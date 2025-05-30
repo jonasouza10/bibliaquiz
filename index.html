@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="iconepq.png">
+    <title>PenseQuiz.com - Livros da Bíblia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0d1226">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PenseQuiz.com">
+
+<style>
+    /* Estilos globais para o corpo do documento, usando a fonte Inter e gradiente azul marinho */
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(to bottom right, #0d1226, #1a2033); /* Gradiente azul marinho escuro */
+        color: #e2e8f0; /* Texto cinza muito claro */
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .container {
+        background-color: #1a2033; /* Azul marinho escuro para o container principal */
+        border: 1px solid #2d3748; /* Borda cinza médio */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada e escura */
+        border-radius: 1rem; /* Cantos mais arredondados */
+        max-width: 1200px; /* Aumenta a largura máxima para acomodar mais botões */
+        width: 100%;
+    }
+
+    .header {
+        background-color: #2d3748; /* Fundo cinza médio para o cabeçalho */
+        border-radius: 0.75rem; /* Cantos arredondados */
+    }
+
+    /* Estilo base para todos os botões dos livros */
+    .book-button {
+        color: #ffffff; /* Texto branco */
+        font-weight: 600; /* font-semibold */
+        padding: 0.75rem 1.5rem; /* Padding ajustado */
+        border-radius: 0.5rem; /* Cantos arredondados */
+        transition: all 0.3s ease-in-out; /* Transição suave para efeitos */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+        cursor: pointer;
+        border: none; /* Remove borda padrão */
+        display: flex; /* Para centralizar o texto */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none; /* Remove sublinhado de link */
+        width: 100%; /* Garante que os botões dentro do dropdown ocupem a largura total */
+    }
+
+    /* Estilo para botões do Antigo Testamento */
+    .old-testament-button {
+        background-color: #34495e; /* Azul acinzentado */
+    }
+
+    .old-testament-button:hover {
+        background-color: #2c3e50; /* Azul acinzentado mais escuro no hover */
+        transform: translateY(-2px) scale(1.02); /* Leve levantamento e aumento */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
+    }
+
+    .old-testament-button:active {
+        background-color: #1f2a38; /* Azul acinzentado ainda mais escuro no active */
+        transform: translateY(0) scale(1.0); /* Retorna à posição original */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais suave no active */
+    }
+
+    /* Estilo para botões do Novo Testamento */
+    .new-testament-button {
+        background-color: #27ae60; /* Verde vibrante */
+    }
+
+    .new-testament-button:hover {
+        background-color: #229954; /* Verde mais escuro no hover */
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .new-testament-button:active {
+        background-color: #1e8449; /* Verde ainda mais escuro no active */
+        transform: translateY(0) scale(1.0);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo para o novo botão de Louvor */
+    .praise-button {
+        background-color: #8B5CF6; /* Roxo vibrante */
+        color: white;
+        font-weight: 700; /* font-bold */
+        padding: 1rem 2rem; /* Padding generoso */
+        border-radius: 0.75rem; /* Cantos arredondados */
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border: none;
+        display: inline-flex; /* Para centralizar o texto e permitir margem */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem; /* Tamanho de fonte maior */
+        margin-top: 2rem; /* Espaçamento superior */
+        width: auto; /* Largura automática */
+    }
+
+    .praise-button:hover {
+        background-color: #7C3AED; /* Roxo mais escuro no hover */
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .praise-button:active {
+        background-color: #6D28D9; /* Roxo ainda mais escuro no active */
+        transform: translateY(0) scale(1.0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+
+    h1, h2 {
+        color: #f8fafc; /* Títulos em branco muito claro */
+    }
+
+    .text-gray-200 { /* Para o texto de parágrafos */
+        color: #cbd5e0; /* Ajustado para cinza azulado claro */
+    }
+
+    .section-title {
+        color: #f8fafc;
+        font-size: 2.25rem; /* text-3xl */
+        font-weight: 700; /* font-bold */
+        margin-top: 2.5rem; /* mt-10 */
+        margin-bottom: 1.5rem; /* mb-6 */
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilos para o rodapé */
+    .footer {
+        margin-top: 3rem; /* Espaçamento superior */
+        padding-top: 1.5rem; /* Padding interno */
+        border-top: 1px solid #2d3748; /* Borda superior sutil */
+        color: #a0aec0; /* Cor de texto mais suave para o rodapé */
+        font-size: 0.9rem;
+    }
+
+    .footer a {
+        color: #90cdf4; /* Cor de link para e-mail/telefone */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+        color: #63b3ed; /* Cor de hover para links */
+    }
+
+    /* Estilos para o Dropdown */
+    .dropdown {
+        position: relative; /* Necessário para posicionar o conteúdo do dropdown */
+        display: inline-block; /* Permite que os dropdowns fiquem lado a lado se houver espaço */
+        width: 100%; /* Ocupa a largura total do pai */
+        margin-bottom: 1rem; /* Espaçamento entre os dropdowns */
+    }
+
+    .dropdown-button {
+        background-color: #4a5568; /* Cor de fundo para o botão do dropdown */
+        color: white;
+        padding: 1rem 1.5rem;
+        font-size: 1.25rem; /* text-xl */
+        font-weight: 700; /* font-bold */
+        border: none;
+        cursor: pointer;
+        border-radius: 0.75rem; /* Cantos arredondados */
+        width: 100%; /* Ocupa a largura total do pai */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown-button:hover {
+        background-color: #2d3748; /* Cor mais escura no hover */
+    }
+
+    .dropdown-content {
+        display: none; /* Esconde o conteúdo por padrão */
+        position: absolute;
+        background-color: #1a2033; /* Fundo do conteúdo do dropdown */
+        min-width: 100%; /* Largura mínima igual ao botão */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+        z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        max-height: 300px; /* Altura máxima para o conteúdo do dropdown */
+        overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+        margin-top: 0.5rem; /* Espaçamento entre o botão e o conteúdo */
+        left: 0; /* Alinha o dropdown à esquerda do botão */
+        right: 0; /* Alinha o dropdown à direita do botão */
+    }
+
+    .dropdown-content a {
+        color: #e2e8f0; /* Cor do texto dos links no dropdown */
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        display: block;
+        text-align: left; /* Alinha o texto à esquerda */
+        transition: background-color 0.2s ease;
+        border-radius: 0.375rem; /* Cantos arredondados para os itens */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #2d3748; /* Cor de fundo no hover para os links */
+    }
+
+    .dropdown-content.show {
+        display: block; /* Mostra o conteúdo quando a classe 'show' é adicionada */
+    }
+
+    /* Ícone de seta para o dropdown */
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown-button.active .arrow-icon {
+        transform: rotate(180deg); /* Gira a seta para cima quando o dropdown está ativo */
+    }
+
+    /* Responsividade para o grid de botões dentro do dropdown */
+    .dropdown-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta o número de colunas */
+        gap: 0.5rem; /* Espaçamento entre os botões */
+    }
+
+    @media (min-width: 640px) { /* sm */
+        .dropdown-grid {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+    }
+
+    @media (min-width: 768px) { /* md */
+        .dropdown-grid {
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
+    }
+
+    @media (min-width: 1024px) { /* lg */
+        .dropdown-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+    }
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="container mx-auto p-6 text-center shadow-xl">
+        <div class="header p-4 rounded-lg mb-6">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white mb-2">PenseQuiz.com</h1>
+            <h2 class="text-3xl font-semibold text-gray-200">Livros da Bíblia Interativos</h2>
+        </div>
+
+        <p class="text-lg leading-relaxed text-blue-100 mb-8">Selecione um livro para explorar seus panoramas, personagens, temas e testar seus conhecimentos com um quiz!</p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4 mb-8">
+            <div class="dropdown">
+                <button class="dropdown-button" id="oldTestamentDropdownBtn">
+                    Antigo Testamento
+                    <svg class="arrow-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="dropdown-content" id="oldTestamentDropdownContent">
+                    <div class="dropdown-grid" id="oldTestamentGrid">
+                        </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-button" id="newTestamentDropdownBtn">
+                    Novo Testamento
+                    <svg class="arrow-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="dropdown-content" id="newTestamentDropdownContent">
+                    <div class="dropdown-grid" id="newTestamentGrid">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="praiseButton" class="praise-button mx-auto">Louvor (Play)</button>
+        <audio id="praiseAudio" src="https://stream.zeno.fm/yddrdqrimfruv" loop preload="auto"></audio>
+
+        <div class="footer">
+            <p>Direitos Reservados © Pense.com</p>
+            <p>Contato: <a href="mailto:contato@pense.com">juniosilvasouza@yahoo.com.br</a></p>
+            <p>Telefone: <a href="tel:+5592988562216">(92) 98856-2216</a></p>
+        </div>
+
+    </div>
+
+    <script type="application/json" id="manifest-data-index">
+        {
+            "name": "PenseQuiz.com - Livros da Bíblia",
+            "short_name": "PenseQuiz",
+            "description": "Explore os livros da Bíblia de forma interativa e teste seus conhecimentos.",
+            "start_url": "./index.html",
+            "display": "standalone",
+            "background_color": "#0d1226",
+            "theme_color": "#0d1226",
+            "icons": [
+                {
+                    "src": "https://placehold.co/192x192/0d1226/ffffff?text=PQ",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                },
+                {
+                    "src": "https://placehold.co/512x512/0d1226/ffffff?text=PQ",
+                    "sizes": "512x512",
+                    "type": "image/png"
+                }
+            ]
+        }
+    </script>
+
+    <script id="service-worker-script-index">
+        // service-worker.js for the main index page
+        const CACHE_NAME_INDEX = 'pensequiz-index-v1';
+        const urlsToCacheIndex = [
+            './index.html',
+            './manifest.json',
+            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+            'https://cdn.tailwindcss.com',
+            // Add other static resources you want to cache here, e.g., images for icons
+            // For now, we'll assume the individual book pages will have their own service workers
+            // or be fetched on demand.
+        ];
+
+        self.addEventListener('install', event => {
+            event.waitUntil(
+                caches.open(CACHE_NAME_INDEX)
+                    .then(cache => {
+                        console.log('Opened cache for PenseQuiz Index');
+                        return cache.addAll(urlsToCacheIndex);
+                    })
+            );
+        });
+
+        self.addEventListener('fetch', event => {
+            event.respondWith(
+                caches.match(event.request)
+                    .then(response => {
+                        // Cache hit - return response
+                        if (response) {
+                            return response;
+                        }
+                        // No cache - fetch from network
+                        return fetch(event.request);
+                    })
+            );
+        });
+
+        self.addEventListener('activate', event => {
+            const cacheWhitelist = [CACHE_NAME_INDEX];
+            event.waitUntil(
+                caches.keys().then(cacheNames => {
+                    return Promise.all(
+                        cacheNames.map(cacheName => {
+                            if (cacheWhitelist.indexOf(cacheName) === -1) {
+                                return caches.delete(cacheName);
+                            }
+                        })
+                    );
+                })
+            );
+        });
+    </script>
+
+    <script>
+        // Registra o Service Worker para a página index
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const serviceWorkerScript = document.getElementById('service-worker-script-index');
+                const serviceWorkerBlob = new Blob([serviceWorkerScript.textContent], { type: 'application/javascript' });
+                const serviceWorkerBlobUrl = URL.createObjectURL(serviceWorkerBlob);
+
+                navigator.serviceWorker.register(serviceWorkerBlobUrl)
+                    .then(registration => {
+                        console.log('Service Worker para PenseQuiz Index registrado com sucesso:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Falha no registro do Service Worker para PenseQuiz Index:', error);
+                    });
+            });
+        }
+
+        // Função para carregar o manifest.json dinamicamente para a página index
+        document.addEventListener('DOMContentLoaded', () => {
+            const manifestData = document.getElementById('manifest-data-index').textContent;
+            const blob = new Blob([manifestData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('link');
+            link.rel = 'manifest';
+            link.href = url;
+            document.head.appendChild(link);
+        });
+
+        // Listas separadas para Antigo e Novo Testamento
+        const oldTestamentBooks = [
+            "Gênesis", "Êxodo", "Levítico", "Números", "Deuteronômio",
+            "Josué", "Juízes", "Rute", "1 Samuel", "2 Samuel",
+            "1 Reis", "2 Reis", "1 Crônicas", "2 Crônicas", "Esdras",
+            "Neemias", "Ester", "Jó", "Salmos", "Provérbios",
+            "Eclesiastes", "Cânticos", "Isaías", "Jeremias", "Lamentações",
+            "Ezequiel", "Daniel", "Oséias", "Joel", "Amós",
+            "Obadias", "Jonas", "Miquéias", "Naum", "Habacuque",
+            "Sofonias", "Ageu", "Zacarias", "Malaquias"
+        ];
+
+        const newTestamentBooks = [
+            "Mateus", "Marcos", "Lucas", "João", "Atos",
+            "Romanos", "1 Coríntios", "2 Coríntios", "Gálatas", "Efésios",
+            "Filipenses", "Colossenses", "1 Tessalonicenses", "2 Tessalonicenses",
+            "1 Timóteo", "2 Timóteo", "Tito", "Filemom", "Hebreus",
+            "Tiago", "1 Pedro", "2 Pedro", "1 João", "2 João",
+            "3 João", "Judas", "Apocalipse"
+        ];
+
+        // Função para normalizar nomes de livros para URLs
+        function normalizeBookName(name) {
+            return name
+                .toLowerCase()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Remove acentos
+                .replace(/\s/g, '') // Remove espaços
+                .replace(/1/g, '1') // Mantém números
+                .replace(/2/g, '2')
+                .replace(/3/g, '3')
+                .replace(/cânticos/g, 'canticos'); // Exceção para "Cânticos"
+        }
+
+        // Função para gerar os botões dos livros dentro dos dropdowns
+        function generateBookButtons() {
+            const oldTestamentGrid = document.getElementById('oldTestamentGrid');
+            const newTestamentGrid = document.getElementById('newTestamentGrid');
+
+            oldTestamentGrid.innerHTML = ''; // Limpa qualquer conteúdo existente
+            newTestamentGrid.innerHTML = ''; // Limpa qualquer conteúdo existente
+
+            // Gerar botões para o Antigo Testamento
+            oldTestamentBooks.forEach(bookName => {
+                const button = document.createElement('a');
+                const normalizedName = normalizeBookName(bookName);
+                
+                // Todos os links seguem o padrão normalizedName.html
+                let href = `${normalizedName}.html`;
+                button.href = href;
+                button.className = 'book-button old-testament-button text-lg'; // Adiciona a classe específica
+                button.textContent = bookName;
+                oldTestamentGrid.appendChild(button);
+            });
+
+            // Gerar botões para o Novo Testamento
+            newTestamentBooks.forEach(bookName => {
+                const button = document.createElement('a');
+                const normalizedName = normalizeBookName(bookName);
+                
+                // Todos os links seguem o padrão normalizedName.html
+                // A função normalizeBookName já lida com "1 João", "2 João", "3 João", "Judas" e "Apocalipse"
+                let href = `${normalizedName}.html`; 
+                button.href = href;
+                button.className = 'book-button new-testament-button text-lg'; // Adiciona a classe específica
+                button.textContent = bookName;
+                newTestamentGrid.appendChild(button);
+            });
+        }
+
+        // Função para alternar a visibilidade do dropdown
+        function toggleDropdown(buttonId, contentId) {
+            const dropdownButton = document.getElementById(buttonId);
+            const dropdownContent = document.getElementById(contentId);
+
+            dropdownButton.classList.toggle('active'); // Adiciona/remove classe 'active' para girar a seta
+            dropdownContent.classList.toggle('show'); // Adiciona/remove classe 'show' para mostrar/esconder
+        }
+
+        // Event Listeners para os botões dos dropdowns
+        document.addEventListener('DOMContentLoaded', () => {
+            generateBookButtons(); // Gera os botões quando a página é carregada
+
+            const oldTestamentDropdownBtn = document.getElementById('oldTestamentDropdownBtn');
+            const newTestamentDropdownBtn = document.getElementById('newTestamentDropdownBtn');
+            const oldTestamentDropdownContent = document.getElementById('oldTestamentDropdownContent');
+            const newTestamentDropdownContent = document.getElementById('newTestamentDropdownContent');
+
+            oldTestamentDropdownBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); // Impede que o clique se propague para o document e feche o dropdown
+                toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
+                // Fecha o outro dropdown se estiver aberto
+                if (newTestamentDropdownContent.classList.contains('show')) {
+                    toggleDropdown('newTestamentDropdownBtn', 'newTestamentDropdownContent');
+                }
+            });
+
+            newTestamentDropdownBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); // Impede que o clique se propague para o document e feche o dropdown
+                toggleDropdown('newTestamentDropdownBtn', 'newTestamentDropdownContent');
+                // Fecha o outro dropdown se estiver aberto
+                if (oldTestamentDropdownContent.classList.contains('show')) {
+                    toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
+                }
+            });
+
+            // Fecha os dropdowns se o usuário clicar fora deles
+            window.addEventListener('click', (event) => {
+                if (oldTestamentDropdownContent.classList.contains('show') && !event.target.closest('.dropdown')) {
+                    toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
+                }
+                if (newTestamentDropdownContent.classList.contains('show') && !event.target.closest('.dropdown')) {
+                    toggleDropdown('newTestamentDropdownBtn', 'newTestamentDropdownContent');
+                }
+            });
+
+            // Lógica para o botão de Louvor (Play/Pause)
+            const praiseButton = document.getElementById('praiseButton');
+            const praiseAudio = document.getElementById('praiseAudio');
+
+            praiseButton.addEventListener('click', async () => { // Adicionado 'async' para usar await
+                if (praiseAudio.paused) {
+                    try {
+                        await praiseAudio.play(); // Usar await para play()
+                        praiseButton.textContent = 'Louvor (Pause)';
+                    } catch (error) {
+                        // Verifica se o erro é um AbortError
+                        if (error.name === 'AbortError') {
+                            console.log('A reprodução de áudio foi interrompida (AbortError). Isso pode acontecer se o usuário clicar muito rápido.');
+                        } else {
+                            console.error('Erro ao tentar reproduzir o áudio:', error);
+                        }
+                        // Manter o texto do botão como Play se a reprodução falhar
+                        praiseButton.textContent = 'Louvor (Play)';
+                    }
+                } else {
+                    praiseAudio.pause();
+                    praiseButton.textContent = 'Louvor (Play)';
+                }
+            });
+
+            // Opcional: Atualizar o texto do botão se o áudio terminar de tocar
+            praiseAudio.addEventListener('ended', () => {
+                praiseButton.textContent = 'Louvor (Play)';
+            });
+        });
+    </script>
+</body>
+</html>
