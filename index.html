@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="iconepq.png">
+	<link rel="icon" type="image/png" href="iconepq.png">
     <title>PenseQuiz.com - Livros da Bíblia</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,11 +16,11 @@
     <meta name="apple-mobile-web-app-title" content="PenseQuiz.com">
 
 <style>
-    /* Estilos globais para o corpo do documento, usando a fonte Inter e gradiente azul marinho */
+    /* Global styles for the document body, using Inter font and a dark navy gradient */
     body {
         font-family: 'Inter', sans-serif;
-        background: linear-gradient(to bottom right, #0d1226, #1a2033); /* Gradiente azul marinho escuro */
-        color: #e2e8f0; /* Texto cinza muito claro */
+        background: linear-gradient(to bottom right, #0d1226, #1a2033); /* Dark navy gradient */
+        color: #e2e8f0; /* Very light gray text */
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -28,111 +29,145 @@
     }
 
     .container {
-        background-color: #1a2033; /* Azul marinho escuro para o container principal */
-        border: 1px solid #2d3748; /* Borda cinza médio */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada e escura */
-        border-radius: 1rem; /* Cantos mais arredondados */
-        max-width: 1200px; /* Aumenta a largura máxima para acomodar mais botões */
+        background-color: #1a2033; /* Dark navy for the main container */
+        border: 1px solid #2d3748; /* Medium gray border */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced and darker shadow */
+        border-radius: 1rem; /* More rounded corners */
+        max-width: 1200px; /* Increased max-width to accommodate more buttons */
         width: 100%;
     }
 
     .header {
-        background-color: #2d3748; /* Fundo cinza médio para o cabeçalho */
-        border-radius: 0.75rem; /* Cantos arredondados */
+        background-color: #2d3748; /* Medium gray background for the header */
+        border-radius: 0.75rem; /* Rounded corners */
     }
 
-    /* Estilo base para todos os botões dos livros */
+    /* Base style for all book buttons */
     .book-button {
-        color: #ffffff; /* Texto branco */
+        color: #ffffff; /* White text */
         font-weight: 600; /* font-semibold */
-        padding: 0.75rem 1.5rem; /* Padding ajustado */
-        border-radius: 0.5rem; /* Cantos arredondados */
-        transition: all 0.3s ease-in-out; /* Transição suave para efeitos */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+        padding: 0.75rem 1.5rem; /* Adjusted padding */
+        border-radius: 0.5rem; /* Rounded corners */
+        transition: all 0.3s ease-in-out; /* Smooth transition for effects */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
         cursor: pointer;
-        border: none; /* Remove borda padrão */
-        display: flex; /* Para centralizar o texto */
+        border: none; /* Remove default border */
+        display: flex; /* To center text */
         align-items: center;
         justify-content: center;
         text-align: center;
-        text-decoration: none; /* Remove sublinhado de link */
-        width: 100%; /* Garante que os botões dentro do dropdown ocupem a largura total */
+        text-decoration: none; /* Remove link underline */
+        width: 100%; /* Ensures buttons within the dropdown take full width */
     }
 
-    /* Estilo para botões do Antigo Testamento */
+    /* Style for Old Testament buttons */
     .old-testament-button {
-        background-color: #34495e; /* Azul acinzentado */
+        background-color: #34495e; /* Grayish blue */
     }
 
     .old-testament-button:hover {
-        background-color: #2c3e50; /* Azul acinzentado mais escuro no hover */
-        transform: translateY(-2px) scale(1.02); /* Leve levantamento e aumento */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
+        background-color: #2c3e50; /* Darker grayish blue on hover */
+        transform: translateY(-2px) scale(1.02); /* Slight lift and scale */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
     }
 
     .old-testament-button:active {
-        background-color: #1f2a38; /* Azul acinzentado ainda mais escuro no active */
-        transform: translateY(0) scale(1.0); /* Retorna à posição original */
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais suave no active */
+        background-color: #1f2a38; /* Even darker grayish blue on active */
+        transform: translateY(0) scale(1.0); /* Return to original position */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Softer shadow on active */
     }
 
-    /* Estilo para botões do Novo Testamento */
+    /* Style for New Testament buttons */
     .new-testament-button {
-        background-color: #27ae60; /* Verde vibrante */
+        background-color: #27ae60; /* Vibrant green */
     }
 
     .new-testament-button:hover {
-        background-color: #229954; /* Verde mais escuro no hover */
+        background-color: #229954; /* Darker green on hover */
         transform: translateY(-2px) scale(1.02);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .new-testament-button:active {
-        background-color: #1e8449; /* Verde ainda mais escuro no active */
+        background-color: #1e8449; /* Even darker green on active */
         transform: translateY(0) scale(1.0);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
-    /* Estilo para o novo botão de Louvor */
+    /* Style for the Praise button */
     .praise-button {
-        background-color: #8B5CF6; /* Roxo vibrante */
+        background-color: #8B5CF6; /* Vibrant purple */
         color: white;
         font-weight: 700; /* font-bold */
-        padding: 1rem 2rem; /* Padding generoso */
-        border-radius: 0.75rem; /* Cantos arredondados */
+        padding: 1rem 2rem; /* Generous padding */
+        border-radius: 0.75rem; /* Rounded corners */
         transition: all 0.3s ease-in-out;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         border: none;
-        display: inline-flex; /* Para centralizar o texto e permitir margem */
+        display: inline-flex; /* To center text and allow margin */
         align-items: center;
         justify-content: center;
         text-align: center;
         text-decoration: none;
-        font-size: 1.5rem; /* Tamanho de fonte maior */
-        margin-top: 2rem; /* Espaçamento superior */
-        width: auto; /* Largura automática */
+        font-size: 1.5rem; /* Larger font size */
+        margin-top: 2rem; /* Top spacing */
+        width: auto; /* Auto width */
     }
 
     .praise-button:hover {
-        background-color: #7C3AED; /* Roxo mais escuro no hover */
+        background-color: #7C3AED; /* Darker purple on hover */
         transform: translateY(-3px) scale(1.03);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     }
 
     .praise-button:active {
-        background-color: #6D28D9; /* Roxo ainda mais escuro no active */
+        background-color: #6D28D9; /* Even darker purple on active */
+        transform: translateY(0) scale(1.0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style for the new Theology Course button */
+    .theology-course-button {
+        background-color: #06b6d4; /* Cyan color */
+        color: white;
+        font-weight: 700; /* font-bold */
+        padding: 1rem 2rem; /* Generous padding */
+        border-radius: 0.75rem; /* Rounded corners */
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border: none;
+        display: inline-flex; /* To center text and allow margin */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem; /* Larger font size */
+        margin-top: 2rem; /* Top spacing */
+        width: auto; /* Auto width */
+        margin-right: 1rem; /* Spacing from the praise button */
+    }
+
+    .theology-course-button:hover {
+        background-color: #0891b2; /* Darker cyan on hover */
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .theology-course-button:active {
+        background-color: #0e7490; /* Even darker cyan on active */
         transform: translateY(0) scale(1.0);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
 
     h1, h2 {
-        color: #f8fafc; /* Títulos em branco muito claro */
+        color: #f8fafc; /* Very light white titles */
     }
 
-    .text-gray-200 { /* Para o texto de parágrafos */
-        color: #cbd5e0; /* Ajustado para cinza azulado claro */
+    .text-gray-200 { /* For paragraph text */
+        color: #cbd5e0; /* Adjusted to light bluish gray */
     }
 
     .section-title {
@@ -144,43 +179,43 @@
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    /* Estilos para o rodapé */
+    /* Styles for the footer */
     .footer {
-        margin-top: 3rem; /* Espaçamento superior */
-        padding-top: 1.5rem; /* Padding interno */
-        border-top: 1px solid #2d3748; /* Borda superior sutil */
-        color: #a0aec0; /* Cor de texto mais suave para o rodapé */
+        margin-top: 3rem; /* Top spacing */
+        padding-top: 1.5rem; /* Inner padding */
+        border-top: 1px solid #2d3748; /* Subtle top border */
+        color: #a0aec0; /* Softer text color for the footer */
         font-size: 0.9rem;
     }
 
     .footer a {
-        color: #90cdf4; /* Cor de link para e-mail/telefone */
+        color: #90cdf4; /* Link color for email/phone */
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
     .footer a:hover {
-        color: #63b3ed; /* Cor de hover para links */
+        color: #63b3ed; /* Hover color for links */
     }
 
-    /* Estilos para o Dropdown */
+    /* Styles for Dropdown */
     .dropdown {
-        position: relative; /* Necessário para posicionar o conteúdo do dropdown */
-        display: inline-block; /* Permite que os dropdowns fiquem lado a lado se houver espaço */
-        width: 100%; /* Ocupa a largura total do pai */
-        margin-bottom: 1rem; /* Espaçamento entre os dropdowns */
+        position: relative; /* Required to position dropdown content */
+        display: inline-block; /* Allows dropdowns to sit side-by-side if space allows */
+        width: 100%; /* Takes full width of parent */
+        margin-bottom: 1rem; /* Spacing between dropdowns */
     }
 
     .dropdown-button {
-        background-color: #4a5568; /* Cor de fundo para o botão do dropdown */
+        background-color: #4a5568; /* Background color for dropdown button */
         color: white;
         padding: 1rem 1.5rem;
         font-size: 1.25rem; /* text-xl */
         font-weight: 700; /* font-bold */
         border: none;
         cursor: pointer;
-        border-radius: 0.75rem; /* Cantos arredondados */
-        width: 100%; /* Ocupa a largura total do pai */
+        border-radius: 0.75rem; /* Rounded corners */
+        width: 100%; /* Takes full width of parent */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -189,57 +224,57 @@
     }
 
     .dropdown-button:hover {
-        background-color: #2d3748; /* Cor mais escura no hover */
+        background-color: #2d3748; /* Darker color on hover */
     }
 
     .dropdown-content {
-        display: none; /* Esconde o conteúdo por padrão */
+        display: none; /* Hide content by default */
         position: absolute;
-        background-color: #1a2033; /* Fundo do conteúdo do dropdown */
-        min-width: 100%; /* Largura mínima igual ao botão */
+        background-color: #1a2033; /* Dropdown content background */
+        min-width: 100%; /* Minimum width equal to button */
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-        z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+        z-index: 1; /* Ensures dropdown is above other elements */
         border-radius: 0.5rem;
         padding: 0.5rem;
-        max-height: 300px; /* Altura máxima para o conteúdo do dropdown */
-        overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
-        margin-top: 0.5rem; /* Espaçamento entre o botão e o conteúdo */
-        left: 0; /* Alinha o dropdown à esquerda do botão */
-        right: 0; /* Alinha o dropdown à direita do botão */
+        max-height: 300px; /* Max height for dropdown content */
+        overflow-y: auto; /* Add scroll if content is too large */
+        margin-top: 0.5rem; /* Spacing between button and content */
+        left: 0; /* Align dropdown to the left of the button */
+        right: 0; /* Align dropdown to the right of the button */
     }
 
     .dropdown-content a {
-        color: #e2e8f0; /* Cor do texto dos links no dropdown */
+        color: #e2e8f0; /* Text color of links in dropdown */
         padding: 0.75rem 1rem;
         text-decoration: none;
         display: block;
-        text-align: left; /* Alinha o texto à esquerda */
+        text-align: left; /* Align text to the left */
         transition: background-color 0.2s ease;
-        border-radius: 0.375rem; /* Cantos arredondados para os itens */
+        border-radius: 0.375rem; /* Rounded corners for items */
     }
 
     .dropdown-content a:hover {
-        background-color: #2d3748; /* Cor de fundo no hover para os links */
+        background-color: #2d3748; /* Background color on hover for links */
     }
 
     .dropdown-content.show {
-        display: block; /* Mostra o conteúdo quando a classe 'show' é adicionada */
+        display: block; /* Show content when 'show' class is added */
     }
 
-    /* Ícone de seta para o dropdown */
+    /* Arrow icon for dropdown */
     .arrow-icon {
         transition: transform 0.3s ease;
     }
 
     .dropdown-button.active .arrow-icon {
-        transform: rotate(180deg); /* Gira a seta para cima quando o dropdown está ativo */
+        transform: rotate(180deg); /* Rotate arrow up when dropdown is active */
     }
 
-    /* Responsividade para o grid de botões dentro do dropdown */
+    /* Responsiveness for the button grid within the dropdown */
     .dropdown-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta o número de colunas */
-        gap: 0.5rem; /* Espaçamento entre os botões */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust number of columns */
+        gap: 0.5rem; /* Spacing between buttons */
     }
 
     @media (min-width: 640px) { /* sm */
@@ -298,11 +333,15 @@
             </div>
         </div>
 
-        <button id="praiseButton" class="praise-button mx-auto">Louvor (Play)</button>
+        <div class="flex justify-center mb-8">
+            <a href="teologia.html" class="theology-course-button">Curso de Teologia</a>
+            <button id="praiseButton" class="praise-button">Louvor (Play)</button>
+        </div>
+        
         <audio id="praiseAudio" src="https://stream.zeno.fm/yddrdqrimfruv" loop preload="auto"></audio>
 
         <div class="footer">
-            <p>Direitos Reservados © Pense.com</p>
+            <p>Direitos Reservados ©PenseQuiz.com</p>
             <p>Contato: <a href="mailto:contato@pense.com">juniosilvasouza@yahoo.com.br</a></p>
             <p>Telefone: <a href="tel:+5592988562216">(92) 98856-2216</a></p>
         </div>
@@ -387,7 +426,7 @@
     </script>
 
     <script>
-        // Registra o Service Worker para a página index
+        // Registers the Service Worker for the index page
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 const serviceWorkerScript = document.getElementById('service-worker-script-index');
@@ -396,15 +435,15 @@
 
                 navigator.serviceWorker.register(serviceWorkerBlobUrl)
                     .then(registration => {
-                        console.log('Service Worker para PenseQuiz Index registrado com sucesso:', registration);
+                        console.log('Service Worker for PenseQuiz Index registered successfully:', registration);
                     })
                     .catch(error => {
-                        console.log('Falha no registro do Service Worker para PenseQuiz Index:', error);
+                        console.log('Failed to register Service Worker for PenseQuiz Index:', error);
                     });
             });
         }
 
-        // Função para carregar o manifest.json dinamicamente para a página index
+        // Function to dynamically load manifest.json for the index page
         document.addEventListener('DOMContentLoaded', () => {
             const manifestData = document.getElementById('manifest-data-index').textContent;
             const blob = new Blob([manifestData], { type: 'application/json' });
@@ -415,7 +454,7 @@
             document.head.appendChild(link);
         });
 
-        // Listas separadas para Antigo e Novo Testamento
+        // Separate lists for Old and New Testaments
         const oldTestamentBooks = [
             "Gênesis", "Êxodo", "Levítico", "Números", "Deuteronômio",
             "Josué", "Juízes", "Rute", "1 Samuel", "2 Samuel",
@@ -436,66 +475,66 @@
             "3 João", "Judas", "Apocalipse"
         ];
 
-        // Função para normalizar nomes de livros para URLs
+        // Function to normalize book names for URLs
         function normalizeBookName(name) {
             return name
                 .toLowerCase()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Remove acentos
-                .replace(/\s/g, '') // Remove espaços
-                .replace(/1/g, '1') // Mantém números
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Removes accents
+                .replace(/\s/g, '') // Removes spaces
+                .replace(/1/g, '1') // Keeps numbers
                 .replace(/2/g, '2')
                 .replace(/3/g, '3')
-                .replace(/cânticos/g, 'canticos'); // Exceção para "Cânticos"
+                .replace(/cânticos/g, 'canticos'); // Exception for "Cânticos"
         }
 
-        // Função para gerar os botões dos livros dentro dos dropdowns
+        // Function to generate book buttons inside dropdowns
         function generateBookButtons() {
             const oldTestamentGrid = document.getElementById('oldTestamentGrid');
             const newTestamentGrid = document.getElementById('newTestamentGrid');
 
-            oldTestamentGrid.innerHTML = ''; // Limpa qualquer conteúdo existente
-            newTestamentGrid.innerHTML = ''; // Limpa qualquer conteúdo existente
+            oldTestamentGrid.innerHTML = ''; // Clears any existing content
+            newTestamentGrid.innerHTML = ''; // Clears any existing content
 
-            // Gerar botões para o Antigo Testamento
+            // Generate buttons for the Old Testament
             oldTestamentBooks.forEach(bookName => {
                 const button = document.createElement('a');
                 const normalizedName = normalizeBookName(bookName);
                 
-                // Todos os links seguem o padrão normalizedName.html
+                // All links follow the pattern normalizedName.html
                 let href = `${normalizedName}.html`;
                 button.href = href;
-                button.className = 'book-button old-testament-button text-lg'; // Adiciona a classe específica
+                button.className = 'book-button old-testament-button text-lg'; // Adds the specific class
                 button.textContent = bookName;
                 oldTestamentGrid.appendChild(button);
             });
 
-            // Gerar botões para o Novo Testamento
+            // Generate buttons for the New Testament
             newTestamentBooks.forEach(bookName => {
                 const button = document.createElement('a');
                 const normalizedName = normalizeBookName(bookName);
                 
-                // Todos os links seguem o padrão normalizedName.html
-                // A função normalizeBookName já lida com "1 João", "2 João", "3 João", "Judas" e "Apocalipse"
+                // All links follow the pattern normalizedName.html
+                // The normalizeBookName function already handles "1 João", "2 João", "3 João", "Judas" and "Apocalipse"
                 let href = `${normalizedName}.html`; 
                 button.href = href;
-                button.className = 'book-button new-testament-button text-lg'; // Adiciona a classe específica
+                button.className = 'book-button new-testament-button text-lg'; // Adds the specific class
                 button.textContent = bookName;
                 newTestamentGrid.appendChild(button);
             });
         }
 
-        // Função para alternar a visibilidade do dropdown
+        // Function to toggle dropdown visibility
         function toggleDropdown(buttonId, contentId) {
             const dropdownButton = document.getElementById(buttonId);
             const dropdownContent = document.getElementById(contentId);
 
-            dropdownButton.classList.toggle('active'); // Adiciona/remove classe 'active' para girar a seta
-            dropdownContent.classList.toggle('show'); // Adiciona/remove classe 'show' para mostrar/esconder
+            dropdownButton.classList.toggle('active'); // Add/remove 'active' class to rotate arrow
+            dropdownContent.classList.toggle('show'); // Add/remove 'show' class to show/hide
         }
 
-        // Event Listeners para os botões dos dropdowns
+        // Event Listeners for dropdown buttons
         document.addEventListener('DOMContentLoaded', () => {
-            generateBookButtons(); // Gera os botões quando a página é carregada
+            generateBookButtons(); // Generates buttons when the page loads
 
             const oldTestamentDropdownBtn = document.getElementById('oldTestamentDropdownBtn');
             const newTestamentDropdownBtn = document.getElementById('newTestamentDropdownBtn');
@@ -503,24 +542,24 @@
             const newTestamentDropdownContent = document.getElementById('newTestamentDropdownContent');
 
             oldTestamentDropdownBtn.addEventListener('click', (event) => {
-                event.stopPropagation(); // Impede que o clique se propague para o document e feche o dropdown
+                event.stopPropagation(); // Prevents click from propagating to document and closing dropdown
                 toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
-                // Fecha o outro dropdown se estiver aberto
+                // Close the other dropdown if it's open
                 if (newTestamentDropdownContent.classList.contains('show')) {
                     toggleDropdown('newTestamentDropdownBtn', 'newTestamentDropdownContent');
                 }
             });
 
             newTestamentDropdownBtn.addEventListener('click', (event) => {
-                event.stopPropagation(); // Impede que o clique se propague para o document e feche o dropdown
+                event.stopPropagation(); // Prevents click from propagating to document and closing dropdown
                 toggleDropdown('newTestamentDropdownBtn', 'newTestamentDropdownContent');
-                // Fecha o outro dropdown se estiver aberto
+                // Close the other dropdown if it's open
                 if (oldTestamentDropdownContent.classList.contains('show')) {
                     toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
                 }
             });
 
-            // Fecha os dropdowns se o usuário clicar fora deles
+            // Close dropdowns if user clicks outside them
             window.addEventListener('click', (event) => {
                 if (oldTestamentDropdownContent.classList.contains('show') && !event.target.closest('.dropdown')) {
                     toggleDropdown('oldTestamentDropdownBtn', 'oldTestamentDropdownContent');
@@ -530,23 +569,23 @@
                 }
             });
 
-            // Lógica para o botão de Louvor (Play/Pause)
+            // Logic for the Praise (Play/Pause) button
             const praiseButton = document.getElementById('praiseButton');
             const praiseAudio = document.getElementById('praiseAudio');
 
-            praiseButton.addEventListener('click', async () => { // Adicionado 'async' para usar await
+            praiseButton.addEventListener('click', async () => { // Added 'async' to use await
                 if (praiseAudio.paused) {
                     try {
-                        await praiseAudio.play(); // Usar await para play()
+                        await praiseAudio.play(); // Use await for play()
                         praiseButton.textContent = 'Louvor (Pause)';
                     } catch (error) {
-                        // Verifica se o erro é um AbortError
+                        // Check if the error is an AbortError
                         if (error.name === 'AbortError') {
-                            console.log('A reprodução de áudio foi interrompida (AbortError). Isso pode acontecer se o usuário clicar muito rápido.');
+                            console.log('Audio playback was interrupted (AbortError). This can happen if the user clicks too fast.');
                         } else {
-                            console.error('Erro ao tentar reproduzir o áudio:', error);
+                            console.error('Error trying to play audio:', error);
                         }
-                        // Manter o texto do botão como Play se a reprodução falhar
+                        // Keep button text as Play if playback fails
                         praiseButton.textContent = 'Louvor (Play)';
                     }
                 } else {
@@ -555,7 +594,7 @@
                 }
             });
 
-            // Opcional: Atualizar o texto do botão se o áudio terminar de tocar
+            // Optional: Update button text if audio finishes playing
             praiseAudio.addEventListener('ended', () => {
                 praiseButton.textContent = 'Louvor (Play)';
             });
