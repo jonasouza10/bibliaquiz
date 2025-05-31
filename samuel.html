@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Samuel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #3b82f6; /* Blue border for Samuel game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #2563eb; /* Blue for Samuel game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #1d4ed8; /* Darker blue on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #2563eb;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #2563eb;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #1d4ed8;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-blue-700 mb-4">A História de Samuel ⚖️</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Acompanhe a vida de Samuel, o último juiz de Israel, profeta e o homem que ungiu os primeiros reis.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Samuel!</p>
+            <p class="text-gray-700 mt-6">A história de Samuel é um testemunho da fidelidade de Deus, da importância da obediência e da transição de Israel de uma teocracia para uma monarquia.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Nascimento de Samuel e a Promessa de Ana',
+                location: 'Ramá e Siló',
+                objective: 'Entender a oração de Ana e o nascimento de Samuel.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Ana era estéril e orava fervorosamente por um filho no tabernáculo em Siló.',
+                    'Ela prometeu dedicar seu filho ao Senhor por toda a sua vida.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: '1 Samuel 1:10-11, 20',
+                enigma: 'Qual era o nome da mãe de Samuel, que orou por um filho?',
+                options: ['Ana', 'Penina', 'Débora'],
+                correctAnswer: 'Ana'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: A Dedicação de Samuel no Templo',
+                location: 'Siló',
+                objective: 'Compreender a dedicação de Samuel ao serviço do Senhor.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Após o desmame, Ana levou Samuel ao sacerdote Eli em Siló.',
+                    'Ela o dedicou ao Senhor, cumprindo sua promessa.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: '1 Samuel 1:24-28',
+                enigma: 'A quem Ana dedicou Samuel para servir no templo?',
+                options: ['Eli', 'O rei', 'Um profeta'],
+                correctAnswer: 'Eli'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: O Chamado de Samuel',
+                location: 'Tabernáculo em Siló',
+                objective: 'Descobrir como Deus chamou Samuel pela primeira vez.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Samuel servia ao Senhor sob a supervisão de Eli.',
+                    'Deus chamou Samuel três vezes durante a noite, e Eli o instruiu a responder: "Fala, Senhor, pois o teu servo ouve".'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: '1 Samuel 3:1-10',
+                enigma: 'O que Samuel respondeu a Deus após a instrução de Eli?',
+                options: ['"Fala, Senhor, pois o teu servo ouve"', '"Estou aqui"', '"O que queres de mim?"'],
+                correctAnswer: '"Fala, Senhor, pois o teu servo ouve"'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Morte de Eli e Seus Filhos',
+                location: 'Siló',
+                objective: 'Aprender sobre o julgamento de Deus sobre a casa de Eli.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Os filhos de Eli, Hofni e Fineias, eram perversos e desonravam o Senhor.',
+                    'Eli morreu ao cair de sua cadeira e quebrar o pescoço, ao saber que a Arca de Deus havia sido capturada e seus filhos mortos.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: '1 Samuel 4:17-18',
+                enigma: 'O que causou a morte de Eli?',
+                options: ['Caiu da cadeira ao saber da captura da Arca e da morte dos filhos', 'Foi morto em batalha', 'Morreu de velhice'],
+                correctAnswer: 'Caiu da cadeira ao saber da captura da Arca e da morte dos filhos'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Arca Capturada pelos Filisteus',
+                location: 'Ebenézer e Asdode',
+                objective: 'Observar a captura da Arca da Aliança pelos filisteus.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Israel foi derrotado pelos filisteus em Ebenézer.',
+                    'A Arca da Aliança foi levada pelos filisteus para Asdode e colocada no templo de Dagom.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: '1 Samuel 4:10-11, 5:1-2',
+                enigma: 'Quem capturou a Arca da Aliança de Israel?',
+                options: ['Os filisteus', 'Os midianitas', 'Os amorreus'],
+                correctAnswer: 'Os filisteus'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Retorno da Arca',
+                location: 'Asdode, Gate, Ecrom e Bete-Semes',
+                objective: 'Entender como a Arca retornou a Israel.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'A Arca trouxe pragas e tumores aos filisteus em cada cidade onde era levada.',
+                    'Eles a devolveram a Israel em uma carroça puxada por vacas que nunca haviam sido jungidas.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: '1 Samuel 6:10-12',
+                enigma: 'Como os filisteus devolveram a Arca da Aliança a Israel?',
+                options: ['Em uma carroça puxada por vacas', 'Por mensageiros', 'Em um barco'],
+                correctAnswer: 'Em uma carroça puxada por vacas'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: Samuel Julga Israel em Mispa',
+                location: 'Mispa',
+                objective: 'Aprender sobre o papel de Samuel como juiz e líder espiritual.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Samuel convocou todo o Israel a Mispa para se arrepender de seus pecados.',
+                    'Ele intercedeu por eles e julgou o povo.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: '1 Samuel 7:5-6',
+                enigma: 'Onde Samuel reuniu Israel para se arrepender e julgá-los?',
+                options: ['Mispa', 'Gilgal', 'Belém'],
+                correctAnswer: 'Mispa'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: A Vitória sobre os Filisteus em Ebenézer',
+                location: 'Ebenézer',
+                objective: 'Descobrir a vitória milagrosa de Israel sob a liderança de Samuel.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Enquanto Samuel oferecia um holocausto, os filisteus atacaram Israel.',
+                    'O Senhor trovejou com grande estrondo sobre os filisteus, e eles foram derrotados.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: '1 Samuel 7:10-12',
+                enigma: 'O que o Senhor fez para ajudar Israel a vencer os filisteus em Ebenézer?',
+                options: ['Trovejou com grande estrondo', 'Enviou anjos', 'Fez a terra tremer'],
+                correctAnswer: 'Trovejou com grande estrondo'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: O Pedido de um Rei',
+                location: 'Ramá',
+                objective: 'Entender por que Israel pediu um rei.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Quando Samuel envelheceu, seus filhos não seguiram seus caminhos.',
+                    'Os anciãos de Israel pediram a Samuel um rei para julgá-los, como as outras nações.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: '1 Samuel 8:4-7',
+                enigma: 'Por que os anciãos de Israel pediram um rei a Samuel?',
+                options: ['Porque os filhos de Samuel não seguiam seus caminhos', 'Porque queriam ser como as outras nações', 'Ambas as opções'],
+                correctAnswer: 'Ambas as opções'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: A Escolha de Saul',
+                location: 'Ramá e Gibeá',
+                objective: 'Aprender sobre a escolha de Saul como o primeiro rei de Israel.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Deus revelou a Samuel que enviaria um homem da terra de Benjamim.',
+                    'Saul, filho de Quis, foi ungido por Samuel em particular e depois escolhido por sorteio em Mispa.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: '1 Samuel 9:15-17, 10:1, 20-24',
+                enigma: 'De qual tribo Saul, o primeiro rei de Israel, era?',
+                options: ['Benjamim', 'Judá', 'Levi'],
+                correctAnswer: 'Benjamim'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Saul é Confirmado como Rei',
+                location: 'Gilgal',
+                objective: 'Observar a confirmação pública de Saul como rei.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Após a vitória de Saul sobre os amonitas, Samuel convocou o povo a Gilgal.',
+                    'Lá, eles renovaram o reino e confirmaram Saul como rei diante do Senhor.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: '1 Samuel 11:14-15',
+                enigma: 'Onde Saul foi confirmado como rei publicamente?',
+                options: ['Gilgal', 'Mispa', 'Belém'],
+                correctAnswer: 'Gilgal'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: O Discurso de Despedida de Samuel',
+                location: 'Gilgal',
+                objective: 'Compreender as últimas palavras de Samuel ao povo.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Samuel fez um discurso de despedida, reafirmando sua integridade como juiz.',
+                    'Ele advertiu o povo a temer e servir ao Senhor, ou enfrentariam as consequências.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: '1 Samuel 12:1-5, 14-15',
+                enigma: 'Qual foi o principal conselho de Samuel ao povo em seu discurso de despedida?',
+                options: ['Temer e servir ao Senhor', 'Serem fortes na guerra', 'Construir um grande templo'],
+                correctAnswer: 'Temer e servir ao Senhor'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Desobediência de Saul em Gilgal',
+                location: 'Gilgal',
+                objective: 'Aprender sobre a primeira grande desobediência de Saul.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Saul não esperou Samuel para oferecer o holocausto antes da batalha contra os filisteus.',
+                    'Samuel o repreendeu, dizendo que seu reino não duraria.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: '1 Samuel 13:8-14',
+                enigma: 'Qual foi a desobediência de Saul que levou Samuel a profetizar a perda de seu reino?',
+                options: ['Oferecer o holocausto sem Samuel', 'Não destruir completamente os amalequitas', 'Consultar uma médium'],
+                correctAnswer: 'Oferecer o holocausto sem Samuel'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: Saul Rejeitado como Rei',
+                location: 'Gilgal',
+                objective: 'Entender a rejeição final de Saul por Deus.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Deus ordenou a Saul que destruísse completamente os amalequitas, mas ele poupou o rei Agague e o melhor do gado.',
+                    'Samuel declarou que o Senhor o havia rejeitado como rei.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: '1 Samuel 15:10-23',
+                enigma: 'Por que Deus rejeitou Saul como rei?',
+                options: ['Por sua desobediência em poupar Agague e o gado', 'Por sua falta de coragem', 'Por sua idade avançada'],
+                correctAnswer: 'Por sua desobediência em poupar Agague e o gado'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: Samuel Unge Davi',
+                location: 'Belém',
+                objective: 'Observar a unção de Davi como o futuro rei de Israel.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Deus enviou Samuel a Belém, à casa de Jessé, para ungir um novo rei.',
+                    'Samuel ungiu Davi, o filho mais novo de Jessé, e o Espírito do Senhor veio poderosamente sobre Davi.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: '1 Samuel 16:1-13',
+                enigma: 'Quem Samuel ungiu como o futuro rei de Israel?',
+                options: ['Davi', 'Eliabe', 'Abinadabe'],
+                correctAnswer: 'Davi'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-blue-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

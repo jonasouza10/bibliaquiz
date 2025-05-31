@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Raquel e Lia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #14b8a6; /* Teal border for Rachel and Leah game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #0d9488; /* Teal for Rachel and Leah game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #0f766e; /* Darker teal on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #0d9488;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #0d9488;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #0f766e;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-teal-700 mb-4">A História de Raquel e Lia 💖</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Acompanhe a história das irmãs Raquel e Lia, suas vidas, amores e a formação das doze tribos de Israel.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Raquel e Lia!</p>
+            <p class="text-gray-700 mt-6">A história de Raquel e Lia nos ensina sobre o amor, a paciência e a providência de Deus na formação de uma nação.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: Jacó Chega em Harã',
+                location: 'Harã',
+                objective: 'Descobrir o primeiro encontro de Jacó com Raquel.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Jacó fugiu de Esaú e viajou para Harã.',
+                    'Ele encontrou Raquel perto de um poço, apascentando as ovelhas de seu pai.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Gênesis 29:1-10',
+                enigma: 'Quem Jacó encontrou primeiro perto do poço em Harã?',
+                options: ['Raquel', 'Lia', 'Labão'],
+                correctAnswer: 'Raquel'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: O Amor de Jacó por Raquel',
+                location: 'Harã',
+                objective: 'Entender a profundidade do amor de Jacó por Raquel.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Raquel era formosa de porte e de semblante.',
+                    'Jacó a amou e se ofereceu para trabalhar por ela.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Gênesis 29:17-18',
+                enigma: 'Por quantos anos Jacó se ofereceu para trabalhar por Raquel inicialmente?',
+                options: ['Sete anos', 'Catorze anos', 'Vinte anos'],
+                correctAnswer: 'Sete anos'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: O Engano de Labão',
+                location: 'Harã',
+                objective: 'Aprender sobre a astúcia de Labão no casamento de Jacó.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Após os sete anos, Jacó pediu Raquel em casamento.',
+                    'Labão deu Lia, a filha mais velha, a Jacó na noite de núpcias.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Gênesis 29:21-25',
+                enigma: 'Quem Labão deu a Jacó em casamento na primeira vez, enganando-o?',
+                options: ['Lia', 'Raquel', 'Bila'],
+                correctAnswer: 'Lia'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: O Casamento com Lia',
+                location: 'Harã',
+                objective: 'Compreender as circunstâncias do primeiro casamento de Jacó.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Lia tinha olhos tenros, mas Raquel era formosa.',
+                    'Jacó só percebeu o engano pela manhã.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Gênesis 29:25-26',
+                enigma: 'Qual era a característica física mais notável de Lia, comparada a Raquel?',
+                options: ['Olhos tenros', 'Cabelos longos', 'Pele clara'],
+                correctAnswer: 'Olhos tenros'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: O Segundo Casamento por Raquel',
+                location: 'Harã',
+                objective: 'Observar a insistência de Jacó por Raquel e o acordo com Labão.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Jacó confrontou Labão sobre o engano.',
+                    'Labão concordou em dar Raquel a Jacó após a semana de Lia, por mais sete anos de trabalho.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Gênesis 29:27-30',
+                enigma: 'Por quantos anos adicionais Jacó trabalhou por Raquel?',
+                options: ['Sete anos', 'Três anos', 'Cinco anos'],
+                correctAnswer: 'Sete anos'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: Os Primeiros Filhos de Lia',
+                location: 'Harã',
+                objective: 'Conhecer os primeiros filhos que Lia teve com Jacó.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Deus viu que Lia era desprezada e abriu sua madre.',
+                    'Ela deu à luz Rúben, Simeão, Levi e Judá.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Gênesis 29:31-35',
+                enigma: 'Qual foi o primeiro filho de Lia?',
+                options: ['Rúben', 'Simeão', 'Levi'],
+                correctAnswer: 'Rúben'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Esterilidade de Raquel',
+                location: 'Harã',
+                objective: 'Entender a angústia de Raquel por não ter filhos.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Raquel era estéril e invejava sua irmã.',
+                    'Ela clamou a Jacó: "Dá-me filhos, senão morro!".'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Gênesis 30:1',
+                enigma: 'Qual era o principal sofrimento de Raquel?',
+                options: ['Esterilidade', 'Doença', 'Solidão'],
+                correctAnswer: 'Esterilidade'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: Bila e Zilpa',
+                location: 'Harã',
+                objective: 'Aprender sobre as servas dadas a Jacó para ter filhos.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Raquel deu sua serva Bila a Jacó para ter filhos por ela.',
+                    'Lia, vendo que parara de ter filhos, deu sua serva Zilpa a Jacó.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Gênesis 30:3-4, 9-10',
+                enigma: 'Qual era o nome da serva de Raquel?',
+                options: ['Bila', 'Zilpa', 'Hagar'],
+                correctAnswer: 'Bila'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: Os Filhos das Servas',
+                location: 'Harã',
+                objective: 'Conhecer os filhos nascidos das servas Bila e Zilpa.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Bila deu à luz Dã e Naftali.',
+                    'Zilpa deu à luz Gade e Aser.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Gênesis 30:6-8, 11-13',
+                enigma: 'Qual filho nasceu de Bila e foi chamado de "justiça" por Raquel?',
+                options: ['Dã', 'Naftali', 'Gade'],
+                correctAnswer: 'Dã'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: Lia e as Mandrágoras',
+                location: 'Harã',
+                objective: 'Entender a disputa pelas mandrágoras e seus efeitos.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Rúben encontrou mandrágoras no campo e as trouxe para Lia.',
+                    'Raquel pediu as mandrágoras a Lia em troca de uma noite com Jacó.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Gênesis 30:14-16',
+                enigma: 'O que Rúben encontrou no campo que causou uma disputa entre as irmãs?',
+                options: ['Mandrágoras', 'Frutas', 'Flores'],
+                correctAnswer: 'Mandrágoras'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Mais Filhos para Lia',
+                location: 'Harã',
+                objective: 'Aprender sobre os últimos filhos de Lia.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Deus ouviu Lia, e ela engravidou novamente.',
+                    'Ela deu à luz Issacar, Zebulom e Diná.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Gênesis 30:17-21',
+                enigma: 'Qual foi o nome do filho que Lia chamou de "recompensa" de Deus?',
+                options: ['Issacar', 'Zebulom', 'José'],
+                correctAnswer: 'Issacar'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: O Nascimento de José',
+                location: 'Harã',
+                objective: 'Testemunhar o cumprimento da promessa de Deus a Raquel.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Deus se lembrou de Raquel e abriu sua madre.',
+                    'Ela deu à luz um filho e o chamou de José, dizendo: "Acrescente-me o Senhor outro filho!".'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Gênesis 30:22-24',
+                enigma: 'Qual foi o nome do primeiro filho de Raquel?',
+                options: ['José', 'Benjamim', 'Dã'],
+                correctAnswer: 'José'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: O Retorno de Jacó para Canaã',
+                location: 'Harã para Canaã',
+                objective: 'Acompanhar a decisão de Jacó de deixar Labão e retornar à sua terra.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Jacó decidiu voltar para sua terra natal com sua família e bens.',
+                    'Ele fugiu secretamente de Labão.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Gênesis 31:17-21',
+                enigma: 'De quem Jacó fugiu secretamente ao deixar Harã?',
+                options: ['Labão', 'Esaú', 'Seus irmãos'],
+                correctAnswer: 'Labão'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: O Roubo dos Ídolos do Lar',
+                location: 'Harã',
+                objective: 'Aprender sobre o ato de Raquel antes de partir de Harã.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Raquel roubou os ídolos do lar de seu pai Labão.',
+                    'Labão perseguiu Jacó para reaver seus ídolos.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Gênesis 31:19, 30-35',
+                enigma: 'O que Raquel roubou da casa de seu pai Labão?',
+                options: ['Os ídolos do lar', 'Seu dote', 'Ouro e prata'],
+                correctAnswer: 'Os ídolos do lar'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: O Nascimento de Benjamim e a Morte de Raquel',
+                location: 'Caminho para Efrata',
+                objective: 'Testemunhar o nascimento do último filho de Jacó e a morte de Raquel.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Raquel deu à luz seu segundo filho no caminho para Efrata.',
+                    'Ela morreu durante o parto e foi sepultada ali.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Gênesis 35:16-19',
+                enigma: 'Qual foi o nome do último filho de Jacó, nascido de Raquel?',
+                options: ['Benjamim', 'Judá', 'Levi'],
+                correctAnswer: 'Benjamim'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-teal-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Deus</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #fcd34d; /* Gold border for God theme */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #f59e0b; /* Amber/Gold for God theme */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #d97706; /* Darker amber on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #f59e0b;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #f59e0b;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #d97706;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-amber-700 mb-4">A História de Deus 👑</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Descubra os atributos, as ações e o plano redentor de Deus ao longo da história bíblica.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Deus!</p>
+            <p class="text-gray-700 mt-6">A história de Deus revela Seu caráter, Sua soberania e Seu amor incondicional pela humanidade.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: A Criação',
+                location: 'O Universo',
+                objective: 'Entender o papel de Deus como Criador de todas as coisas.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'No princípio, Deus criou os céus e a terra.',
+                    'Ele formou tudo pela Sua palavra.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Gênesis 1:1',
+                enigma: 'O que Deus criou no princípio?',
+                options: ['Os céus e a terra', 'Os anjos', 'O homem'],
+                correctAnswer: 'Os céus e a terra'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: A Santidade de Deus',
+                location: 'Céu',
+                objective: 'Compreender a pureza e perfeição do caráter de Deus.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Deus é santo e separado de todo mal.',
+                    'Ele é perfeito em todos os Seus caminhos.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Levítico 11:44',
+                enigma: 'Qual atributo de Deus significa que Ele é separado e puro?',
+                options: ['Santidade', 'Onipotência', 'Onisciência'],
+                correctAnswer: 'Santidade'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Onipotência de Deus',
+                location: 'Em todo lugar',
+                objective: 'Reconhecer o poder ilimitado de Deus.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Para Deus, nada é impossível.',
+                    'Ele pode fazer todas as coisas.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Lucas 1:37',
+                enigma: 'Qual atributo de Deus se refere ao Seu poder ilimitado?',
+                options: ['Onipotência', 'Onisciência', 'Onipresença'],
+                correctAnswer: 'Onipotência'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Onisciência de Deus',
+                location: 'Em todo lugar',
+                objective: 'Entender que Deus sabe todas as coisas.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Deus conhece nossos pensamentos antes mesmo de falarmos.',
+                    'Ele sabe o fim desde o princípio.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Salmos 139:4',
+                enigma: 'Qual atributo de Deus significa que Ele sabe tudo?',
+                options: ['Onisciência', 'Onipotência', 'Onipresença'],
+                correctAnswer: 'Onisciência'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Onipresença de Deus',
+                location: 'Em todo lugar',
+                objective: 'Compreender que Deus está presente em todos os lugares.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Não há lugar para onde possamos fugir da Sua presença.',
+                    'Ele preenche os céus e a terra.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Salmos 139:7-8',
+                enigma: 'Qual atributo de Deus significa que Ele está em todos os lugares ao mesmo tempo?',
+                options: ['Onipresença', 'Onisciência', 'Onipotência'],
+                correctAnswer: 'Onipresença'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Amor de Deus',
+                location: 'Coração de Deus',
+                objective: 'Entender o amor incondicional de Deus pela humanidade.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Deus amou o mundo de tal maneira que deu Seu Filho unigênito.',
+                    'Seu amor é eterno e fiel.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'João 3:16',
+                enigma: 'O que Deus deu por causa do Seu grande amor pelo mundo?',
+                options: ['Seu Filho unigênito', 'Riquezas', 'Poder'],
+                correctAnswer: 'Seu Filho unigênito'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Justiça de Deus',
+                location: 'Seu Trono',
+                objective: 'Reconhecer que Deus é justo e reto em Seus julgamentos.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Ele julga o mundo com retidão.',
+                    'Sua justiça é perfeita e inabalável.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Salmos 9:8',
+                enigma: 'Como Deus julga o mundo?',
+                options: ['Com retidão', 'Com misericórdia', 'Com paciência'],
+                correctAnswer: 'Com retidão'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: A Fidelidade de Deus',
+                location: 'Sua Palavra',
+                objective: 'Compreender que Deus cumpre todas as Suas promessas.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Ele é fiel e não pode negar-Se a Si mesmo.',
+                    'Suas promessas são "sim" e "amém".'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: '2 Timóteo 2:13',
+                enigma: 'O que Deus não pode negar, demonstrando Sua fidelidade?',
+                options: ['A Si mesmo', 'Sua palavra', 'Sua criação'],
+                correctAnswer: 'A Si mesmo'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: A Misericórdia de Deus',
+                location: 'Sua Graça',
+                objective: 'Entender a compaixão e o perdão de Deus.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Suas misericórdias são a causa de não sermos consumidos.',
+                    'Ele é tardio em irar-se e grande em benignidade.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Lamentações 3:22-23',
+                enigma: 'O que é a causa de não sermos consumidos, segundo a Bíblia?',
+                options: ['As misericórdias do Senhor', 'Nossas boas obras', 'Nossa fé'],
+                correctAnswer: 'As misericórdias do Senhor'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: O Plano de Redenção',
+                location: 'Desde a Eternidade',
+                objective: 'Compreender o plano de Deus para salvar a humanidade.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Deus enviou Jesus Cristo para morrer por nossos pecados.',
+                    'A salvação é um dom de Deus pela graça.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Efésios 2:8-9',
+                enigma: 'Como somos salvos, segundo a Bíblia?',
+                options: ['Pela graça, por meio da fé', 'Pelas obras', 'Pelo conhecimento'],
+                correctAnswer: 'Pela graça, por meio da fé'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Deus como Pai',
+                location: 'Seu Reino',
+                objective: 'Entender o relacionamento de Deus como Pai para Seus filhos.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Ele nos adota como filhos por meio de Jesus Cristo.',
+                    'Ele cuida de nós como um pai cuida de seus filhos.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Gálatas 4:5-7',
+                enigma: 'O que nos tornamos por meio de Jesus Cristo, pela adoção de Deus?',
+                options: ['Filhos', 'Servos', 'Amigos'],
+                correctAnswer: 'Filhos'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Voz de Deus',
+                location: 'Em todo lugar',
+                objective: 'Reconhecer as formas como Deus se comunica com a humanidade.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Deus fala através de Sua Palavra (a Bíblia).',
+                    'Ele também fala através da criação e do Espírito Santo.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Hebreus 1:1-2',
+                enigma: 'De que forma principal Deus falou conosco nos últimos dias?',
+                options: ['Pelo Filho', 'Pelos profetas', 'Pelos anjos'],
+                correctAnswer: 'Pelo Filho'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Providência de Deus',
+                location: 'Em todas as coisas',
+                objective: 'Compreender que Deus governa e sustenta todas as coisas.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Ele trabalha em todas as coisas para o bem daqueles que O amam.',
+                    'Nada acontece sem a Sua permissão e propósito.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Romanos 8:28',
+                enigma: 'Para quem todas as coisas cooperam para o bem, segundo a Bíblia?',
+                options: ['Aqueles que amam a Deus', 'Todos os homens', 'Os justos'],
+                correctAnswer: 'Aqueles que amam a Deus'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: A Soberania de Deus',
+                location: 'Seu Trono',
+                objective: 'Reconhecer que Deus tem controle absoluto sobre tudo.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Ele faz o que Lhe apraz nos céus e na terra.',
+                    'Ninguém pode frustrar Seus planos.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Salmos 115:3',
+                enigma: 'Onde Deus faz o que Lhe apraz?',
+                options: ['Nos céus e na terra', 'Apenas no céu', 'Apenas na terra'],
+                correctAnswer: 'Nos céus e na terra'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: A Glória de Deus',
+                location: 'Em toda a criação',
+                objective: 'Admirar a majestade e a excelência de Deus.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Os céus proclamam a glória de Deus.',
+                    'Toda a terra está cheia da Sua glória.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Salmos 19:1',
+                enigma: 'O que proclama a glória de Deus?',
+                options: ['Os céus', 'Os homens', 'Os animais'],
+                correctAnswer: 'Os céus'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-amber-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

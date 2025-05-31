@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Elias</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #ef4444; /* Red border for Elijah game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #dc2626; /* Red for Elijah game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #b91c1c; /* Darker red on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #dc2626;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #dc2626;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #b91c1c;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-red-700 mb-4">A História de Elias 🔥</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Descubra a poderosa história de Elias, o profeta de fogo, que defendeu a adoração ao único Deus verdadeiro em Israel.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Elias!</p>
+            <p class="text-gray-700 mt-6">A história de Elias é um testemunho da soberania de Deus, do poder da oração e da fidelidade de um profeta em meio à apostasia.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: A Profecia da Seca',
+                location: 'Gileade e Samaria',
+                objective: 'Entender a primeira profecia de Elias e sua causa.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Elias, o tisbita, apareceu diante do rei Acabe.',
+                    'Ele profetizou que não haveria orvalho nem chuva por anos, exceto pela sua palavra.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: '1 Reis 17:1',
+                enigma: 'Quem era o rei de Israel a quem Elias profetizou a seca?',
+                options: ['Acabe', 'Jezabel', 'Salomão'],
+                correctAnswer: 'Acabe'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: Elias no Ribeirão de Querite',
+                location: 'Ribeirão de Querite',
+                objective: 'Aprender sobre a provisão de Deus para Elias durante a seca.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Deus instruiu Elias a se esconder no ribeirão de Querite.',
+                    'Ele foi alimentado por corvos, que lhe traziam pão e carne de manhã e à noite.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: '1 Reis 17:2-6',
+                enigma: 'Quem alimentou Elias no ribeirão de Querite?',
+                options: ['Corvos', 'Anjos', 'Uma mulher'],
+                correctAnswer: 'Corvos'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: Elias e a Viúva de Sarepta',
+                location: 'Sarepta',
+                objective: 'Descobrir o milagre da provisão na casa da viúva.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Quando o ribeirão secou, Deus enviou Elias a Sarepta.',
+                    'Uma viúva, que tinha apenas um punhado de farinha e um pouco de azeite, o alimentou, e sua farinha e azeite não se acabaram.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: '1 Reis 17:8-16',
+                enigma: 'O que não se acabou na casa da viúva de Sarepta?',
+                options: ['Farinha e azeite', 'Água e pão', 'Vinho e carne'],
+                correctAnswer: 'Farinha e azeite'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Ressurreição do Filho da Viúva',
+                location: 'Sarepta',
+                objective: 'Entender o poder de Deus através de Elias para ressuscitar os mortos.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'O filho da viúva de Sarepta adoeceu e morreu.',
+                    'Elias orou ao Senhor, e o Senhor ouviu sua voz, e a vida do menino voltou a ele.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: '1 Reis 17:17-24',
+                enigma: 'Quem Elias ressuscitou na casa da viúva de Sarepta?',
+                options: ['O filho da viúva', 'Um servo', 'A própria viúva'],
+                correctAnswer: 'O filho da viúva'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: O Desafio no Monte Carmelo',
+                location: 'Monte Carmelo',
+                objective: 'Aprender sobre o confronto de Elias com os profetas de Baal.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Elias desafiou os 450 profetas de Baal e os 400 profetas de Aserá no Monte Carmelo.',
+                    'Ele propôs que cada lado preparasse um sacrifício, e o deus que respondesse com fogo seria o verdadeiro Deus.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: '1 Reis 18:19-24',
+                enigma: 'Quantos profetas de Baal Elias desafiou no Monte Carmelo?',
+                options: ['450', '400', '850'],
+                correctAnswer: '450'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Fogo do Senhor no Carmelo',
+                location: 'Monte Carmelo',
+                objective: 'Testemunhar a demonstração do poder de Deus.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Os profetas de Baal clamaram por horas, mas não houve resposta.',
+                    'Elias derramou água sobre seu sacrifício três vezes, e o fogo do Senhor desceu e consumiu o holocausto, a lenha, as pedras e a água.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: '1 Reis 18:36-39',
+                enigma: 'O que Elias derramou sobre o sacrifício antes que o fogo descesse?',
+                options: ['Água', 'Azeite', 'Vinho'],
+                correctAnswer: 'Água'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Chuva Retorna',
+                location: 'Monte Carmelo',
+                objective: 'Observar o fim da seca após a vitória de Deus.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Após a vitória no Carmelo, Elias orou por chuva.',
+                    'Ele enviou seu servo sete vezes para olhar para o mar, e na sétima vez, uma pequena nuvem subiu do mar, trazendo uma grande chuva.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: '1 Reis 18:41-45',
+                enigma: 'Quantas vezes o servo de Elias olhou para o mar antes de ver a nuvem?',
+                options: ['Sete vezes', 'Três vezes', 'Uma vez'],
+                correctAnswer: 'Sete vezes'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: Elias Foge de Jezabel',
+                location: 'Jezreel e Berseba',
+                objective: 'Aprender sobre o medo de Elias e sua fuga.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Jezabel jurou matar Elias depois da derrota dos profetas de Baal.',
+                    'Elias fugiu para Berseba e depois para o deserto, desejando a morte.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: '1 Reis 19:1-4',
+                enigma: 'De quem Elias fugiu após o Monte Carmelo?',
+                options: ['Jezabel', 'Acabe', 'O povo de Israel'],
+                correctAnswer: 'Jezabel'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: O Anjo e o Pão Cozido no Fogo',
+                location: 'Deserto',
+                objective: 'Entender a provisão de Deus para Elias no deserto.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Elias adormeceu debaixo de um zimbro, desanimado.',
+                    'Um anjo o tocou e lhe deu pão cozido no fogo e água, fortalecendo-o para uma longa jornada.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: '1 Reis 19:5-8',
+                enigma: 'O que o anjo deu a Elias no deserto para fortalecê-lo?',
+                options: ['Pão e água', 'Carne e vinho', 'Frutas e mel'],
+                correctAnswer: 'Pão e água'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: Elias no Monte Horebe (A Voz Suave e Delicada)',
+                location: 'Monte Horebe (Sinai)',
+                objective: 'Aprender sobre o encontro de Elias com Deus no Monte Horebe.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Elias viajou quarenta dias e quarenta noites até o Monte Horebe.',
+                    'Deus não estava no vento forte, nem no terremoto, nem no fogo, mas na voz mansa e suave.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: '1 Reis 19:11-13',
+                enigma: 'Em que forma Deus se manifestou a Elias no Monte Horebe?',
+                options: ['Uma voz mansa e suave', 'Vento forte', 'Fogo'],
+                correctAnswer: 'Uma voz mansa e suave'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: O Chamado de Eliseu',
+                location: 'Abel-Meolá',
+                objective: 'Observar o chamado de Eliseu como sucessor de Elias.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Deus instruiu Elias a ungir Eliseu como profeta em seu lugar.',
+                    'Elias encontrou Eliseu arando com doze juntas de bois e lançou seu manto sobre ele.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: '1 Reis 19:19-21',
+                enigma: 'O que Elias lançou sobre Eliseu como sinal de seu chamado?',
+                options: ['Seu manto', 'Um cajado', 'Um livro'],
+                correctAnswer: 'Seu manto'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Vinha de Nabote',
+                location: 'Jezreel',
+                objective: 'Compreender a injustiça contra Nabote e a condenação de Acabe e Jezabel.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Acabe desejou a vinha de Nabote, mas Nabote recusou-se a vendê-la.',
+                    'Jezabel orquestrou a morte de Nabote para que Acabe pudesse tomar a vinha, e Elias profetizou o julgamento de Deus sobre eles.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: '1 Reis 21:1-19',
+                enigma: 'Quem orquestrou a morte de Nabote para que Acabe tomasse sua vinha?',
+                options: ['Jezabel', 'Acabe', 'Um servo'],
+                correctAnswer: 'Jezabel'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: Elias e os Capitães de 50',
+                location: 'Samaria',
+                objective: 'Aprender sobre o julgamento de Deus sobre os mensageiros do rei Acazias.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'O rei Acazias enviou mensageiros para consultar Baal-Zebube.',
+                    'Elias fez descer fogo do céu para consumir dois capitães de cinquenta homens e seus grupos.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: '2 Reis 1:9-12',
+                enigma: 'Quantos capitães de cinquenta homens foram consumidos pelo fogo do céu?',
+                options: ['Dois', 'Um', 'Três'],
+                correctAnswer: 'Dois'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: A Separação do Jordão',
+                location: 'Rio Jordão',
+                objective: 'Observar o último milagre de Elias antes de ser levado.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Elias e Eliseu estavam atravessando o Jordão.',
+                    'Elias pegou seu manto, enrolou-o e feriu as águas, que se dividiram, e eles passaram a seco.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: '2 Reis 2:7-8',
+                enigma: 'O que Elias usou para dividir as águas do rio Jordão?',
+                options: ['Seu manto', 'Um cajado', 'Sua mão'],
+                correctAnswer: 'Seu manto'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: Elias é Levado ao Céu',
+                location: 'Além do Jordão',
+                objective: 'Refletir sobre a ascensão de Elias ao céu.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Enquanto Elias e Eliseu caminhavam e conversavam, um carro de fogo e cavalos de fogo os separaram.',
+                    'Elias subiu ao céu num redemoinho.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: '2 Reis 2:11',
+                enigma: 'Como Elias foi levado ao céu?',
+                options: ['Num carro de fogo e redemoinho', 'Numa nuvem', 'Numa escada'],
+                correctAnswer: 'Num carro de fogo e redemoinho'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-red-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

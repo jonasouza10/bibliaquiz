@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Davi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #facc15; /* Yellow border for David game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #eab308; /* Yellow for David game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #d97706; /* Darker yellow on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #eab308;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #eab308;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #d97706;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-yellow-700 mb-4">A História de Davi 🐑</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Acompanhe a extraordinária jornada de Davi, o pastor que se tornou rei, um homem segundo o coração de Deus.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Davi!</p>
+            <p class="text-gray-700 mt-6">A história de Davi nos ensina sobre fé, coragem, arrependimento e a fidelidade de Deus em cumprir Suas promessas, mesmo através de nossas falhas.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Jovem Pastor de Belém',
+                location: 'Belém',
+                objective: 'Entender a origem humilde de Davi.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Davi era o filho mais novo de Jessé, de Belém.',
+                    'Ele era um pastor de ovelhas.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: '1 Samuel 16:11',
+                enigma: 'Qual era a profissão de Davi antes de ser ungido rei?',
+                options: ['Pastor', 'Agricultor', 'Soldado'],
+                correctAnswer: 'Pastor'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: Davi é Ungido Rei',
+                location: 'Belém',
+                objective: 'Aprender sobre a unção de Davi por Samuel.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Deus rejeitou Saul como rei e enviou Samuel à casa de Jessé.',
+                    'Samuel ungiu Davi, o mais jovem dos filhos de Jessé, e o Espírito do Senhor veio sobre ele.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: '1 Samuel 16:12-13',
+                enigma: 'Quem ungiu Davi como o futuro rei de Israel?',
+                options: ['Samuel', 'Eli', 'Saul'],
+                correctAnswer: 'Samuel'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: Davi Toca Harpa para Saul',
+                location: 'Gibeá',
+                objective: 'Descobrir como Davi entrou na corte de Saul.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Um espírito maligno atormentava Saul.',
+                    'Davi foi chamado para tocar harpa e acalmar o rei.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: '1 Samuel 16:23',
+                enigma: 'Qual instrumento Davi tocava para acalmar o rei Saul?',
+                options: ['Harpa', 'Flauta', 'Trombeta'],
+                correctAnswer: 'Harpa'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: Davi e Golias',
+                location: 'Vale de Elá',
+                objective: 'Entender a vitória de Davi sobre o gigante filisteu.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Golias, um gigante filisteu, desafiava o exército de Israel por quarenta dias.',
+                    'Davi o derrotou com uma funda e uma pedra, confiando em Deus.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: '1 Samuel 17:48-50',
+                enigma: 'Com o que Davi derrotou Golias?',
+                options: ['Uma funda e uma pedra', 'Uma espada', 'Um arco e flechas'],
+                correctAnswer: 'Uma funda e uma pedra'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Amizade com Jônatas',
+                location: 'Gibeá',
+                objective: 'Aprender sobre a profunda amizade entre Davi e Jônatas.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Jônatas, filho de Saul, amou Davi como a si mesmo.',
+                    'Eles fizeram uma aliança de amizade e lealdade.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: '1 Samuel 18:1-3',
+                enigma: 'Quem era o filho de Saul que se tornou o melhor amigo de Davi?',
+                options: ['Jônatas', 'Is-Bosete', 'Malquisua'],
+                correctAnswer: 'Jônatas'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Ciúme de Saul e a Fuga de Davi',
+                location: 'Gibeá e Ramá',
+                objective: 'Entender o crescente ciúme de Saul e a necessidade de Davi fugir.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Saul ficou ciumento da popularidade de Davi após a vitória sobre Golias.',
+                    'Saul tentou matar Davi várias vezes, forçando-o a fugir e viver como fugitivo.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: '1 Samuel 18:8-9, 19:9-10',
+                enigma: 'O que Saul tentou fazer com Davi por causa de ciúme?',
+                options: ['Matá-lo', 'Prendê-lo', 'Exilá-lo'],
+                correctAnswer: 'Matá-lo'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: Davi Poupa a Vida de Saul (Caverna de En-Gedi)',
+                location: 'Caverna de En-Gedi',
+                objective: 'Observar a misericórdia de Davi para com Saul.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Saul entrou na caverna onde Davi e seus homens estavam escondidos.',
+                    'Davi cortou um pedaço da orla do manto de Saul, mas recusou-se a feri-lo, pois era o ungido do Senhor.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: '1 Samuel 24:3-7',
+                enigma: 'O que Davi cortou do manto de Saul na caverna?',
+                options: ['Um pedaço da orla', 'Uma manga', 'Um pedaço de pano'],
+                correctAnswer: 'Um pedaço da orla'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: Davi Poupa a Vida de Saul (Colina de Haquilá)',
+                location: 'Colina de Haquilá',
+                objective: 'Aprender sobre o segundo ato de misericórdia de Davi para com Saul.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Davi e Abisai se infiltraram no acampamento de Saul à noite.',
+                    'Davi pegou a lança e o jarro de água de Saul, mas não o feriu, reafirmando seu respeito pelo ungido de Deus.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: '1 Samuel 26:7-12',
+                enigma: 'Quais dois itens Davi pegou ao lado da cabeça de Saul enquanto ele dormia?',
+                options: ['Lança e jarro de água', 'Espada e escudo', 'Arco e flechas'],
+                correctAnswer: 'Lança e jarro de água'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: A Morte de Saul e Jônatas',
+                location: 'Monte Gilboa',
+                objective: 'Entender o trágico fim de Saul e seu filho Jônatas.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Os filisteus lutaram contra Israel no Monte Gilboa.',
+                    'Saul e Jônatas morreram em batalha.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: '1 Samuel 31:1-6',
+                enigma: 'Onde Saul e Jônatas morreram em batalha?',
+                options: ['Monte Gilboa', 'Vale de Elá', 'Micmás'],
+                correctAnswer: 'Monte Gilboa'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: Davi é Ungido Rei de Judá',
+                location: 'Hebrom',
+                objective: 'Aprender sobre a primeira unção de Davi como rei.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Após a morte de Saul, Davi consultou o Senhor e foi para Hebrom.',
+                    'Os homens de Judá o ungiram rei sobre a casa de Judá.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: '2 Samuel 2:1-4',
+                enigma: 'Onde Davi foi ungido rei pela primeira vez, sobre a casa de Judá?',
+                options: ['Hebrom', 'Belém', 'Jerusalém'],
+                correctAnswer: 'Hebrom'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Davi se Torna Rei de Todo o Israel',
+                location: 'Hebrom',
+                objective: 'Observar a união de todas as tribos sob o reinado de Davi.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Após sete anos e meio reinando em Hebrom sobre Judá, os anciãos de Israel vieram a ele.',
+                    'Eles o ungiram rei sobre todo o Israel.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: '2 Samuel 5:1-5',
+                enigma: 'Por quantos anos Davi reinou em Hebrom antes de se tornar rei de todo o Israel?',
+                options: ['Sete anos e meio', 'Três anos', 'Dez anos'],
+                correctAnswer: 'Sete anos e meio'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
+                title: 'Capítulo 12: Conquista de Jerusalém',
                 location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                objective: 'Compreender a conquista de Jerusalém e sua importância.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Davi e seus homens foram a Jerusalém para lutar contra os jebuseus.',
+                    'Ele conquistou a fortaleza de Sião, que se tornou a Cidade de Davi.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: '2 Samuel 5:6-9',
+                enigma: 'Qual cidade Davi conquistou e fez sua capital?',
+                options: ['Jerusalém', 'Jericó', 'Samaria'],
+                correctAnswer: 'Jerusalém'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
+                title: 'Capítulo 13: A Arca da Aliança em Jerusalém',
                 location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                objective: 'Aprender sobre a alegria de Davi ao trazer a Arca para Jerusalém.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Davi desejou trazer a Arca da Aliança para Jerusalém.',
+                    'Ele dançou com todo o seu vigor diante do Senhor, celebrando a chegada da Arca.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: '2 Samuel 6:12-15',
+                enigma: 'O que Davi trouxe para Jerusalém com grande celebração?',
+                options: ['A Arca da Aliança', 'O templo', 'Um tesouro'],
+                correctAnswer: 'A Arca da Aliança'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
+                title: 'Capítulo 14: O Pecado de Davi e o Profeta Natã',
                 location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                objective: 'Entender a queda de Davi e o confronto com o profeta Natã.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Davi cometeu adultério com Bate-Seba e ordenou a morte de Urias, seu marido.',
+                    'O profeta Natã confrontou Davi com uma parábola, e Davi se arrependeu.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: '2 Samuel 12:1-13',
+                enigma: 'Quem foi o profeta que confrontou Davi sobre seu pecado?',
+                options: ['Natã', 'Samuel', 'Eli'],
+                correctAnswer: 'Natã'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
+                title: 'Capítulo 15: O Legado de Davi',
                 location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                objective: 'Refletir sobre o impacto duradouro do reinado de Davi.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Davi foi um grande rei, guerreiro e poeta.',
+                    'Sua linhagem levou a Jesus Cristo, o Messias.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Atos 13:22, Mateus 1:1',
+                enigma: 'Qual é um dos legados mais importantes de Davi?',
+                options: ['Sua linhagem levou a Jesus Cristo', 'Ele construiu o templo', 'Ele nunca pecou'],
+                correctAnswer: 'Sua linhagem levou a Jesus Cristo'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-yellow-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

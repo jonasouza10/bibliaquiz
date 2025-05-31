@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Salomão</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #f59e0b; /* Amber border for Solomon game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #f59e0b; /* Amber for Solomon game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #d97706; /* Darker amber on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #f59e0b;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #f59e0b;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #d97706;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-amber-700 mb-4">A História de Salomão 👑</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Explore a vida de Salomão, o rei mais sábio e rico de Israel, e as lições de sua glória e suas falhas.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Salomão!</p>
+            <p class="text-gray-700 mt-6">A história de Salomão é um lembrete de que a verdadeira sabedoria e a prosperidade vêm de Deus, e que a obediência contínua é essencial para manter as bênçãos divinas.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: A Sucessão ao Trono de Davi',
+                location: 'Jerusalém',
+                objective: 'Entender como Salomão se tornou rei após Davi.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Davi, em sua velhice, designou Salomão como seu sucessor.',
+                    'Adonias tentou usurpar o trono, mas foi impedido por Natã e Bate-Seba.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: '1 Reis 1:28-30, 39',
+                enigma: 'Quem ungiu Salomão como rei por ordem de Davi?',
+                options: ['Zadoque, o sacerdote', 'Natã, o profeta', 'Benaia, filho de Joiada'],
+                correctAnswer: 'Zadoque, o sacerdote'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: O Pedido de Sabedoria',
+                location: 'Gibeão',
+                objective: 'Aprender sobre o famoso pedido de Salomão a Deus.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Deus apareceu a Salomão em um sonho em Gibeão e lhe ofereceu o que quisesse.',
+                    'Salomão pediu um coração sábio e discernimento para governar o povo de Deus.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: '1 Reis 3:5-9',
+                enigma: 'O que Salomão pediu a Deus em Gibeão?',
+                options: ['Sabedoria e discernimento', 'Riqueza e glória', 'Longa vida e vitória sobre inimigos'],
+                correctAnswer: 'Sabedoria e discernimento'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: O Julgamento Sábio',
+                location: 'Jerusalém',
+                objective: 'Observar a sabedoria de Salomão em um caso difícil.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Duas prostitutas vieram a Salomão, cada uma alegando ser a mãe de um bebê vivo.',
+                    'Salomão propôs dividir o bebê ao meio para descobrir a verdadeira mãe.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: '1 Reis 3:16-28',
+                enigma: 'Qual foi a solução de Salomão para o problema das duas mulheres e o bebê?',
+                options: ['Dividir o bebê ao meio', 'Dar o bebê à primeira mulher', 'Dar o bebê à segunda mulher'],
+                correctAnswer: 'Dividir o bebê ao meio'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
+                title: 'Capítulo 4: A Construção do Templo (Início)',
                 location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                objective: 'Entender o início da construção do Templo do Senhor.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Salomão começou a construir o Templo do Senhor, uma tarefa que seu pai Davi desejava fazer.',
+                    'Ele usou madeira de cedro do Líbano e pedras lavradas.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: '1 Reis 6:1-2',
+                enigma: 'Qual era o principal objetivo da construção do Templo por Salomão?',
+                options: ['Ser uma casa para o nome do Senhor', 'Ser um palácio real', 'Ser uma fortaleza militar'],
+                correctAnswer: 'Ser uma casa para o nome do Senhor'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
+                title: 'Capítulo 5: A Dedicação do Templo',
                 location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                objective: 'Aprender sobre a dedicação do Templo e a glória de Deus.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Após sete anos de construção, o Templo foi concluído.',
+                    'Durante a dedicação, a glória do Senhor encheu o Templo, impedindo os sacerdotes de ministrar.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: '1 Reis 8:10-11',
+                enigma: 'O que encheu o Templo durante sua dedicação?',
+                options: ['A glória do Senhor', 'Fumaça de incenso', 'Uma nuvem escura'],
+                correctAnswer: 'A glória do Senhor'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: A Riqueza e Glória de Salomão',
+                location: 'Jerusalém',
+                objective: 'Entender a vasta riqueza e glória de Salomão.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Salomão recebia 666 talentos de ouro por ano.',
+                    'Seus carros e cavalos, seus utensílios de ouro e prata, e sua sabedoria eram incomparáveis.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: '1 Reis 10:14, 23-25',
+                enigma: 'Quantos talentos de ouro Salomão recebia por ano?',
+                options: ['666', '1000', '500'],
+                correctAnswer: '666'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Visita da Rainha de Sabá',
+                location: 'Jerusalém',
+                objective: 'Observar a admiração da Rainha de Sabá pela sabedoria de Salomão.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'A Rainha de Sabá ouviu falar da fama de Salomão e veio para testá-lo com perguntas difíceis.',
+                    'Ela ficou impressionada com sua sabedoria, riqueza e a organização de seu reino.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: '1 Reis 10:1-7',
+                enigma: 'De qual reino a rainha veio para visitar Salomão?',
+                options: ['Sabá', 'Egito', 'Babilônia'],
+                correctAnswer: 'Sabá'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
+                title: 'Capítulo 8: As Muitas Esposas e a Idolatria',
                 location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                objective: 'Aprender sobre a queda de Salomão na idolatria.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Salomão amou muitas mulheres estrangeiras que não eram de Israel.',
+                    'Suas esposas desviaram seu coração para outros deuses, e ele construiu altares para eles.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: '1 Reis 11:1-8',
+                enigma: 'O que as muitas esposas estrangeiras de Salomão fizeram com seu coração?',
+                options: ['Desviaram-no para outros deuses', 'Ensinaram-lhe sabedoria', 'Ajudaram-no a governar'],
+                correctAnswer: 'Desviaram-no para outros deuses'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
+                title: 'Capítulo 9: O Juízo de Deus sobre Salomão',
                 location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                objective: 'Entender a consequência da desobediência de Salomão.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'O Senhor ficou irado com Salomão porque seu coração se desviou.',
+                    'Deus declarou que rasgaria o reino de suas mãos, mas deixaria uma tribo por causa de Davi.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: '1 Reis 11:9-13',
+                enigma: 'Qual foi o juízo de Deus sobre Salomão por sua idolatria?',
+                options: ['O reino seria rasgado de suas mãos', 'Ele perderia sua riqueza', 'Ele morreria jovem'],
+                correctAnswer: 'O reino seria rasgado de suas mãos'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: O Surgimento de Adversários',
+                location: 'Edon, Damasco e Israel',
+                objective: 'Aprender sobre os adversários que Deus levantou contra Salomão.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Deus levantou Hadade, o edomita, como adversário de Salomão.',
+                    'Rezon, de Damasco, também se tornou um adversário, e Jeroboão se rebelou em Israel.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: '1 Reis 11:14, 23, 26',
+                enigma: 'Quem foi um dos principais adversários que Deus levantou contra Salomão?',
+                options: ['Hadade, o edomita', 'Golias, o filisteu', 'Naamã, o sírio'],
+                correctAnswer: 'Hadade, o edomita'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
+                title: 'Capítulo 11: A Profecia a Jeroboão',
                 location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                objective: 'Observar a profecia sobre a divisão do reino.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'O profeta Aías encontrou Jeroboão e rasgou sua capa em doze pedaços.',
+                    'Ele disse a Jeroboão que Deus lhe daria dez tribos de Israel.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: '1 Reis 11:29-31',
+                enigma: 'Quantas tribos o profeta Aías disse que Jeroboão governaria?',
+                options: ['Dez', 'Duas', 'Doze'],
+                correctAnswer: 'Dez'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
+                title: 'Capítulo 12: Os Escritos de Salomão',
                 location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                objective: 'Compreender a contribuição literária de Salomão.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Salomão escreveu três mil provérbios e mil e cinco cânticos.',
+                    'Ele falou sobre árvores, animais, aves, répteis e peixes.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: '1 Reis 4:32-33',
+                enigma: 'Quantos provérbios Salomão escreveu?',
+                options: ['Três mil', 'Mil', 'Sete mil'],
+                correctAnswer: 'Três mil'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
+                title: 'Capítulo 13: O Fim do Reinado de Salomão',
                 location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                objective: 'Aprender sobre o declínio do reinado de Salomão.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Apesar de sua sabedoria e riqueza, Salomão se desviou de Deus em sua velhice.',
+                    'Seu coração não foi inteiramente fiel ao Senhor, ao contrário de seu pai Davi.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: '1 Reis 11:4-6',
+                enigma: 'Qual foi a principal falha de Salomão em sua velhice?',
+                options: ['Seu coração se desviou de Deus', 'Ele perdeu todas as suas riquezas', 'Ele perdeu todas as suas batalhas'],
+                correctAnswer: 'Seu coração se desviou de Deus'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
+                title: 'Capítulo 14: A Morte de Salomão',
                 location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                objective: 'Observar o fim do reinado de Salomão.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Salomão reinou sobre todo o Israel por quarenta anos.',
+                    'Ele morreu e foi sepultado na Cidade de Davi.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: '1 Reis 11:42-43',
+                enigma: 'Por quantos anos Salomão reinou sobre Israel?',
+                options: ['Quarenta anos', 'Vinte anos', 'Trinta anos'],
+                correctAnswer: 'Quarenta anos'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
+                title: 'Capítulo 15: O Legado de Salomão',
                 location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                objective: 'Refletir sobre o impacto duradouro do reinado de Salomão.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Salomão é lembrado por sua sabedoria, riqueza e a construção do Templo.',
+                    'No entanto, suas falhas levaram à divisão do reino após sua morte.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: '1 Reis 12:15-16',
+                enigma: 'O que aconteceu com o reino de Israel após a morte de Salomão?',
+                options: ['Foi dividido em dois', 'Permaneceu unido', 'Foi conquistado por outra nação'],
+                correctAnswer: 'Foi dividido em dois'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-amber-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

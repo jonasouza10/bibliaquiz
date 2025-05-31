@@ -1,752 +1,492 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livro Interativo de Judas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>A História de Judas Iscariotes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0d1226">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Judas Interativo">
-
-<style>
-    /* Estilos globais para o corpo do documento, usando a fonte Inter e gradiente azul marinho */
-    body {
-        font-family: 'Inter', sans-serif;
-        background: linear-gradient(to bottom right, #0d1226, #1a2033); /* Gradiente azul marinho escuro */
-        color: #e2e8f0; /* Texto cinza muito claro */
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-    }
-
-    /* Esconde a barra de rolagem para o modal, mas permite a rolagem do conteúdo */
-    .modal-content::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
-
-    .container {
-        background-color: #1a2033; /* Azul marinho escuro para o container principal */
-        border: 1px solid #2d3748; /* Borda cinza médio */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada e escura */
-        border-radius: 1rem; /* Cantos mais arredondados */
-        max-width: 960px; /* Aumenta um pouco a largura máxima */
-        width: 100%;
-    }
-
-    .nav-bar {
-        background-color: #2d3748; /* Fundo cinza médio para a barra de navegação */
-        border-radius: 0.75rem; /* Cantos arredondados */
-    }
-
-    /* Estilo base para todos os botões da navegação e quiz */
-    .nav-button, .quiz-options button, .quiz-next {
-        background-color: #34495e; /* Azul acinzentado para botões */
-        color: #ffffff; /* Texto branco */
-        font-weight: 600; /* font-semibold */
-        padding: 0.75rem 1.5rem; /* Padding ajustado */
-        border-radius: 0.5rem; /* Cantos arredondados */
-        transition: all 0.3s ease-in-out; /* Transição suave para efeitos */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-        cursor: pointer;
-        border: none; /* Remove borda padrão */
-    }
-
-    /* Efeitos de hover e active para botões */
-    .nav-button:hover, .quiz-options button:hover, .quiz-next:hover {
-        background-color: #2c3e50; /* Azul acinzentado mais escuro no hover */
-        transform: translateY(-2px) scale(1.02); /* Leve levantamento e aumento */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
-    }
-
-    .nav-button:active, .quiz-options button:active, .quiz-next:active {
-        background-color: #1f2a38; /* Azul acinzentado ainda mais escuro no active */
-        transform: translateY(0) scale(1.0); /* Retorna à posição original */
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mais suave no active */
-    }
-
-    .section {
-        background-color: #1a2033; /* Fundo das seções azul marinho escuro */
-        border: 1px solid #2d3748; /* Borda cinza médio */
-        border-radius: 1rem; /* Cantos mais arredondados */
-    }
-
-    h1, h2, h3 {
-        color: #f8fafc; /* Títulos em branco muito claro */
-    }
-
-    .text-gray-200, .text-gray-300, .text-gray-700 { /* Para o texto de parágrafos */
-        color: #cbd5e0; /* Ajustado para cinza azulado claro */
-    }
-    .text-gray-400, .text-gray-600 { /* Para referências e descrições menores */
-        color: #a0aec0; /* Cinza azulado médio */
-    }
-
-    .quiz-question {
-        color: #f8fafc; /* Pergunta do quiz em branco muito claro */
-    }
-
-    /* Estilos para feedback do quiz */
-    .quiz-options button.bg-green-600 {
-        background-color: #10b981; /* Resposta correta em verde */
-        color: #ffffff;
-    }
-    .quiz-options button.bg-red-600 {
-        background-color: #ef4444; /* Resposta errada em vermelho */
-        color: #ffffff;
-    }
-
-    .quiz-feedback.text-green-500 {
-        color: #10b981; /* Feedback correto em verde */
-    }
-    .quiz-feedback.text-red-500 {
-        color: #ef4444; /* Feedback errado em vermelho */
-    }
-
-    .modal-content {
-        background-color: #1a2033; /* Fundo do modal azul marinho escuro */
-        color: #e2e8f0; /* Texto do modal em cinza muito claro */
-        border-radius: 1rem;
-    }
-    .close-btn {
-        color: #a0aec0; /* Botão de fechar em cinza azulado médio */
-    }
-    .close-btn:hover {
-        color: #cbd5e0; /* Hover do botão de fechar em cinza azulado claro */
-    }
-    /* Estilos para o gráfico */
-    canvas {
-        background-color: #2d3748; /* Fundo do gráfico cinza escuro */
-        border-radius: 0.5rem; /* Cantos arredondados */
-    }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .game-container {
+            background-color: #fff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .chapter-section {
+            display: none; /* Hidden by default */
+        }
+        .chapter-section.active {
+            display: block;
+        }
+        .clue-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .clue-list li {
+            background-color: #f9fafb;
+            border-left: 4px solid #374151; /* Dark gray border for Judas game */
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            text-align: left;
+        }
+        .key-verse {
+            font-style: italic;
+            color: #4b5563; /* Gray text */
+            margin-top: 1rem;
+        }
+        .enigma {
+            font-weight: 600;
+            color: #1f2937; /* Darker text */
+            margin-top: 1rem;
+        }
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            align-items: flex-start; /* Align radio buttons to the left */
+            padding-left: 1rem; /* Indent options slightly */
+        }
+        .options-container label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #374151;
+        }
+        .options-container input[type="radio"] {
+            margin-right: 0.5rem;
+            transform: scale(1.2); /* Slightly larger radio buttons */
+        }
+        button {
+            background-color: #374151; /* Dark gray for Judas game */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; /* More rounded */
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: none;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #1f2937; /* Even darker gray on hover */
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            border: 2px solid #374151;
+        }
+        .message-box.show {
+            display: block;
+        }
+        .message-box p {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: #1f2937;
+        }
+        .message-box button {
+            background-color: #374151;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .message-box button:hover {
+            background-color: #1f2937;
+        }
+        .final-revelation {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #10b981; /* Green for success */
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
-    <div class="container mx-auto p-6 text-center shadow-xl">
-        <h1 class="text-4xl font-bold text-white mb-6">Livro Interativo de Judas</h1>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="game-container">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">A História de Judas Iscariotes 💔</h1>
+        <p class="text-gray-700 mb-6">
+            Acompanhe a trágica história de Judas Iscariotes, o discípulo que traiu Jesus, e as consequências de suas escolhas.
+        </p>
 
-        <div class="nav-bar p-3 rounded-lg mb-6 flex flex-wrap justify-center gap-3">
-            <button class="nav-button" onclick="showSectionJudas('inicioJudas')">Início</button>
-            <button class="nav-button" onclick="showSectionJudas('introducaoJudas')">Introdução</button>
-            <button class="nav-button" onclick="showSectionJudas('panoramasJudas')">Panoramas do Livro</button>
-            <button class="nav-button" onclick="showSectionJudas('personagensJudas')">Personagens</button>
-            <button class="nav-button" onclick="showSectionJudas('esbocosJudas')">Esboços</button>
-            <button class="nav-button" onclick="showSectionJudas('temasJudas')">Temas</button>
-            <button class="nav-button" onclick="showSectionJudas('capitulosJudas')">Capítulos</button>
-            <button class="nav-button" onclick="showSectionJudas('quizJudas')">Quiz</button>
-            <button class="nav-button" onclick="showSectionJudas('graficoJudas')">Gráfico</button>
+        <div id="start-screen" class="active">
+            <button id="start-game-btn">Iniciar Jornada</button>
         </div>
 
-        <div id="inicioJudas" class="section p-6 mb-6 text-left shadow-lg active">
-            <h2 class="text-3xl font-semibold text-white mb-4">Bem-vindo ao Livro Interativo de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100">Explore a Epístola de Judas, uma carta concisa e poderosa que exorta os crentes a contenderem diligentemente pela fé que uma vez por todas foi entregue aos santos. Descubra as advertências contra os falsos mestres e apóstatas, e a importância de se edificar na fé, orar no Espírito Santo e guardar-se no amor de Deus. Teste seus conhecimentos com nosso quiz!</p>
-            <p class="text-base leading-relaxed text-blue-200 mt-4">Toda a aplicação utiliza o texto da <strong>Bíblia João Ferreira de Almeida (JFA)</strong>, uma tradução de domínio público amplamente respeitada, para garantir a autenticidade e a fidelidade ao texto bíblico original.</p>
-        </div>
-
-        <div id="introducaoJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Introdução ao Livro de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">A Epístola de Judas é uma das cartas mais curtas do Novo Testamento, composta por apenas um capítulo. O autor se identifica como "Judas, servo de Jesus Cristo e irmão de Tiago". Tradicionalmente, este Judas é identificado como Judas, o irmão de Jesus (Mateus 13:55; Marcos 6:3), o que o torna também irmão de Tiago, o líder da igreja em Jerusalém e autor da Epístola de Tiago. A data de sua escrita é debatida, mas muitos estudiosos a situam entre 65 e 80 d.C., antes da destruição de Jerusalém em 70 d.C., ou mais tarde, entre 80 e 90 d.C., com algumas semelhanças com 2 Pedro sugerindo uma possível interdependência ou uso de fontes comuns.</p>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">O propósito principal de Judas é exortar os crentes a "contenderem diligentemente pela fé que uma vez por todas foi entregue aos santos" (Judas 1:3). Ele escreve para combater a influência de falsos mestres que haviam se infiltrado na igreja, promovendo imoralidade e negando a soberania de Jesus Cristo. Judas usa exemplos históricos de apostasia e julgamento divino (Israel no deserto, anjos que não guardaram seu estado original, Sodoma e Gomorra, Caim, Balaão e Coré) para ilustrar o destino desses enganadores.</p>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">A carta é um chamado urgente à vigilância e à firmeza doutrinária em face do perigo da apostasia. Judas não apenas denuncia os falsos mestres, mas também instrui os crentes sobre como se preservar na fé: edificando-se na santíssima fé, orando no Espírito Santo, guardando-se no amor de Deus e esperando a misericórdia de Jesus Cristo. A epístola termina com uma das mais belas doxologias do Novo Testamento, glorificando a Deus que é poderoso para nos guardar de cair e nos apresentar irrepreensíveis diante de sua glória.</p>
-            <h3 class="text-2xl font-semibold text-white mb-3">Estrutura e Conteúdo Principal:</h3>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>Versículos 1-2: Saudação.</strong> Judas se apresenta como servo de Jesus Cristo e irmão de Tiago, e saúda os chamados, santificados e guardados.</li>
-                <li><strong>Versículos 3-4: Propósito da Carta.</strong> Exortação a contender pela fé, devido à infiltração de homens ímpios que pervertem a graça de Deus.</li>
-                <li><strong>Versículos 5-7: Exemplos de Julgamento Divino.</strong> Lembra o julgamento de Israel no deserto, dos anjos caídos e de Sodoma e Gomorra.</li>
-                <li><strong>Versículos 8-16: Caráter e Condenação dos Falsos Mestres.</strong> Descreve a imoralidade, arrogância e rebelião dos enganadores, comparando-os a Caim, Balaão e Coré, e profetizando seu julgamento.</li>
-                <li><strong>Versículos 17-23: Exortação aos Crentes.</strong> Instruções para se edificar na fé, orar no Espírito Santo, guardar-se no amor de Deus, esperar a misericórdia de Cristo e ter compaixão dos que duvidam.</li>
-                <li><strong>Versículos 24-25: Doxologia.</strong> Uma gloriosa exaltação a Deus, que é poderoso para guardar os crentes de cair e apresentá-los irrepreensíveis.</li>
-            </ul>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">Judas é um chamado à vigilância, à santidade e à perseverança na fé verdadeira em tempos de apostasia.</p>
-        </div>
-
-        <div id="panoramasJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Panoramas do Livro de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">A Epístola de Judas é uma exortação à defesa da fé e uma advertência contra os falsos mestres.</p>
-            <h3 class="text-2xl font-semibold text-white mb-3">I. Saudação e Propósito da Carta (Versículos 1-4)</h3>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>A. Saudação (Versículos 1-2):</strong>
-                    <ul>
-                        <li>Judas, servo de Jesus Cristo e irmão de Tiago, aos chamados, santificados em Deus Pai e guardados em Jesus Cristo.</li>
-                        <li>Misericórdia, paz e amor vos sejam multiplicados.</li>
-                    </ul>
-                </li>
-                <li><strong>B. Propósito: Contender pela Fé (Versículos 3-4):</strong>
-                    <ul>
-                        <li>Amados, enquanto eu empregava toda a diligência para vos escrever acerca da salvação comum, senti a necessidade de vos escrever, exortando-vos a batalhardes diligentemente pela fé que uma vez por todas foi entregue aos santos.</li>
-                        <li>Porque se introduziram furtivamente certos homens, ímpios, que convertem em dissolução a graça de nosso Deus, e negam a Deus, único dominador, e a nosso Senhor Jesus Cristo.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3 class="text-2xl font-semibold text-white mb-3">II. Exemplos de Julgamento Divino (Versículos 5-7)</h3>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>A. Israel no Deserto (Versículo 5):</strong>
-                    <ul>
-                        <li>Lembrai-vos que o Senhor, havendo salvo o povo tirando-o da terra do Egito, destruiu depois os que não creram.</li>
-                    </ul>
-                </li>
-                <li><strong>B. Anjos Caídos (Versículo 6):</strong>
-                    <ul>
-                        <li>E aos anjos que não guardaram o seu principado, mas deixaram a sua própria habitação, reservou na escuridão e em prisões eternas até ao juízo do grande Dia.</li>
-                    </ul>
-                </li>
-                <li><strong>C. Sodoma e Gomorra (Versículo 7):</strong>
-                    <ul>
-                        <li>Assim como Sodoma e Gomorra, e as cidades circunvizinhas, havendo-se entregado à fornicação e ido após outra carne, foram postas por exemplo, sofrendo a pena do fogo eterno.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3 class="text-2xl font-semibold text-white mb-3">III. Caráter e Condenação dos Falsos Mestres (Versículos 8-16)</h3>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>A. Descrição dos Falsos Mestres (Versículos 8-10):</strong>
-                    <ul>
-                        <li>Contaminam a carne, desprezam as autoridades e blasfemam das dignidades.</li>
-                        <li>Miguel, o arcanjo, não ousou proferir juízo de maldição contra o diabo, mas disse: O Senhor te repreenda.</li>
-                        <li>Mas estes blasfemam do que não sabem; e o que naturalmente conhecem, como animais irracionais, nisso se corrompem.</li>
-                    </ul>
-                </li>
-                <li><strong>B. Exemplos Históricos de Rebelião (Versículo 11):</strong>
-                    <ul>
-                        <li>Ai deles! Porque entraram pelo caminho de Caim, e caíram no erro de Balaão por amor do ganho, e pereceram na rebelião de Coré.</li>
-                    </ul>
-                </li>
-                <li><strong>C. Descrição Adicional e Profecia (Versículos 12-16):</strong>
-                    <ul>
-                        <li>São manchas em vossas festas de caridade, apascentando-se a si mesmos sem temor; nuvens sem água, levadas pelos ventos; árvores murchas, infrutíferas, duas vezes mortas, desarraigadas; ondas impetuosas do mar, que escumam as suas mesmas abominações; estrelas errantes, para as quais está eternamente reservada a negrura das trevas.</li>
-                        <li>E destes profetizou também Enoque, o sétimo depois de Adão, dizendo: Eis que é vindo o Senhor com milhares de seus santos.</li>
-                        <li>Para fazer juízo contra todos e condenar dentre eles todos os ímpios, por todas as suas obras de impiedade, que impiamente cometeram, e por todas as duras palavras que ímpios pecadores disseram contra ele.</li>
-                        <li>Estes são murmuradores, queixosos da sua sorte, andando segundo as suas concupiscências; e a sua boca diz coisas mui arrogantes, admirando as pessoas por causa do proveito.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3 class="text-2xl font-semibold text-white mb-3">IV. Exortação aos Crentes e Doxologia (Versículos 17-25)</h3>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>A. Lembrar as Palavras dos Apóstolos (Versículos 17-19):</strong>
-                    <ul>
-                        <li>Mas vós, amados, lembrai-vos das palavras que vos foram preditas pelos apóstolos de nosso Senhor Jesus Cristo.</li>
-                        <li>Os quais vos diziam que nos últimos tempos haveria escarnecedores, que andariam segundo as suas ímpias concupiscências.</li>
-                        <li>Estes são os que causam divisões, sensuais, que não têm o Espírito.</li>
-                    </ul>
-                </li>
-                <li><strong>B. Como se Preservar na Fé (Versículos 20-23):</strong>
-                    <ul>
-                        <li>Mas vós, amados, edificando-vos sobre a vossa santíssima fé, orando no Espírito Santo.</li>
-                        <li>Conservai-vos a vós mesmos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo para a vida eterna.</li>
-                        <li>E apiedai-vos de alguns que duvidam.</li>
-                        <li>E salvai alguns, arrebatando-os do fogo; e de outros tende misericórdia com temor, aborrecendo até a túnica manchada pela carne.</li>
-                    </ul>
-                </li>
-                <li><strong>C. Doxologia Final (Versículos 24-25):</strong>
-                    <ul>
-                        <li>Ora, àquele que é poderoso para vos guardar de tropeçar e apresentar-vos irrepreensíveis, com alegria, perante a sua glória.</li>
-                        <li>Ao único Deus sábio, Salvador nosso, seja glória e majestade, domínio e poder, agora e para todo o sempre. Amém.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3 class="text-2xl font-semibold text-white mb-3">Significado Teológico</h3>
-            <p class="text-lg leading-relaxed text-blue-100">A Epístola de Judas é um vigoroso apelo à ortodoxia e à santidade em face da apostasia. Ela serve como um lembrete severo dos perigos da heresia e da imoralidade que podem se infiltrar na igreja. Judas enfatiza a necessidade de os crentes se manterem firmes na fé verdadeira, edificando-se mutuamente e buscando a preservação no amor de Deus. A carta oferece consolo e segurança na soberania de Deus, que é capaz de guardar seus filhos de cair e de apresentá-los perfeitos diante de Si. É um livro que nos chama à vigilância constante e à defesa zelosa da verdade do evangelho, ao mesmo tempo em que nos encoraja à compaixão e à evangelização daqueles que estão em perigo.</p>
-        </div>
-
-        <div id="personagensJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Personagens Bíblicos</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">Clique em um personagem para saber mais!</p>
-            <div class="character-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4" id="characterGridJudas">
+        <div id="chapter-content-area">
             </div>
-        </div>
 
-        <div id="esbocosJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Esboços do Livro de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">Uma visão detalhada da estrutura do livro de Judas, versículo por versículo, destacando os temas e eventos.</p>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>Versículos 1-4:</strong> Saudação e Propósito da Carta.</li>
-                <li><strong>Versículos 5-7:</strong> Exemplos de Julgamento Divino.</li>
-                <li><strong>Versículos 8-16:</strong> Caráter e Condenação dos Falsos Mestres.</li>
-                <li><strong>Versículos 17-23:</strong> Exortação aos Crentes.</li>
-                <li><strong>Versículos 24-25:</strong> Doxologia Final.</li>
-            </ul>
+        <div id="revelation-screen" class="chapter-section">
+            <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
+            <p class="final-revelation">Você completou a jornada pela história de Judas Iscariotes!</p>
+            <p class="text-gray-700 mt-6">A história de Judas é um lembrete sombrio das consequências da ganância e da traição, mas também da soberania de Deus que, mesmo em meio à maldade humana, cumpre Seus propósitos.</p>
+            <button onclick="restartGame()">Jogar Novamente</button>
+            <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
-
-        <div id="temasJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Temas Centrais do Livro de Judas</h2>
-            <ul class="list-disc list-inside text-lg leading-relaxed text-blue-100 space-y-2 mb-4">
-                <li><strong>Apostasia e Falsos Mestres:</strong> A principal preocupação de Judas é a infiltração de enganadores na igreja.</li>
-                <li><strong>Contender pela Fé:</strong> A exortação aos crentes para defenderem vigorosamente a fé verdadeira.</li>
-                <li><strong>Julgamento Divino:</strong> Exemplos históricos de punição divina para a desobediência e a impiedade.</li>
-                <li><strong>Preservação na Fé:</strong> Instruções para os crentes se manterem firmes na verdade e no amor de Deus.</li>
-                <li><strong>Santidade e Pureza:</strong> A necessidade de uma vida moral e doutrinária correta.</li>
-                <li><strong>A Soberania de Cristo:</strong> A negação da autoridade de Jesus pelos falsos mestres e a reafirmação de Seu domínio.</li>
-            </ul>
-        </div>
-
-        <div id="capitulosJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Capítulos do Livro de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">Selecione um capítulo para ver o conteúdo (link externo).</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="chaptersJudas">
-            </div>
-        </div>
-
-        <div id="quizJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Quiz sobre Judas</h2>
-            <div id="quizContainerJudas" class="mb-4">
-                <p class="text-xl font-semibold quiz-question mb-4" id="quizQuestionJudas"></p>
-                <div id="quizOptionsJudas" class="grid grid-cols-1 gap-3 mb-4">
-                </div>
-                <p id="quizFeedbackJudas" class="text-lg font-medium mb-4"></p>
-                <button onclick="nextQuestionJudas()" class="quiz-next hidden">Próxima Perógunta</button>
-            </div>
-            <div class="text-center text-lg font-bold text-white">
-                <p>Progresso: <span id="quizProgressJudas"></span></p>
-                <p>Pontuação: <span id="quizScoreJudas">Acertos: 0, Erros: 0</span></p>
-            </div>
-        </div>
-
-        <div id="graficoJudas" class="section p-6 mb-6 text-left shadow-lg hidden">
-            <h2 class="text-3xl font-semibold text-white mb-4">Gráfico de Temas de Judas</h2>
-            <p class="text-lg leading-relaxed text-blue-100 mb-4">Uma visualização dos principais temas abordados no livro de Judas.</p>
-            <div class="chart-container" style="position: relative; height: 400px; width: 100%;">
-                <canvas id="judasChart"></canvas>
-            </div>
-        </div>
-
-        <div id="characterModalJudas" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50">
-            <div class="modal-content p-6 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
-                <span class="close-btn absolute top-3 right-4 text-2xl font-bold cursor-pointer" onclick="closeCharacterModalJudas()">&times;</span>
-                <h3 id="modalCharacterNameJudas" class="text-3xl font-bold text-white mb-4"></h3>
-                <p id="modalCharacterDescriptionJudas" class="text-lg leading-relaxed text-blue-200"></p>
-            </div>
-        </div>
-
     </div>
 
-    <script type="application/json" id="manifest-data-judas">
-        {
-            "name": "Livro Interativo de Judas",
-            "short_name": "Judas",
-            "description": "Explore o livro de Judas de forma interativa e teste seus conhecimentos.",
-            "start_url": "./index.html",
-            "display": "standalone",
-            "background_color": "#0d1226",
-            "theme_color": "#0d1226",
-            "icons": [
-                {
-                    "src": "https://placehold.co/192x192/0d1226/ffffff?text=JUD",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                },
-                {
-                    "src": "https://placehold.co/512x512/0d1226/ffffff?text=JUD",
-                    "sizes": "512x512",
-                    "type": "image/png"
-                }
-            ]
-        }
-    </script>
-
-    <script id="service-worker-script-judas">
-        // service-worker.js for Judas
-        const CACHE_NAME_JUDAS = 'judas-interactive-v1';
-        const urlsToCacheJudas = [
-            './index.html',
-            './manifest.json',
-            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-            'https://cdn.tailwindcss.com',
-            'https://cdn.jsdelivr.net/npm/chart.js',
-            // Add other static resources you want to cache here
-        ];
-
-        self.addEventListener('install', event => {
-            event.waitUntil(
-                caches.open(CACHE_NAME_JUDAS)
-                    .then(cache => {
-                        console.log('Opened cache for Judas');
-                        return cache.addAll(urlsToCacheJudas);
-                    })
-            );
-        });
-
-        self.addEventListener('fetch', event => {
-            event.respondWith(
-                caches.match(event.request)
-                    .then(response => {
-                        // Cache hit - return response
-                        if (response) {
-                            return response;
-                        }
-                        // No cache - fetch from network
-                        return fetch(event.request);
-                    })
-            );
-        });
-
-        self.addEventListener('activate', event => {
-            const cacheWhitelist = [CACHE_NAME_JUDAS];
-            event.waitUntil(
-                caches.keys().then(cacheNames => {
-                    return Promise.all(
-                        cacheNames.map(cacheName => {
-                            if (cacheWhitelist.indexOf(cacheName) === -1) {
-                                return caches.delete(cacheName);
-                            }
-                        })
-                    );
-                })
-            );
-        });
-    </script>
+    <div id="message-box" class="message-box">
+        <p id="message-text"></p>
+        <button id="close-message-btn">Fechar</button>
+    </div>
 
     <script>
-        // Register Service Worker for Judas
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                const serviceWorkerScript = document.getElementById('service-worker-script-judas');
-                const serviceWorkerBlob = new Blob([serviceWorkerScript.textContent], { type: 'application/javascript' });
-                const serviceWorkerBlobUrl = URL.createObjectURL(serviceWorkerBlob);
-
-                navigator.serviceWorker.register(serviceWorkerBlobUrl)
-                    .then(registration => {
-                        console.log('Service Worker for Judas registered successfully:', registration);
-                    })
-                    .catch(error => {
-                        console.log('Service Worker registration failed for Judas:', error);
-                    });
-            });
-        }
-
-        // Function to dynamically load manifest.json for Judas
-        document.addEventListener('DOMContentLoaded', () => {
-            const manifestData = document.getElementById('manifest-data-judas').textContent;
-            const blob = new Blob([manifestData], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('link');
-            link.rel = 'manifest';
-            link.href = url;
-            document.head.appendChild(link);
-        });
-
-
-        // Functions for section control of Judas
-        function showSectionJudas(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.add('hidden');
-                section.classList.remove('active');
-            });
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.remove('hidden');
-                targetSection.classList.add('active');
-            } else {
-                console.error(`Section with ID '${sectionId}' not found.`);
-            }
-
-            // Ensure character buttons and chapter links are generated when entering respective sections
-            if (sectionId === 'personagensJudas') {
-                generateCharacterButtonsJudas();
-            }
-            if (sectionId === 'capitulosJudas') {
-                generateChapterLinksJudas();
-            }
-            if (sectionId === 'quizJudas') {
-                shuffleQuizQuestionsJudas(); // Shuffle questions at the start of the quiz
-                currentQuizIndexJudas = 0; // Reset quiz
-                scoreJudas = 0;
-                wrongAnswersJudas = 0;
-                document.getElementById('quizScoreJudas').textContent = `Acertos: ${scoreJudas}, Erros: ${wrongAnswersJudas}`;
-                displayQuestionJudas();
-            }
-            if (sectionId === 'graficoJudas') {
-                renderJudasChart();
-            }
-        }
-
-        // Character data for Judas
-        const characterDetailsJudas = {
-            "Judas": {
-                name: "Judas",
-                description: "O autor da epístola, servo de Jesus Cristo e irmão de Tiago, que exorta os crentes a contenderem pela fé."
+        // Array de objetos para armazenar os dados de cada capítulo
+        const chapters = [
+            {
+                id: 'chapter1',
+                title: 'Capítulo 1: A Escolha do Discípulo',
+                location: 'Galileia',
+                objective: 'Entender como Judas se tornou um dos doze apóstolos.',
+                clues: [
+                    'Jesus escolheu doze homens para serem Seus apóstolos.',
+                    'Judas Iscariotes, apesar de seu futuro, foi um dos escolhidos.'
+                ],
+                keyVerse: 'Lucas 6:12-16',
+                enigma: 'Quantos discípulos Jesus escolheu para serem apóstolos, incluindo Judas?',
+                options: ['Doze', 'Sete', 'Três'],
+                correctAnswer: 'Doze'
             },
-            "Jesus Cristo": {
-                name: "Jesus Cristo",
-                description: "O Senhor e Salvador, cuja soberania é negada pelos falsos mestres, e cuja misericórdia os crentes devem esperar."
+            {
+                id: 'chapter2',
+                title: 'Capítulo 2: O Tesoureiro do Grupo',
+                location: 'Durante o ministério de Jesus',
+                objective: 'Conhecer o papel de Judas e sua inclinação.',
+                clues: [
+                    'Judas era o tesoureiro do grupo de discípulos, responsável pela bolsa de dinheiro.',
+                    'Ele, no entanto, roubava o que era colocado na bolsa.'
+                ],
+                keyVerse: 'João 12:6',
+                enigma: 'Qual era a função de Judas entre os discípulos?',
+                options: ['Tesoureiro', 'Pregador', 'Curador'],
+                correctAnswer: 'Tesoureiro'
             },
-            "Falsos Mestres / Ímpios": {
-                name: "Falsos Mestres / Ímpios",
-                description: "Indivíduos que se infiltraram na igreja, pervertendo a graça de Deus, negando Cristo e promovendo imoralidade."
+            {
+                id: 'chapter3',
+                title: 'Capítulo 3: A Unção em Betânia',
+                location: 'Betânia (casa de Lázaro)',
+                objective: 'Compreender o descontentamento de Judas com a unção.',
+                clues: [
+                    'Maria, irmã de Lázaro, ungiu os pés de Jesus com um perfume muito caro.',
+                    'Judas reclamou, dizendo que o perfume poderia ter sido vendido por trezentos denários e dado aos pobres.'
+                ],
+                keyVerse: 'João 12:3-5',
+                enigma: 'O que Maria usou para ungir os pés de Jesus?',
+                options: ['Perfume caro', 'Azeite', 'Água'],
+                correctAnswer: 'Perfume caro'
             },
-            "Deus Pai": {
-                name: "Deus Pai",
-                description: "Aquele que santifica e guarda os chamados, e em cujo amor os crentes devem se conservar."
+            {
+                id: 'chapter4',
+                title: 'Capítulo 4: A Profecia da Traição (Primeira Menção)',
+                location: 'Durante o ministério de Jesus',
+                objective: 'Aprender sobre a predição de Jesus sobre a traição.',
+                clues: [
+                    'Jesus sabia desde o princípio quem O trairia.',
+                    'Ele afirmou que um dos doze era um diabo.'
+                ],
+                keyVerse: 'João 6:64, 70-71',
+                enigma: 'O que Jesus sabia desde o princípio sobre um de Seus discípulos?',
+                options: ['Que O trairia', 'Que O defenderia', 'Que O curaria'],
+                correctAnswer: 'Que O trairia'
             },
-            "Miguel, o Arcanjo": {
-                name: "Miguel, o Arcanjo",
-                description: "O arcanjo que disputou com o diabo sobre o corpo de Moisés, não ousando proferir juízo de maldição."
+            {
+                id: 'chapter5',
+                title: 'Capítulo 5: O Pacto com os Sacerdotes',
+                location: 'Jerusalém (Templo)',
+                objective: 'Entender o acordo de Judas para entregar Jesus.',
+                clues: [
+                    'Judas foi aos principais sacerdotes e perguntou o que eles lhe dariam para entregar Jesus.',
+                    'Ele buscou uma oportunidade para entregá-Lo sem tumulto.'
+                ],
+                keyVerse: 'Mateus 26:14-16',
+                enigma: 'Com quem Judas fez um pacto para entregar Jesus?',
+                options: ['Os principais sacerdotes', 'Os fariseus', 'Os romanos'],
+                correctAnswer: 'Os principais sacerdotes'
             },
-            "Enoque": {
-                name: "Enoque",
-                description: "O sétimo depois de Adão, que profetizou sobre a vinda do Senhor com milhares de seus santos para fazer juízo."
+            {
+                id: 'chapter6',
+                title: 'Capítulo 6: As Trinta Moedas de Prata',
+                location: 'Jerusalém (Templo)',
+                objective: 'Conhecer o preço da traição.',
+                clues: [
+                    'Eles concordaram em pagar a Judas trinta moedas de prata.',
+                    'Este valor era o preço de um escravo, cumprindo uma profecia.'
+                ],
+                keyVerse: 'Mateus 26:15',
+                enigma: 'Quantas moedas de prata Judas recebeu pela traição?',
+                options: ['Trinta', 'Vinte', 'Quarenta'],
+                correctAnswer: 'Trinta'
             },
-            "Caim": {
-                name: "Caim",
-                description: "Exemplo de rebelião e assassinato, cujo caminho os falsos mestres seguiram."
+            {
+                id: 'chapter7',
+                title: 'Capítulo 7: A Preparação da Páscoa',
+                location: 'Jerusalém',
+                objective: 'Observar a participação de Judas nos preparativos finais.',
+                clues: [
+                    'Judas estava presente quando Jesus enviou Pedro e João para preparar a Páscoa.',
+                    'Ele participou dos preparativos para a Última Ceia.'
+                ],
+                keyVerse: 'Mateus 26:17-19',
+                enigma: 'Qual festa Jesus e os discípulos estavam preparando para celebrar?',
+                options: ['Páscoa', 'Pentecostes', 'Tabernáculos'],
+                correctAnswer: 'Páscoa'
             },
-            "Balaão": {
-                name: "Balaão",
-                description: "Exemplo de erro por amor ao ganho, em que os falsos mestres caíram."
+            {
+                id: 'chapter8',
+                title: 'Capítulo 8: A Última Ceia (Revelação do Traidor)',
+                location: 'Cenáculo em Jerusalém',
+                objective: 'Aprender sobre o momento em que Jesus identifica o traidor.',
+                clues: [
+                    'Durante a ceia, Jesus declarou: "Um de vocês que está comendo comigo vai me trair."',
+                    'Os discípulos ficaram muito tristes e começaram a perguntar um por um: "Sou eu, Senhor?"'
+                ],
+                keyVerse: 'Marcos 14:18-21',
+                enigma: 'O que Jesus revelou durante a Última Ceia sobre um dos discípulos?',
+                options: ['Que um O trairia', 'Que um O negaria', 'Que um O abandonaria'],
+                correctAnswer: 'Que um O trairia'
             },
-            "Coré": {
-                name: "Coré",
-                description: "Exemplo de rebelião contra a autoridade divina, em cuja rebelião os falsos mestres pereceram."
+            {
+                id: 'chapter9',
+                title: 'Capítulo 9: O Bocado Molhado',
+                location: 'Cenáculo em Jerusalém',
+                objective: 'Entender o sinal específico para Judas.',
+                clues: [
+                    'Jesus respondeu a João que era aquele a quem Ele daria um bocado de pão molhado.',
+                    'Após molhar o bocado, Jesus o deu a Judas Iscariotes.'
+                ],
+                keyVerse: 'João 13:26-27',
+                enigma: 'O que Jesus deu a Judas para indicar que ele era o traidor?',
+                options: ['Um bocado de pão molhado', 'Um copo de vinho', 'Uma peça de roupa'],
+                correctAnswer: 'Um bocado de pão molhado'
+            },
+            {
+                id: 'chapter10',
+                title: 'Capítulo 10: Judas Sai',
+                location: 'Cenáculo em Jerusalém',
+                objective: 'Observar o momento da partida de Judas para consumar a traição.',
+                clues: [
+                    'Depois que Judas recebeu o bocado, Satanás entrou nele.',
+                    'Jesus disse a Judas: "O que você vai fazer, faça depressa." E Judas saiu imediatamente; era noite.'
+                ],
+                keyVerse: 'João 13:30',
+                enigma: 'O que aconteceu com Judas depois que ele recebeu o bocado de Jesus e ouviu Suas palavras?',
+                options: ['Satanás entrou nele e ele saiu', 'Ele se arrependeu e ficou', 'Ele ficou confuso e perguntou mais'],
+                correctAnswer: 'Satanás entrou nele e ele saiu'
+            },
+            {
+                id: 'chapter11',
+                title: 'Capítulo 11: O Beijo da Traição',
+                location: 'Jardim do Getsêmani',
+                objective: 'Aprender sobre o ato final da traição.',
+                clues: [
+                    'Judas chegou ao Getsêmani com uma grande multidão, armada com espadas e varapaus, enviada pelos principais sacerdotes e anciãos.',
+                    'Ele se aproximou de Jesus e O beijou, que era o sinal combinado para identificá-Lo.'
+                ],
+                keyVerse: 'Mateus 26:47-49',
+                enigma: 'Como Judas identificou Jesus para a multidão que O prenderia?',
+                options: ['Com um beijo', 'Apontando para Ele', 'Gritando Seu nome'],
+                correctAnswer: 'Com um beijo'
+            },
+            {
+                id: 'chapter12',
+                title: 'Capítulo 12: A Prisão de Jesus',
+                location: 'Jardim do Getsêmani',
+                objective: 'Compreender o papel de Judas na prisão de Jesus.',
+                clues: [
+                    'Após o beijo de Judas, os soldados e os guardas do Templo prenderam Jesus e O levaram.',
+                    'Jesus não resistiu à prisão, cumprindo as Escrituras.'
+                ],
+                keyVerse: 'Mateus 26:50',
+                enigma: 'O que aconteceu com Jesus logo após o beijo de Judas?',
+                options: ['Foi preso', 'Fugiu', 'Curou alguém'],
+                correctAnswer: 'Foi preso'
+            },
+            {
+                id: 'chapter13',
+                title: 'Capítulo 13: O Remorso de Judas',
+                location: 'Jerusalém (Templo)',
+                objective: 'Entender o arrependimento e a tentativa de Judas de reverter a situação.',
+                clues: [
+                    'Quando Judas viu que Jesus fora condenado, sentiu remorso e devolveu as trinta moedas de prata aos principais sacerdotes e anciãos.',
+                    'Ele confessou: "Pequei, traindo sangue inocente."'
+                ],
+                keyVerse: 'Mateus 27:3-4',
+                enigma: 'O que Judas fez ao sentir remorso pela condenação de Jesus?',
+                options: ['Devolveu as moedas de prata', 'Fugiu para longe', 'Tentou libertar Jesus'],
+                correctAnswer: 'Devolveu as moedas de prata'
+            },
+            {
+                id: 'chapter14',
+                title: 'Capítulo 14: A Morte de Judas',
+                location: 'Jerusalém',
+                objective: 'Aprender sobre o fim trágico de Judas.',
+                clues: [
+                    'Judas atirou as moedas de prata no Templo e, em seguida, foi e enforcou-se.',
+                    'Outro relato bíblico menciona que ele caiu de cabeça e seu corpo se rompeu, derramando suas entranhas.'
+                ],
+                keyVerse: 'Mateus 27:5, Atos 1:18',
+                enigma: 'O que Judas fez após devolver as moedas de prata?',
+                options: ['Foi enforcar-se', 'Fugiu para outra cidade', 'Procurou perdão'],
+                correctAnswer: 'Foi enforcar-se'
+            },
+            {
+                id: 'chapter15',
+                title: 'Capítulo 15: O Campo de Sangue',
+                location: 'Jerusalém',
+                objective: 'Refletir sobre o destino das moedas da traição e o legado de Judas.',
+                clues: [
+                    'Os principais sacerdotes não acharam lícito colocar as trinta moedas no tesouro do Templo, pois era preço de sangue.',
+                    'Com elas, compraram o Campo do Oleiro para sepultar estrangeiros, e por isso o campo foi chamado de "Campo de Sangue" até hoje.'
+                ],
+                keyVerse: 'Mateus 27:6-8',
+                enigma: 'O que os sacerdotes compraram com as trinta moedas de prata devolvidas por Judas?',
+                options: ['O Campo do Oleiro', 'Um novo templo', 'Armas'],
+                correctAnswer: 'O Campo do Oleiro'
             }
-        };
-
-        // Function to display character modal
-        function displayCharacterModalJudas(characterName) {
-            const details = characterDetailsJudas[characterName];
-            if (details) {
-                document.getElementById('modalCharacterNameJudas').textContent = details.name;
-                document.getElementById('modalCharacterDescriptionJudas').textContent = details.description;
-                document.getElementById('characterModalJudas').classList.remove('hidden');
-            }
-        }
-
-        // Function to close character modal
-        function closeCharacterModalJudas() {
-            document.getElementById('characterModalJudas').classList.add('hidden');
-        }
-
-        // Generate character buttons
-        function generateCharacterButtonsJudas() {
-            const grid = document.getElementById('characterGridJudas');
-            grid.innerHTML = '';
-            for (const key in characterDetailsJudas) {
-                const button = document.createElement('button');
-                button.className = 'bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-semibold py-3 px-5 rounded-md transition duration-200 ease-in-out shadow-lg text-lg transform hover:scale-105';
-                button.textContent = key;
-                button.onclick = () => displayCharacterModalJudas(key);
-                grid.appendChild(button);
-            }
-        }
-        
-        // Generate chapter links (Judas has only 1 chapter)
-        function generateChapterLinksJudas() {
-            const chaptersDiv = document.getElementById('chaptersJudas');
-            chaptersDiv.innerHTML = '';
-            // Judas has only 1 chapter
-            const link = document.createElement('a');
-            link.href = `https://www.bibliaonline.com.br/acf/jd/1`; // Link to online Bible, Judas, Chapter 1
-            link.target = "_blank"; // Open in new tab
-            link.className = 'bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-semibold py-3 px-5 rounded-md transition duration-200 ease-in-out shadow-md text-lg flex items-center justify-center transform hover:scale-105';
-            link.textContent = `Capítulo 1`;
-            chaptersDiv.appendChild(link);
-        }
-
-        // Function to shuffle an array (Fisher-Yates)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-
-        // Quiz data for Judas (unique questions, duplicated to reach 200)
-        const uniqueQuizQuestionsJudas = [
-            { question: "Quem é o autor da Epístola de Judas?", options: ["Pedro", "Paulo", "Judas, servo de Jesus Cristo e irmão de Tiago", "João"], answer: "Judas, servo de Jesus Cristo e irmão de Tiago", reference: "Judas 1:1" },
-            { question: "Qual o propósito principal da carta de Judas?", options: ["Falar sobre a lei mosaica", "Exortar a contender diligentemente pela fé", "Narrar a vida de Jesus", "Descrever o fim dos tempos"], answer: "Exortar a contender diligentemente pela fé", reference: "Judas 1:3" },
-            { question: "Quem se introduziu furtivamente na igreja, segundo Judas?", options: ["Apóstolos", "Homens ímpios", "Anjos", "Profetas"], answer: "Homens ímpios", reference: "Judas 1:4" },
-            { question: "Qual exemplo de julgamento Judas menciona para os que não creram após serem salvos do Egito?", options: ["A destruição de Jerusalém", "A destruição no deserto", "O dilúvio", "A torre de Babel"], answer: "A destruição no deserto", reference: "Judas 1:5" },
-            { question: "O que aconteceu com os anjos que não guardaram seu principado?", options: ["Foram perdoados", "Foram transformados em homens", "Foram reservados em escuridão e prisões eternas", "Foram enviados para pregar"], answer: "Foram reservados em escuridão e prisões eternas", reference: "Judas 1:6" },
-            { question: "Qual cidade é citada como exemplo de sofrimento da pena do fogo eterno?", options: ["Nínive", "Babilônia", "Sodoma e Gomorra", "Jerusalém"], answer: "Sodoma e Gomorra", reference: "Judas 1:7" },
-            { question: "O que os falsos mestres contaminam, desprezam e blasfemam?", options: ["A carne, as autoridades e as dignidades", "A verdade, o amor e a fé", "A oração, o jejum e a leitura", "A igreja, os santos e os anjos"], answer: "A carne, as autoridades e as dignidades", reference: "Judas 1:8" },
-            { question: "Quem disputou com o diabo sobre o corpo de Moisés?", options: ["Pedro", "Paulo", "Miguel, o arcanjo", "Gabriel"], answer: "Miguel, o arcanjo", reference: "Judas 1:9" },
-            { question: "Qual o caminho que os falsos mestres seguiram, segundo Judas 1:11?", options: ["O caminho da justiça", "O caminho de Caim, o erro de Balaão e a rebelião de Coré", "O caminho da verdade", "O caminho da salvação"], answer: "O caminho de Caim, o erro de Balaão e a rebelião de Coré", reference: "Judas 1:11" },
-            { question: "Como Judas descreve os falsos mestres em relação às festas de caridade?", options: ["Luzes", "Manchas", "Bênçãos", "Servos"], answer: "Manchas", reference: "Judas 1:12" },
-            { question: "Quem profetizou sobre a vinda do Senhor com milhares de seus santos para fazer juízo?", options: ["Isaías", "Jeremias", "Enoque", "Elias"], answer: "Enoque", reference: "Judas 1:14" },
-            { question: "O que os crentes devem fazer para se preservar no amor de Deus?", options: ["Edificar-se na santíssima fé e orar no Espírito Santo", "Ignorar os falsos mestres", "Viver como o mundo", "Acumular riquezas"], answer: "Edificar-se na santíssima fé e orar no Espírito Santo", reference: "Judas 1:20-21" },
-            { question: "O que os crentes devem esperar para a vida eterna?", options: ["Riquezas", "Fama", "A misericórdia de nosso Senhor Jesus Cristo", "Poder"], answer: "A misericórdia de nosso Senhor Jesus Cristo", reference: "Judas 1:21" },
-            { question: "Como os crentes devem agir com alguns que duvidam?", options: ["Julgá-los", "Ter compaixão", "Expulsá-los", "Ignorá-los"], answer: "Ter compaixão", reference: "Judas 1:22" },
-            { question: "A quem Judas atribui o poder de nos guardar de tropeçar e nos apresentar irrepreensíveis?", options: ["Aos apóstolos", "Ao único Deus sábio, Salvador nosso", "Aos anjos", "Aos homens"], answer: "Ao único Deus sábio, Salvador nosso", reference: "Judas 1:24-25" },
-            { question: "O que os falsos mestres convertem em dissolução?", options: ["A fé", "A esperança", "A graça de nosso Deus", "O amor"], answer: "A graça de nosso Deus", reference: "Judas 1:4" },
-            { question: "O que os falsos mestres negam, segundo Judas 1:4?", options: ["A existência de Deus", "A Deus, único dominador, e a nosso Senhor Jesus Cristo", "A ressurreição", "A criação"], answer: "A Deus, único dominador, e a nosso Senhor Jesus Cristo", reference: "Judas 1:4" },
-            { question: "Qual a atitude dos falsos mestres em relação às dignidades?", options: ["Respeitam", "Honram", "Blasfemam", "Adoram"], answer: "Blasfemam", reference: "Judas 1:8" },
-            { question: "Como os falsos mestres são comparados a nuvens?", options: ["Com muita água", "Sem água, levadas pelos ventos", "Com chuva abundante", "Paradas no céu"], answer: "Sem água, levadas pelos ventos", reference: "Judas 1:12" },
-            { question: "O que os crentes devem aborrecer, mesmo ao ter misericórdia?", options: ["O pecado", "A túnica manchada pela carne", "As pessoas", "As dúvidas"], answer: "A túnica manchada pela carne", reference: "Judas 1:23" }
         ];
 
-        // Duplicate questions to reach 200, if necessary
-        let allQuizQuestionsJudas = [];
-        const numCopiesJudas = Math.ceil(200 / uniqueQuizQuestionsJudas.length);
-        for (let i = 0; i < numCopiesJudas; i++) {
-            allQuizQuestionsJudas = allQuizQuestionsJudas.concat(uniqueQuizQuestionsJudas);
-        }
-        allQuizQuestionsJudas = allQuizQuestionsJudas.slice(0, 200); // Ensure exactly 200 questions
+        let currentChapterIndex = 0; // Inicia no primeiro capítulo
 
-        let shuffledQuizQuestionsJudas = [];
-        let currentQuizIndexJudas = 0;
-        let scoreJudas = 0;
-        let wrongAnswersJudas = 0;
-        let judasChartInstance = null; // To store the chart instance
+        // Elementos do DOM
+        const startScreen = document.getElementById('start-screen');
+        const startGameBtn = document.getElementById('start-game-btn');
+        const chapterContentArea = document.getElementById('chapter-content-area'); // Área para conteúdo dinâmico
+        const revelationScreen = document.getElementById('revelation-screen');
+        const messageBox = document.getElementById('message-box');
+        const messageText = document.getElementById('message-text');
+        const closeMessageBtn = document.getElementById('close-message-btn');
 
-        // Shuffle quiz questions
-        function shuffleQuizQuestionsJudas() {
-            shuffledQuizQuestionsJudas = [...allQuizQuestionsJudas]; // Create a copy to avoid modifying the original
-            shuffleArray(shuffledQuizQuestionsJudas);
+        // Função para exibir a caixa de mensagem personalizada
+        function showMessage(message) {
+            messageText.textContent = message;
+            messageBox.classList.add('show');
         }
 
-        // Update quiz progress
-        function updateQuizProgressJudas() {
-            const progressElement = document.getElementById('quizProgressJudas');
-            progressElement.textContent = `${currentQuizIndexJudas + 1}/${shuffledQuizQuestionsJudas.length}`;
+        // Event listener para fechar a caixa de mensagem
+        closeMessageBtn.addEventListener('click', () => {
+            messageBox.classList.remove('show');
+        });
+
+        // Função para iniciar o jogo
+        startGameBtn.addEventListener('click', () => {
+            startScreen.classList.remove('active'); // Esconde a tela inicial
+            displayChapter(currentChapterIndex); // Exibe o primeiro capítulo
+        });
+
+        // Função para exibir um capítulo específico
+        function displayChapter(index) {
+            // Esconde todas as seções (incluindo a de revelação, se estiver ativa)
+            document.querySelectorAll('.chapter-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            chapterContentArea.innerHTML = ''; // Limpa o conteúdo anterior
+
+            if (index < chapters.length) {
+                const chapterData = chapters[index];
+                const chapterDiv = document.createElement('div');
+                chapterDiv.id = chapterData.id;
+                chapterDiv.classList.add('chapter-section', 'active');
+
+                // Construção do HTML do capítulo dinamicamente
+                let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
+
+                chapterDiv.innerHTML = `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">${chapterData.title}</h2>
+                    <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
+                    <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
+                    <ul class="clue-list">
+                        ${cluesHtml}
+                    </ul>
+                    <p class="key-verse">Versículo-chave: ${chapterData.keyVerse}</p>
+                    <p class="enigma">Enigma: ${chapterData.enigma}</p>
+                    <div class="options-container" id="options${index + 1}">
+                        </div>
+                    <button onclick="checkAnswer(${index + 1})">Verificar</button>
+                `;
+                chapterContentArea.appendChild(chapterDiv);
+
+                // Popula as opções do enigma
+                const optionsContainer = document.getElementById(`options${index + 1}`);
+                if (optionsContainer) {
+                    const shuffledOptions = [...chapterData.options].sort(() => Math.random() - 0.5); // Randomize order
+                    shuffledOptions.forEach((option, i) => {
+                        const label = document.createElement('label');
+                        label.innerHTML = `
+                            <input type="radio" name="answer${index + 1}" value="${option.toLowerCase()}" id="option${index + 1}-${i}">
+                            ${option}
+                        `;
+                        optionsContainer.appendChild(label);
+                    });
+                }
+            } else {
+                // Exibe a tela de revelação final
+                revelationScreen.classList.add('active');
+            }
         }
 
-        // Display current quiz question
-        function displayQuestionJudas() {
-            if (currentQuizIndexJudas >= shuffledQuizQuestionsJudas.length) {
-                // End of quiz
-                document.getElementById('quizQuestionJudas').textContent = "Quiz Concluído!";
-                document.getElementById('quizOptionsJudas').innerHTML = `<p class="text-xl text-white">Sua pontuação final: Acertos: ${scoreJudas}, Erros: ${wrongAnswersJudas}</p>`;
-                document.getElementById('quizFeedbackJudas').textContent = "";
-                document.querySelector('.quiz-next').classList.add('hidden');
+        // Função para verificar a resposta de um capítulo
+        function checkAnswer(chapterNumber) {
+            const selectedOption = document.querySelector(`input[name="answer${chapterNumber}"]:checked`);
+            if (!selectedOption) {
+                showMessage('Por favor, selecione uma opção!');
                 return;
             }
 
-            const currentQuestion = shuffledQuizQuestionsJudas[currentQuizIndexJudas];
-            document.getElementById('quizQuestionJudas').textContent = currentQuestion.question;
+            const userAnswer = selectedOption.value.trim().toLowerCase();
+            const correctAnswer = chapters[chapterNumber - 1].correctAnswer.toLowerCase();
 
-            const optionsContainer = document.getElementById('quizOptionsJudas');
-            optionsContainer.innerHTML = ''; // Clear previous options
-
-            const shuffledOptions = [...currentQuestion.options];
-            shuffleArray(shuffledOptions); // Shuffle answer options
-
-            shuffledOptions.forEach(option => {
-                const button = document.createElement('button');
-                button.className = 'quiz-options button bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-semibold py-3 px-5 rounded-md transition duration-200 ease-in-out shadow-md text-lg';
-                button.textContent = option;
-                button.onclick = () => checkAnswerJudas(option, currentQuestion.answer, currentQuestion.reference);
-                optionsContainer.appendChild(button);
-            });
-
-            document.getElementById('quizFeedbackJudas').textContent = ""; // Clear previous feedback
-            document.querySelector('.quiz-next').classList.add('hidden'); // Hide "Next Question" button
-            updateQuizProgressJudas();
-        }
-
-        // Check quiz answer
-        function checkAnswerJudas(selectedOption, correctAnswer, reference) {
-            const feedbackElement = document.getElementById('quizFeedbackJudas');
-            const optionsButtons = document.querySelectorAll('#quizOptionsJudas button');
-
-            // Disable all option buttons
-            optionsButtons.forEach(button => {
-                button.disabled = true;
-                if (button.textContent === correctAnswer) {
-                    button.classList.add('bg-green-600');
-                    button.classList.remove('bg-blue-700', 'hover:bg-blue-600', 'active:bg-blue-800');
-                } else if (button.textContent === selectedOption) {
-                    button.classList.add('bg-red-600');
-                    button.classList.remove('bg-blue-700', 'hover:bg-blue-600', 'active:bg-blue-800');
-                }
-            });
-
-            if (selectedOption === correctAnswer) {
-                feedbackElement.textContent = "Correto! 🎉";
-                feedbackElement.className = 'quiz-feedback text-lg font-medium mb-4 text-green-500';
-                scoreJudas++;
+            if (userAnswer === correctAnswer) {
+                showMessage('Resposta correta! Você avançou para o próximo capítulo.');
+                currentChapterIndex++;
+                setTimeout(() => {
+                    displayChapter(currentChapterIndex);
+                }, 1500); // Pequeno atraso para o usuário ler a mensagem
             } else {
-                feedbackElement.textContent = `Errado. A resposta correta era: "${correctAnswer}". Referência: ${reference}`;
-                feedbackElement.className = 'quiz-feedback text-lg font-medium mb-4 text-red-500';
-                wrongAnswersJudas++;
+                showMessage('Resposta incorreta. Tente novamente!');
             }
-            document.getElementById('quizScoreJudas').textContent = `Acertos: ${scoreJudas}, Erros: ${wrongAnswersJudas}`;
-            document.querySelector('.quiz-next').classList.remove('hidden'); // Show "Next Question" button
         }
 
-        // Advance to the next question
-        function nextQuestionJudas() {
-            currentQuizIndexJudas++;
-            displayQuestionJudas();
-        }
-
-        // Data for Judas themes chart
-        const judasChartData = {
-            labels: ['Apostasia e Falsos Mestres', 'Contender pela Fé', 'Julgamento Divino', 'Preservação na Fé', 'Santidade e Pureza', 'A Soberania de Cristo'],
-            datasets: [{
-                label: 'Frequência de Temas',
-                data: [35, 25, 20, 10, 5, 5], // Fictional values to represent theme frequency
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        };
-
-        const judasChartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#e2e8f0' // Legend color
-                    }
-                },
-                title: {
-                    display: true,
-                    text: 'Principais Temas do Livro de Judas',
-                    color: '#f8fafc' // Chart title color
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        color: '#a0aec0' // Y-axis label color
-                    },
-                    grid: {
-                        color: '#2d3748' // Y-axis grid line color
-                    }
-                },
-                x: {
-                    ticks: {
-                        color: '#a0aec0' // X-axis label color
-                    },
-                    grid: {
-                        color: '#2d3748' // X-axis grid line color
-                    }
-                }
-            }
-        };
-
-        // Render the themes chart
-        function renderJudasChart() {
-            const ctx = document.getElementById('judasChart').getContext('2d');
-            if (judasChartInstance) {
-                judasChartInstance.destroy(); // Destroy previous chart instance if it exists
-            }
-            judasChartInstance = new Chart(ctx, {
-                type: 'bar', // Can be 'bar', 'pie', 'line', etc.
-                data: judasChartData,
-                options: judasChartOptions
-            });
+        // Função para reiniciar o jogo
+        function restartGame() {
+            currentChapterIndex = 0;
+            revelationScreen.classList.remove('active'); // Esconde a tela de revelação
+            startScreen.classList.add('active'); // Volta para a tela inicial
+            chapterContentArea.innerHTML = ''; // Limpa o conteúdo dinâmico
         }
     </script>
 </body>

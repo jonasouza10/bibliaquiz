@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de João Batista</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #14b8a6; /* Cyan border for John the Baptist game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #14b8a6; /* Cyan for John the Baptist game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #0f9b8a; /* Darker cyan on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #14b8a6;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #14b8a6;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #0f9b8a;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-teal-600 mb-4">A História de João Batista 🌿</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Descubra a vida e o ministério de João Batista, o precursor que preparou o caminho para Jesus Cristo, pregando arrependimento e batismo.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de João Batista!</p>
+            <p class="text-gray-700 mt-6">A vida de João Batista é um exemplo de dedicação, humildade e coragem em cumprir o chamado divino, preparando os corações para a chegada do Messias.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Anúncio do Nascimento',
+                location: 'Templo em Jerusalém',
+                objective: 'Entender a profecia sobre o nascimento de João.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'O anjo Gabriel apareceu a Zacarias, pai de João, no Templo.',
+                    'Ele anunciou que sua esposa Isabel, já idosa, teria um filho que seria cheio do Espírito Santo desde o ventre.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Lucas 1:11-17',
+                enigma: 'Qual anjo anunciou o nascimento de João Batista?',
+                options: ['Gabriel', 'Miguel', 'Rafael'],
+                correctAnswer: 'Gabriel'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: O Nome de João',
+                location: 'Judá',
+                objective: 'Compreender a obediência ao nome dado por Deus.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'No oitavo dia, quando foram circuncidar o menino, queriam chamá-lo de Zacarias, como seu pai.',
+                    'Isabel insistiu que seu nome seria João, e Zacarias, que estava mudo, escreveu "João é o seu nome", e sua boca se abriu.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Lucas 1:59-64',
+                enigma: 'Qual nome Isabel e Zacarias deram ao seu filho, conforme instrução divina?',
+                options: ['João', 'Zacarias', 'Elias'],
+                correctAnswer: 'João'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Vida no Deserto',
+                location: 'Deserto da Judeia',
+                objective: 'Aprender sobre o estilo de vida de João Batista.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'João cresceu e se fortaleceu em espírito, vivendo nos desertos até o dia em que se manifestou a Israel.',
+                    'Ele se vestia de pelos de camelo e usava um cinto de couro, e sua comida era gafanhotos e mel silvestre.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Lucas 1:80, Mateus 3:4',
+                enigma: 'Qual era a vestimenta característica de João Batista?',
+                options: ['Pelos de camelo e cinto de couro', 'Roupas finas', 'Túnica de linho'],
+                correctAnswer: 'Pelos de camelo e cinto de couro'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Pregação do Arrependimento',
+                location: 'Deserto da Judeia, Rio Jordão',
+                objective: 'Entender a mensagem central de João Batista.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'João pregava no deserto da Judeia, dizendo: "Arrependei-vos, porque é chegado o Reino dos céus".',
+                    'Muitos vinham a ele para serem batizados no rio Jordão, confessando seus pecados.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Mateus 3:1-2, 6',
+                enigma: 'Qual era a principal mensagem de João Batista?',
+                options: ['Arrependimento', 'Prosperidade', 'Guerra'],
+                correctAnswer: 'Arrependimento'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: O Precursor do Messias',
+                location: 'Rio Jordão',
+                objective: 'Compreender o papel de João como precursor de Jesus.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'João dizia: "Eu vos batizo com água, para arrependimento; mas aquele que vem depois de mim é mais poderoso do que eu, cujas sandálias não sou digno de levar; ele vos batizará com o Espírito Santo e com fogo."',
+                    'Ele apontava para Jesus como o Cordeiro de Deus que tira o pecado do mundo.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Mateus 3:11, João 1:29',
+                enigma: 'João Batista se considerava digno de levar as sandálias de Jesus?',
+                options: ['Não', 'Sim', 'Talvez'],
+                correctAnswer: 'Não'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Batismo de Jesus',
+                location: 'Rio Jordão',
+                objective: 'Aprender sobre o batismo de Jesus por João.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Jesus veio da Galileia para ser batizado por João no Jordão.',
+                    'João hesitou, mas Jesus disse que era necessário para cumprir toda a justiça.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Mateus 3:13-15',
+                enigma: 'Quem batizou Jesus no rio Jordão?',
+                options: ['João Batista', 'Pedro', 'Um sacerdote'],
+                correctAnswer: 'João Batista'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: O Testemunho de Jesus',
+                location: 'Rio Jordão',
+                objective: 'Observar o reconhecimento divino de Jesus no batismo.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Ao ser batizado, os céus se abriram, e o Espírito de Deus desceu sobre Jesus como pomba.',
+                    'Uma voz do céu disse: "Este é o meu Filho amado, em quem me comprazo."'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Mateus 3:16-17',
+                enigma: 'O que desceu sobre Jesus como pomba após seu batismo?',
+                options: ['O Espírito Santo', 'Um anjo', 'Uma nuvem'],
+                correctAnswer: 'O Espírito Santo'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: A Prisão de João Batista',
+                location: 'Maquero',
+                objective: 'Entender a coragem de João em repreender Herodes.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'João Batista repreendeu Herodes por ter se casado com Herodias, esposa de seu irmão Filipe.',
+                    'Por causa disso, Herodes o prendeu.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Marcos 6:17-18',
+                enigma: 'Por que Herodes prendeu João Batista?',
+                options: ['Por repreendê-lo por Herodias', 'Por pregar no deserto', 'Por batizar pessoas'],
+                correctAnswer: 'Por repreendê-lo por Herodias'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: A Dúvida de João na Prisão',
+                location: 'Prisão',
+                objective: 'Compreender a humanidade de João e sua busca por confirmação.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Enquanto estava na prisão, João enviou seus discípulos a Jesus para perguntar: "És tu aquele que havia de vir, ou devemos esperar outro?"',
+                    'Jesus respondeu citando Suas obras e milagres.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Mateus 11:2-5',
+                enigma: 'O que João Batista perguntou a Jesus da prisão?',
+                options: ['"És tu aquele que havia de vir?"', '"Quando serei libertado?"', '"Você é o Messias?"'],
+                correctAnswer: '"És tu aquele que havia de vir?"'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: A Morte de João Batista',
+                location: 'Maquero',
+                objective: 'Aprender sobre o martírio de João Batista.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Herodias, com raiva de João, queria matá-lo, mas Herodes o temia.',
+                    'No aniversário de Herodes, a filha de Herodias dançou e agradou Herodes, que jurou dar-lhe o que pedisse.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Marcos 6:19-23',
+                enigma: 'Quem pediu a cabeça de João Batista como recompensa pela dança?',
+                options: ['A filha de Herodias', 'Herodias', 'Herodes'],
+                correctAnswer: 'A filha de Herodias'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: A Cabeça na Bandeja',
+                location: 'Maquero (palácio de Herodes)',
+                objective: 'Entender o desfecho trágico da vida de João.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'A filha de Herodias, instigada por sua mãe, pediu a cabeça de João Batista em uma bandeja.',
+                    'Herodes, por causa de seu juramento e dos convidados, mandou degolar João na prisão.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Marcos 6:24-28',
+                enigma: 'Onde a cabeça de João Batista foi entregue?',
+                options: ['Em uma bandeja', 'Em um cesto', 'Em um saco'],
+                correctAnswer: 'Em uma bandeja'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: O Luto dos Discípulos',
+                location: 'Maquero',
+                objective: 'Observar a reação dos discípulos de João à sua morte.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Os discípulos de João vieram, levaram o corpo e o sepultaram.',
+                    'Depois, foram e contaram a Jesus o que havia acontecido.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Mateus 14:12',
+                enigma: 'O que os discípulos de João fizeram com seu corpo após sua morte?',
+                options: ['Levaram e sepultaram', 'Queimaram', 'Jogaram no rio'],
+                correctAnswer: 'Levaram e sepultaram'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: O Maior entre os Nascidos de Mulher',
+                location: 'Israel',
+                objective: 'Refletir sobre a importância de João Batista na história da salvação.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Jesus testemunhou sobre João: "Em verdade vos digo que, entre os que de mulher têm nascido, não apareceu alguém maior do que João Batista."',
+                    'Ele foi a voz que clamava no deserto, preparando o caminho do Senhor.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Mateus 11:11',
+                enigma: 'De acordo com Jesus, quem foi o maior entre os nascidos de mulher?',
+                options: ['João Batista', 'Moisés', 'Elias'],
+                correctAnswer: 'João Batista'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: O Espírito e Poder de Elias',
+                location: 'Israel',
+                objective: 'Compreender a conexão profética entre João e Elias.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'João Batista veio no espírito e poder de Elias para converter o coração dos pais aos filhos e os desobedientes à prudência dos justos.',
+                    'Ele cumpriu a profecia de Malaquias sobre o mensageiro que viria antes do Dia do Senhor.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Lucas 1:17, Malaquias 4:5-6',
+                enigma: 'João Batista veio no espírito e poder de qual profeta do Antigo Testamento?',
+                options: ['Elias', 'Isaías', 'Jeremias'],
+                correctAnswer: 'Elias'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: O Legado de João Batista',
+                location: 'Mundo Antigo',
+                objective: 'Refletir sobre o impacto duradouro do ministério de João.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'João Batista foi um profeta corajoso, um pregador de arrependimento e o elo entre o Antigo e o Novo Testamento.',
+                    'Seu ministério preparou o caminho para a vinda de Jesus e o início do Reino de Deus.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'João 1:6-7',
+                enigma: 'Qual foi o principal objetivo do ministério de João Batista?',
+                options: ['Preparar o caminho para Jesus', 'Construir um templo', 'Liderar um exército'],
+                correctAnswer: 'Preparar o caminho para Jesus'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-teal-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Jesus</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #dc2626; /* Red border for Jesus game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #dc2626; /* Red for Jesus game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #b91c1c; /* Darker red on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #dc2626;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #dc2626;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #b91c1c;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-red-700 mb-4">A História de Jesus ❤️</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Siga a vida de Jesus, desde o seu nascimento humilde até a sua gloriosa ressurreição, e aprenda sobre o maior amor já demonstrado.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Jesus!</p>
+            <p class="text-gray-700 mt-6">A história de Jesus é o fundamento da fé cristã, revelando o amor incondicional de Deus, o sacrifício pela humanidade e a promessa de vida eterna.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,214 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Nascimento de Jesus',
+                location: 'Belém da Judeia',
+                objective: 'Entender as circunstâncias do nascimento de Jesus.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Jesus nasceu em Belém, durante o recenseamento ordenado por César Augusto.',
+                    'Ele foi deitado em uma manjedoura, pois não havia lugar para eles na hospedaria.',
+                    'Pastores foram os primeiros a visitar o recém-nascido, após serem avisados por anjos.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Lucas 2:6-7',
+                enigma: 'Onde Jesus foi deitado ao nascer?',
+                options: ['Numa manjedoura', 'Num berço de ouro', 'Numa cama confortável'],
+                correctAnswer: 'Numa manjedoura'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: A Visita dos Magos',
+                location: 'Jerusalém e Belém',
+                objective: 'Aprender sobre a adoração dos magos a Jesus.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Magos do Oriente seguiram uma estrela até Jerusalém, perguntando pelo rei dos judeus que havia nascido.',
+                    'Eles encontraram Jesus em Belém e o adoraram, oferecendo ouro, incenso e mirra.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Mateus 2:1-2, 11',
+                enigma: 'Quais presentes os magos ofereceram a Jesus?',
+                options: ['Ouro, incenso e mirra', 'Prata, joias e especiarias', 'Roupas, comida e água'],
+                correctAnswer: 'Ouro, incenso e mirra'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Fuga para o Egito',
+                location: 'Belém e Egito',
+                objective: 'Entender a proteção divina de Jesus contra Herodes.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Um anjo avisou José em sonho para fugir para o Egito com Maria e Jesus, pois Herodes procuraria o menino para matá-lo.',
+                    'Herodes, furioso por ter sido enganado pelos magos, ordenou a matança de todos os meninos de dois anos para baixo em Belém e arredores.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Mateus 2:13-16',
+                enigma: 'Para onde a família de Jesus fugiu para escapar de Herodes?',
+                options: ['Egito', 'Nazaré', 'Galileia'],
+                correctAnswer: 'Egito'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
+                title: 'Capítulo 4: Jesus no Templo aos Doze Anos',
                 location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                objective: 'Aprender sobre a sabedoria precoce de Jesus.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Aos doze anos, Jesus foi com seus pais a Jerusalém para a Páscoa.',
+                    'Ele ficou no Templo, ouvindo e fazendo perguntas aos mestres da Lei, que se admiravam de sua inteligência e respostas.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Lucas 2:46-47',
+                enigma: 'Onde Jesus foi encontrado por seus pais, ouvindo e perguntando aos mestres?',
+                options: ['No Templo', 'No mercado', 'Na casa de um parente'],
+                correctAnswer: 'No Templo'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: O Batismo de Jesus',
+                location: 'Rio Jordão',
+                objective: 'Compreender o batismo de Jesus e a confirmação divina.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Jesus foi batizado por João Batista no rio Jordão.',
+                    'Enquanto Jesus saía da água, os céus se abriram, o Espírito Santo desceu sobre Ele em forma de pomba, e uma voz do céu disse: "Tu és o meu Filho amado; em ti me agrado."'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Lucas 3:21-22',
+                enigma: 'Quem batizou Jesus no rio Jordão?',
+                options: ['João Batista', 'Pedro', 'Um sacerdote'],
+                correctAnswer: 'João Batista'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: A Tentação no Deserto',
+                location: 'Deserto da Judeia',
+                objective: 'Entender a vitória de Jesus sobre a tentação.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Após o batismo, Jesus foi levado pelo Espírito ao deserto para ser tentado pelo diabo.',
+                    'Ele jejuou por quarenta dias e quarenta noites e resistiu a todas as tentações, citando as Escrituras.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Mateus 4:1-4',
+                enigma: 'Por quantos dias Jesus jejuou no deserto?',
+                options: ['Quarenta dias', 'Sete dias', 'Três dias'],
+                correctAnswer: 'Quarenta dias'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: O Primeiro Milagre (Bodas de Caná)',
+                location: 'Caná da Galileia',
+                objective: 'Aprender sobre o primeiro sinal público do poder de Jesus.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Jesus e seus discípulos foram convidados para um casamento em Caná, onde o vinho acabou.',
+                    'A pedido de sua mãe, Maria, Jesus transformou água em vinho, realizando seu primeiro milagre público.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'João 2:7-11',
+                enigma: 'O que Jesus transformou em vinho nas bodas de Caná?',
+                options: ['Água', 'Suco de uva', 'Azeite'],
+                correctAnswer: 'Água'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: A Chamada dos Discípulos',
+                location: 'Mar da Galileia',
+                objective: 'Observar como Jesus chamou seus primeiros seguidores.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Jesus chamou pescadores como Simão (Pedro), André, Tiago e João para segui-Lo.',
+                    'Ele prometeu que os faria "pescadores de homens".'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Mateus 4:18-22',
+                enigma: 'O que Jesus prometeu que faria de seus primeiros discípulos pescadores?',
+                options: ['"Pescadores de homens"', '"Grandes líderes"', '"Construtores de templos"'],
+                correctAnswer: '"Pescadores de homens"'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: O Sermão da Montanha',
+                location: 'Uma montanha na Galileia',
+                objective: 'Entender os ensinamentos fundamentais de Jesus.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Jesus ensinou sobre as Bem-aventuranças, a oração do Pai Nosso e a importância de amar os inimigos.',
+                    'Ele ensinou com autoridade, e não como os escribas.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Mateus 5:3-12',
+                enigma: 'Qual famoso sermão Jesus proferiu em uma montanha?',
+                options: ['O Sermão da Montanha', 'O Sermão do Templo', 'O Sermão da Planície'],
+                correctAnswer: 'O Sermão da Montanha'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: Multiplicação dos Pães e Peixes',
+                location: 'Perto do Mar da Galileia',
+                objective: 'Aprender sobre o milagre da alimentação da multidão.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Jesus alimentou uma multidão de cerca de cinco mil homens (além de mulheres e crianças) com apenas cinco pães de cevada e dois peixes.',
+                    'Sobraram doze cestos cheios de pedaços.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Mateus 14:17-21',
+                enigma: 'Quantos pães e peixes Jesus usou para alimentar a multidão?',
+                options: ['Cinco pães e dois peixes', 'Dez pães e um peixe', 'Dois pães e cinco peixes'],
+                correctAnswer: 'Cinco pães e dois peixes'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Andando sobre as Águas',
+                location: 'Mar da Galileia',
+                objective: 'Observar o poder de Jesus sobre a natureza.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Após alimentar a multidão, Jesus mandou os discípulos irem adiante de barco, e Ele foi orar no monte.',
+                    'Durante uma tempestade, Jesus andou sobre as águas para alcançá-los, e Pedro também andou brevemente.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Mateus 14:25-29',
+                enigma: 'Quem também andou sobre as águas com Jesus, por um breve momento?',
+                options: ['Pedro', 'João', 'André'],
+                correctAnswer: 'Pedro'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Transfiguração',
+                location: 'Uma alta montanha',
+                objective: 'Compreender a revelação da glória divina de Jesus.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Jesus levou Pedro, Tiago e João a uma alta montanha, onde Ele foi transfigurado diante deles.',
+                    'Suas vestes ficaram resplandecentes, e Moisés e Elias apareceram conversando com Ele.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Mateus 17:1-3',
+                enigma: 'Quais figuras do Antigo Testamento apareceram com Jesus na Transfiguração?',
+                options: ['Moisés e Elias', 'Abraão e Davi', 'Noé e Samuel'],
+                correctAnswer: 'Moisés e Elias'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Última Ceia',
+                location: 'Cenáculo em Jerusalém',
+                objective: 'Entender a instituição da Ceia do Senhor.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Jesus celebrou a Páscoa com seus discípulos, instituindo a Ceia do Senhor com pão e vinho.',
+                    'Ele revelou que um deles o trairia.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Mateus 26:26-28',
+                enigma: 'O que Jesus instituiu durante a Última Ceia com pão e vinho?',
+                options: ['A Ceia do Senhor', 'O novo templo', 'Um novo mandamento'],
+                correctAnswer: 'A Ceia do Senhor'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: A Crucificação e Morte',
+                location: 'Gólgota (Calvário), Jerusalém',
+                objective: 'Aprender sobre o sacrifício de Jesus pela humanidade.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Jesus foi traído por Judas, preso, julgado e condenado à morte por crucificação.',
+                    'Ele foi crucificado no Gólgota (Calvário) entre dois criminosos e morreu na cruz.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Mateus 27:33-35, 50',
+                enigma: 'Onde Jesus foi crucificado?',
+                options: ['No Gólgota (Calvário)', 'No Templo', 'No Jardim do Getsêmani'],
+                correctAnswer: 'No Gólgota (Calvário)'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: A Ressurreição e Ascensão',
+                location: 'Jerusalém e Monte das Oliveiras',
+                objective: 'Refletir sobre a vitória de Jesus sobre a morte e seu retorno ao Pai.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'No terceiro dia após sua morte, Jesus ressuscitou dos mortos, aparecendo a muitos de seus discípulos.',
+                    'Após quarenta dias, Ele ascendeu ao céu da vista de seus discípulos, prometendo voltar.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Lucas 24:1-7, Atos 1:9-11',
+                enigma: 'Em qual dia Jesus ressuscitou dos mortos?',
+                options: ['No terceiro dia', 'No primeiro dia', 'No sétimo dia'],
+                correctAnswer: 'No terceiro dia'
             }
         ];
 
@@ -426,7 +427,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-red-700 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

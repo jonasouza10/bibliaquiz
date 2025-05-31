@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Pedro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #0f766e; /* Teal border for Peter game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #0f766e; /* Teal for Peter game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #0d645c; /* Darker teal on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #0f766e;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #0f766e;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #0d645c;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-teal-700 mb-4">A História de Pedro 🎣</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Acompanhe a vida de Simão Pedro, o pescador que se tornou um dos mais importantes apóstolos de Jesus, marcado por sua fé, impulsividade e restauração.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Pedro!</p>
+            <p class="text-gray-700 mt-6">A história de Pedro é um testemunho de como Deus usa pessoas imperfeitas, transformando-as em líderes poderosos através da fé, arrependimento e um amor inabalável.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: A Chamada de Pedro',
+                location: 'Mar da Galileia',
+                objective: 'Entender como Jesus chamou Pedro para segui-Lo.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Pedro era um pescador, e Jesus o encontrou lançando as redes no mar.',
+                    'Após uma pesca milagrosa, Jesus disse a Pedro: "De agora em diante, serás pescador de homens."'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Lucas 5:10-11',
+                enigma: 'Qual era a profissão de Pedro antes de seguir Jesus?',
+                options: ['Pescador', 'Carpinteiro', 'Agricultor'],
+                correctAnswer: 'Pescador'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: Pedro Andando sobre as Águas',
+                location: 'Mar da Galileia',
+                objective: 'Compreender a fé e a dúvida de Pedro.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Durante uma tempestade, Jesus foi até os discípulos andando sobre as águas.',
+                    'Pedro pediu para ir ao encontro de Jesus sobre as águas, mas começou a afundar ao ter medo e duvidar.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Mateus 14:28-31',
+                enigma: 'O que fez Pedro começar a afundar enquanto andava sobre as á águas?',
+                options: ['O medo e a dúvida', 'Uma onda grande', 'O cansaço'],
+                correctAnswer: 'O medo e a dúvida'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Confissão de Pedro',
+                location: 'Cesareia de Filipe',
+                objective: 'Entender a revelação de Pedro sobre a identidade de Jesus.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Jesus perguntou aos discípulos quem eles diziam que Ele era.',
+                    'Pedro respondeu: "Tu és o Cristo, o Filho do Deus vivo."'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Mateus 16:15-16',
+                enigma: 'O que Pedro confessou sobre Jesus em Cesareia de Filipe?',
+                options: ['"Tu és o Cristo, o Filho do Deus vivo."', '"Tu és um grande profeta."', '"Tu és o rei de Israel."'],
+                correctAnswer: '"Tu és o Cristo, o Filho do Deus vivo."'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Transfiguração',
+                location: 'Uma alta montanha',
+                objective: 'Aprender sobre a experiência de Pedro na Transfiguração.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Jesus levou Pedro, Tiago e João a uma alta montanha, onde foi transfigurado diante deles.',
+                    'Pedro, em sua impulsividade, sugeriu construir três tendas para Jesus, Moisés e Elias.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Mateus 17:1-4',
+                enigma: 'Quantas tendas Pedro sugeriu construir na Transfiguração?',
+                options: ['Três', 'Uma', 'Duas'],
+                correctAnswer: 'Três'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: Pedro e o Imposto do Templo',
+                location: 'Cafarnaum',
+                objective: 'Compreender a obediência de Pedro e o milagre do peixe.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Os cobradores do imposto do Templo perguntaram a Pedro se Jesus pagava o imposto.',
+                    'Jesus instruiu Pedro a ir pescar e encontrar uma moeda na boca do primeiro peixe para pagar o imposto por ambos.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Mateus 17:24-27',
+                enigma: 'Onde Pedro encontrou a moeda para pagar o imposto do Templo?',
+                options: ['Na boca de um peixe', 'No fundo do mar', 'Em sua bolsa'],
+                correctAnswer: 'Na boca de um peixe'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: A Negação de Pedro',
+                location: 'Pátio do sumo sacerdote',
+                objective: 'Entender a fraqueza de Pedro e o cumprimento da profecia.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Jesus profetizou que Pedro o negaria três vezes antes que o galo cantasse duas vezes.',
+                    'Pedro negou conhecer Jesus por três vezes, no pátio do sumo sacerdote, e o galo cantou.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Marcos 14:66-72',
+                enigma: 'Quantas vezes Pedro negou conhecer Jesus?',
+                options: ['Três vezes', 'Uma vez', 'Duas vezes'],
+                correctAnswer: 'Três vezes'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: O Arrependimento de Pedro',
+                location: 'Pátio do sumo sacerdote',
+                objective: 'Aprender sobre o profundo arrependimento de Pedro.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Após a terceira negação e o canto do galo, Pedro se lembrou das palavras de Jesus e chorou amargamente.',
+                    'Seu arrependimento foi genuíno e levou à sua restauração.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Lucas 22:61-62',
+                enigma: 'O que Pedro fez depois de negar Jesus pela terceira vez e o galo cantar?',
+                options: ['Chorou amargamente', 'Fugiu da cidade', 'Escondeu-se dos outros discípulos'],
+                correctAnswer: 'Chorou amargamente'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: O Encontro com Jesus Ressuscitado',
+                location: 'Mar da Galileia',
+                objective: 'Observar a restauração de Pedro por Jesus.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Após a ressurreição, Jesus apareceu aos discípulos à beira do Mar da Galileia, enquanto pescavam.',
+                    'Jesus perguntou a Pedro três vezes se ele O amava, e Pedro confirmou seu amor, sendo instruído a "apascentar as Suas ovelhas".'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'João 21:15-17',
+                enigma: 'Quantas vezes Jesus perguntou a Pedro se ele O amava, à beira do mar?',
+                options: ['Três vezes', 'Uma vez', 'Duas vezes'],
+                correctAnswer: 'Três vezes'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
+                title: 'Capítulo 9: Pentecostes',
                 location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                objective: 'Entender o papel de Pedro no início da Igreja.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'No dia de Pentecostes, o Espírito Santo desceu sobre os discípulos.',
+                    'Pedro pregou um sermão poderoso, e cerca de três mil pessoas foram batizadas naquele dia.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Atos 2:1-4, 37-41',
+                enigma: 'Quantas pessoas foram batizadas após o sermão de Pedro no Pentecostes?',
+                options: ['Cerca de três mil', 'Cem', 'Quinhentas'],
+                correctAnswer: 'Cerca de três mil'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: A Cura do Coxo',
+                location: 'Porta do Templo (Formosa)',
+                objective: 'Aprender sobre o poder de Deus através de Pedro.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Pedro e João subiam ao Templo para orar e encontraram um homem coxo de nascença na porta Formosa.',
+                    'Pedro disse: "Não tenho prata nem ouro, mas o que tenho, isso te dou: Em nome de Jesus Cristo, o Nazareno, levanta-te e anda!" e o homem foi curado.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Atos 3:1-8',
+                enigma: 'O que Pedro disse ao homem coxo na porta do Templo?',
+                options: ['"Em nome de Jesus Cristo, o Nazareno, levanta-te e anda!"', '"Tenho ouro para te dar."', '"Vá e peça esmolas em outro lugar."'],
+                correctAnswer: '"Em nome de Jesus Cristo, o Nazareno, levanta-te e anda!"'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Pedro e Cornélio',
+                location: 'Jope e Cesareia',
+                objective: 'Observar a abertura do evangelho aos gentios através de Pedro.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Pedro teve uma visão de animais impuros, e uma voz lhe disse para não chamar de impuro o que Deus purificou.',
+                    'Ele foi chamado à casa de Cornélio, um centurião gentio, e pregou o evangelho, resultando na conversão e batismo de Cornélio e sua família.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Atos 10:9-16, 44-48',
+                enigma: 'Qual foi o nome do centurião gentio que Pedro visitou e pregou o evangelho?',
+                options: ['Cornélio', 'Pilatos', 'Herodes'],
+                correctAnswer: 'Cornélio'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
+                title: 'Capítulo 12: Pedro na Prisão',
                 location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                objective: 'Compreender a libertação milagrosa de Pedro da prisão.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Herodes Agripa prendeu Pedro com a intenção de executá-lo.',
+                    'Um anjo do Senhor apareceu na prisão, libertou Pedro de suas correntes e o guiou para fora da prisão.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Atos 12:1-11',
+                enigma: 'Quem libertou Pedro da prisão?',
+                options: ['Um anjo do Senhor', 'Os discípulos', 'Ele mesmo'],
+                correctAnswer: 'Um anjo do Senhor'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
+                title: 'Capítulo 13: O Concílio de Jerusalém',
                 location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                objective: 'Entender a defesa de Pedro pela inclusão dos gentios.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Pedro participou do Concílio de Jerusalém, onde defendeu que os gentios convertidos não precisavam ser circuncidados para serem salvos.',
+                    'Ele testemunhou sobre a obra do Espírito Santo entre os gentios.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Atos 15:7-11',
+                enigma: 'Qual foi a principal questão debatida no Concílio de Jerusalém em que Pedro participou?',
+                options: ['A circuncisão dos gentios', 'A liderança da Igreja', 'A construção de um novo templo'],
+                correctAnswer: 'A circuncisão dos gentios'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: As Cartas de Pedro',
+                location: 'Diversas regiões',
+                objective: 'Aprender sobre as epístolas escritas por Pedro.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Pedro escreveu duas epístolas no Novo Testamento: 1 Pedro e 2 Pedro.',
+                    'Nelas, ele encoraja os cristãos a perseverar na fé em meio às perseguições e a crescer no conhecimento de Jesus Cristo.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: '1 Pedro 1:3-7',
+                enigma: 'Quantas epístolas Pedro escreveu no Novo Testamento?',
+                options: ['Duas', 'Uma', 'Três'],
+                correctAnswer: 'Duas'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: O Legado de Pedro',
+                location: 'Roma (tradição)',
+                objective: 'Refletir sobre o impacto duradouro da vida e ministério de Pedro.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Pedro é considerado uma das colunas da Igreja primitiva, um líder corajoso e um pregador poderoso.',
+                    'Sua vida é um exemplo de transformação, de um pescador impulsivo a um apóstolo fiel e mártir (segundo a tradição).'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Mateus 16:18',
+                enigma: 'Qual é um dos principais legados de Pedro para a Igreja?',
+                options: ['Sua liderança e pregação poderosa', 'Sua riqueza', 'Sua habilidade em construir barcos'],
+                correctAnswer: 'Sua liderança e pregação poderosa'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-teal-700 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

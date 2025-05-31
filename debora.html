@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Débora</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #6366f1; /* Indigo border for Deborah game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #4f46e5; /* Indigo for Deborah game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #4338ca; /* Darker indigo on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #4f46e5;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #4f46e5;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #4338ca;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-indigo-700 mb-4">A História de Débora 🛡️</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Conheça a inspiradora história de Débora, a única juíza de Israel, que liderou seu povo à vitória.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Débora!</p>
+            <p class="text-gray-700 mt-6">A história de Débora é um poderoso exemplo de fé, coragem e liderança, mostrando que Deus usa quem Ele quer para Seus propósitos.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: Débora, a Juíza e Profetisa',
+                location: 'Efraim, debaixo da palmeira de Débora',
+                objective: 'Entender o papel de Débora como líder de Israel.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Débora era uma profetisa e juíza em Israel.',
+                    'Ela julgava o povo debaixo de uma palmeira entre Ramá e Betel.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Juízes 4:4-5',
+                enigma: 'Qual era a dupla função de Débora em Israel?',
+                options: ['Juíza e profetisa', 'Cantora e guerreira', 'Rainha e conselheira'],
+                correctAnswer: 'Juíza e profetisa'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: A Opressão de Jabim',
+                location: 'Canaã',
+                objective: 'Compreender a situação de Israel sob a opressão cananeia.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Israel estava oprimido por Jabim, rei de Canaã.',
+                    'Jabim tinha um comandante do exército chamado Sísera, com novecentos carros de ferro.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Juízes 4:1-3',
+                enigma: 'Quem oprimia Israel na época de Débora?',
+                options: ['Jabim', 'Sísera', 'Jael'],
+                correctAnswer: 'Jabim'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: O Chamado a Baraque',
+                location: 'Quedes-Naftali',
+                objective: 'Descobrir como Débora convocou Baraque para a batalha.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Débora mandou chamar Baraque, de Quedes-Naftali.',
+                    'Ela o instruiu a reunir dez mil homens e ir para o monte Tabor.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Juízes 4:6-7',
+                enigma: 'Para onde Débora instruiu Baraque a levar seus dez mil homens?',
+                options: ['Monte Tabor', 'Monte Carmelo', 'Vale de Jezreel'],
+                correctAnswer: 'Monte Tabor'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Condição de Baraque',
+                location: 'Quedes-Naftali',
+                objective: 'Entender a hesitação de Baraque e a condição de Débora.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Baraque disse que só iria se Débora fosse com ele.',
+                    'Débora concordou, mas profetizou que a honra da vitória não seria dele.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Juízes 4:8-9',
+                enigma: 'Qual foi a condição de Baraque para ir à batalha?',
+                options: ['Que Débora fosse com ele', 'Que tivesse mais homens', 'Que Deus lhe desse um sinal'],
+                correctAnswer: 'Que Débora fosse com ele'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Reunião do Exército',
+                location: 'Quedes e Monte Tabor',
+                objective: 'Observar a mobilização das tribos de Israel.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Baraque reuniu homens de Naftali e Zebulom.',
+                    'Eles subiram ao monte Tabor, conforme Débora instruiu.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Juízes 4:10',
+                enigma: 'De quais tribos Baraque reuniu os dez mil homens?',
+                options: ['Naftali e Zebulom', 'Judá e Benjamim', 'Rúben e Gade'],
+                correctAnswer: 'Naftali e Zebulom'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: A Batalha no Rio Quisom',
+                location: 'Rio Quisom',
+                objective: 'Testemunhar a vitória de Israel sobre Sísera.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Débora disse a Baraque: "Levanta-te, pois este é o dia em que o Senhor entregou Sísera em tuas mãos".',
+                    'O Senhor confundiu Sísera e todos os seus carros e exército diante de Baraque.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Juízes 4:14-15',
+                enigma: 'Onde ocorreu a batalha decisiva contra Sísera?',
+                options: ['Rio Quisom', 'Monte Tabor', 'Jericó'],
+                correctAnswer: 'Rio Quisom'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Fuga de Sísera',
+                location: 'Campo de batalha',
+                objective: 'Acompanhar a fuga de Sísera e sua busca por refúgio.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Sísera desceu do seu carro e fugiu a pé.',
+                    'Ele buscou refúgio na tenda de Jael, mulher de Héber, o queneu.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Juízes 4:15-17',
+                enigma: 'Para onde Sísera fugiu a pé após a derrota?',
+                options: ['Para a tenda de Jael', 'Para sua própria cidade', 'Para o Egito'],
+                correctAnswer: 'Para a tenda de Jael'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: Jael e a Estaca',
+                location: 'Tenda de Jael',
+                objective: 'Aprender sobre o ato corajoso e decisivo de Jael.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Jael recebeu Sísera em sua tenda e lhe ofereceu leite.',
+                    'Enquanto ele dormia, ela pegou uma estaca de tenda e um martelo e o matou.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Juízes 4:18-21',
+                enigma: 'Com o que Jael matou Sísera?',
+                options: ['Uma estaca de tenda e um martelo', 'Uma espada', 'Uma pedra'],
+                correctAnswer: 'Uma estaca de tenda e um martelo'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: A Chegada de Baraque',
+                location: 'Tenda de Jael',
+                objective: 'Observar a confirmação da profecia de Débora.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Baraque chegou perseguindo Sísera.',
+                    'Jael saiu ao seu encontro e mostrou-lhe Sísera morto em sua tenda.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Juízes 4:22',
+                enigma: 'Quem mostrou a Baraque o corpo de Sísera morto?',
+                options: ['Jael', 'Débora', 'Um servo'],
+                correctAnswer: 'Jael'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: O Cântico de Débora e Baraque',
+                location: 'Israel',
+                objective: 'Entender a celebração da vitória e a exaltação de Deus.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Débora e Baraque cantaram um cântico de louvor ao Senhor.',
+                    'Eles exaltaram a Deus pela vitória e a Jael por sua coragem.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Juízes 5:1-3',
+                enigma: 'Quem cantou um cântico de louvor após a vitória sobre Sísera?',
+                options: ['Débora e Baraque', 'Os sacerdotes', 'Todo o povo de Israel'],
+                correctAnswer: 'Débora e Baraque'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: A Paz na Terra',
+                location: 'Canaã',
+                objective: 'Compreender o resultado da vitória para Israel.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'A terra teve paz por quarenta anos.',
+                    'A opressão de Jabim e Sísera chegou ao fim.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Juízes 5:31',
+                enigma: 'Por quantos anos a terra teve paz após a vitória de Débora e Baraque?',
+                options: ['Quarenta anos', 'Vinte anos', 'Cinquenta anos'],
+                correctAnswer: 'Quarenta anos'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Liderança Feminina',
+                location: 'Israel',
+                objective: 'Refletir sobre o significado da liderança de Débora.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Débora foi uma das poucas mulheres a julgar Israel.',
+                    'Sua liderança demonstrou que Deus usa quem Ele quer, independentemente do gênero.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Juízes 4:4',
+                enigma: 'O que a história de Débora demonstra sobre a liderança de Deus?',
+                options: ['Que Deus usa quem Ele quer', 'Que apenas homens podem liderar', 'Que mulheres não podem ser juízas'],
+                correctAnswer: 'Que Deus usa quem Ele quer'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Fé de Débora',
+                location: 'Israel',
+                objective: 'Reconhecer a fé inabalável de Débora em Deus.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Débora não hesitou em obedecer a Deus e ir para a batalha.',
+                    'Sua fé inspirou Baraque e todo o exército.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Hebreus 11:32-34', // General reference to judges, including Deborah
+                enigma: 'Qual característica de Débora inspirou Baraque e o exército?',
+                options: ['Sua fé', 'Sua força física', 'Sua beleza'],
+                correctAnswer: 'Sua fé'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: O Propósito de Deus',
+                location: 'Canaã',
+                objective: 'Entender que Deus usa circunstâncias e pessoas para cumprir Seus propósitos.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Deus usou uma mulher, Jael, para dar a vitória final.',
+                    'Isso mostrou que a glória seria de Deus, não de um homem.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Juízes 4:9',
+                enigma: 'Por que a honra da vitória final não foi para Baraque?',
+                options: ['Para que a glória fosse de Deus através de uma mulher', 'Porque ele foi covarde', 'Porque ele não lutou bem'],
+                correctAnswer: 'Para que a glória fosse de Deus através de uma mulher'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
+                title: 'Capítulo 15: Legado de Débora',
                 location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                objective: 'Refletir sobre o impacto duradouro da vida de Débora.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Débora é lembrada como uma das grandes líderes de Israel.',
+                    'Sua história inspira fé, coragem e obediência a Deus.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Juízes 5:31',
+                enigma: 'Qual é o principal legado de Débora?',
+                options: ['Fé, coragem e obediência a Deus', 'Riqueza e poder', 'Conquistas territoriais'],
+                correctAnswer: 'Fé, coragem e obediência a Deus'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

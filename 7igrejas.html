@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Josué</title>
+    <title>A História das 7 Igrejas do Apocalipse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #10b981; /* Emerald border for Joshua game */
+            border-left: 4px solid #dc2626; /* Red border for Revelation game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #059669; /* Emerald for Joshua game */
+            background-color: #dc2626; /* Red for Revelation game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #047857; /* Darker emerald on hover */
+            background-color: #b91c1c; /* Darker red on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #059669;
+            border: 2px solid #dc2626;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #059669;
+            background-color: #dc2626;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #047857;
+            background-color: #b91c1c;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-emerald-700 mb-4">A História de Josué ⚔️</h1>
+        <h1 class="text-4xl font-bold text-red-700 mb-4">As 7 Igrejas do Apocalipse 🔥</h1>
         <p class="text-gray-700 mb-6">
-            Siga Josué na liderança de Israel para conquistar a Terra Prometida, com fé e obediência a Deus.
+            Explore as mensagens de Jesus às sete igrejas da Ásia Menor, revelando suas virtudes, falhas e as promessas para os vencedores.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Josué!</p>
-            <p class="text-gray-700 mt-6">A história de Josué é um testemunho de liderança, coragem e a fidelidade de Deus em cumprir Suas promessas.</p>
+            <p class="final-revelation">Você completou a jornada pelas 7 Igrejas do Apocalipse!</p>
+            <p class="text-gray-700 mt-6">As mensagens às sete igrejas são um chamado atemporal à autoavaliação, ao arrependimento e à perseverança na fé, com promessas gloriosas para aqueles que vencem.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,101 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Chamado de Josué',
-                location: 'Planícies de Moabe',
-                objective: 'Entender a sucessão de Moisés e o chamado de Josué por Deus.',
+                title: 'Capítulo 1: Éfeso - A Igreja que Perdeu o Primeiro Amor',
+                location: 'Éfeso',
+                objective: 'Entender a exortação de Jesus à igreja de Éfeso.',
                 clues: [
-                    'Moisés, servo do Senhor, havia morrido.',
-                    'Deus chamou Josué para liderar o povo à Terra Prometida.'
+                    'Jesus elogiou suas obras, trabalho árduo e perseverança.',
+                    'No entanto, Ele os repreendeu por terem abandonado o seu primeiro amor.'
                 ],
-                keyVerse: 'Josué 1:1-2',
-                enigma: 'Quem Deus escolheu para liderar Israel após a morte de Moisés?',
-                options: ['Josué', 'Calebe', 'Eleazar'],
-                correctAnswer: 'Josué'
+                keyVerse: 'Apocalipse 2:1-7',
+                enigma: 'Qual foi a principal falha da igreja de Éfeso, segundo Jesus?',
+                options: ['Perder o primeiro amor', 'Falta de obras', 'Tolerância ao pecado'],
+                correctAnswer: 'Perder o primeiro amor'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Promessa de Deus a Josué',
-                location: 'Planícies de Moabe',
-                objective: 'Compreender as promessas de Deus para Josué em sua nova liderança.',
+                title: 'Capítulo 2: Esmirna - A Igreja Perseguida e Fiel',
+                location: 'Esmirna',
+                objective: 'Compreender a condição da igreja de Esmirna e a promessa a ela.',
                 clues: [
-                    'Deus prometeu estar com Josué, assim como esteve com Moisés.',
-                    'Ele deveria ser forte e corajoso.'
+                    'Jesus conhecia suas tribulações e pobreza, mas disse que eram ricos.',
+                    'Ele os encorajou a ser fiéis até a morte, prometendo a coroa da vida.'
                 ],
-                keyVerse: 'Josué 1:5-7',
-                enigma: 'O que Deus disse a Josué para ser em sua liderança?',
-                options: ['Forte e corajoso', 'Sábio e paciente', 'Rico e poderoso'],
-                correctAnswer: 'Forte e corajoso'
+                keyVerse: 'Apocalipse 2:8-11',
+                enigma: 'Qual foi a promessa de Jesus à igreja de Esmirna por sua fidelidade até a morte?',
+                options: ['A coroa da vida', 'Riquezas terrenas', 'Paz imediata'],
+                correctAnswer: 'A coroa da vida'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Os Espiões em Jericó',
-                location: 'Jericó',
-                objective: 'Descobrir o papel de Raabe e a fidelidade de Deus.',
+                title: 'Capítulo 3: Pérgamo - A Igreja que Habita Onde Satanás Tem Seu Trono',
+                location: 'Pérgamo',
+                objective: 'Aprender sobre os desafios e a repreensão à igreja de Pérgamo.',
                 clues: [
-                    'Josué enviou dois espiões a Jericó.',
-                    'Eles foram escondidos por uma prostituta chamada Raabe.'
+                    'Jesus elogiou sua permanência na fé, mesmo onde Satanás habitava.',
+                    'Mas os repreendeu por terem entre eles os que seguiam a doutrina de Balaão e dos nicolaítas.'
                 ],
-                keyVerse: 'Josué 2:1, 4-6',
-                enigma: 'Quem escondeu os espiões israelitas em Jericó?',
-                options: ['Raabe', 'Débora', 'Jael'],
-                correctAnswer: 'Raabe'
+                keyVerse: 'Apocalipse 2:12-17',
+                enigma: 'Onde Jesus disse que Satanás tinha seu trono, em relação à igreja de Pérgamo?',
+                options: ['Pérgamo', 'Éfeso', 'Esmirna'],
+                correctAnswer: 'Pérgamo'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Travessia do Jordão',
-                location: 'Rio Jordão',
-                objective: 'Observar o milagre da travessia do Rio Jordão.',
+                title: 'Capítulo 4: Tiatira - A Igreja Tolerante e Amorosa',
+                location: 'Tiatira',
+                objective: 'Entender as qualidades e a falha da igreja de Tiatira.',
                 clues: [
-                    'Os sacerdotes carregaram a Arca da Aliança.',
-                    'As águas do Jordão se separaram quando seus pés tocaram a água.'
+                    'Jesus elogiou seu amor, fé, serviço e perseverança, e que suas últimas obras eram maiores que as primeiras.',
+                    'No entanto, Ele os repreendeu por tolerarem a mulher Jezabel, que ensinava e seduzia seus servos à prostituição e a comer coisas sacrificadas a ídolos.'
                 ],
-                keyVerse: 'Josué 3:13-17',
-                enigma: 'O que os sacerdotes carregavam ao atravessar o Rio Jordão?',
-                options: ['A Arca da Aliança', 'As tábuas da Lei', 'O cajado de Moisés'],
-                correctAnswer: 'A Arca da Aliança'
+                keyVerse: 'Apocalipse 2:18-29',
+                enigma: 'Qual mulher a igreja de Tiatira era repreendida por tolerar?',
+                options: ['Jezabel', 'Dalila', 'Herodias'],
+                correctAnswer: 'Jezabel'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Os Doze Marcos de Pedra',
-                location: 'Gilgal',
-                objective: 'Entender o propósito dos doze marcos de pedra em Gilgal.',
+                title: 'Capítulo 5: Sardes - A Igreja Morta',
+                location: 'Sardes',
+                objective: 'Compreender a condição espiritual da igreja de Sardes.',
                 clues: [
-                    'Josué ordenou que doze homens pegassem uma pedra do meio do Jordão.',
-                    'As pedras serviriam como memorial para as futuras gerações.'
+                    'Jesus disse que eles tinham nome de que viviam, mas estavam mortos.',
+                    'Ele os exortou a despertar e fortalecer o que restava.'
                 ],
-                keyVerse: 'Josué 4:5-7',
-                enigma: 'Quantas pedras foram tiradas do Jordão para servir de memorial?',
-                options: ['Doze', 'Sete', 'Quarenta'],
-                correctAnswer: 'Doze'
+                keyVerse: 'Apocalipse 3:1-6',
+                enigma: 'Qual era a condição espiritual da igreja de Sardes, segundo Jesus?',
+                options: ['Morta', 'Forte', 'Perseguida'],
+                correctAnswer: 'Morta'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Circuncisão em Gilgal',
-                location: 'Gilgal',
-                objective: 'Compreender a renovação da aliança em Gilgal.',
+                title: 'Capítulo 6: Filadélfia - A Igreja Fiel e de Pouca Força',
+                location: 'Filadélfia',
+                objective: 'Aprender sobre a fidelidade e as promessas à igreja de Filadélfia.',
                 clues: [
-                    'Todos os homens nascidos no deserto não haviam sido circuncidados.',
-                    'Deus removeu o opróbrio do Egito de sobre Israel.'
+                    'Jesus elogiou sua pouca força, mas que guardaram Sua palavra e não negaram Seu nome.',
+                    'Ele prometeu mantê-los da hora da provação e fazê-los coluna no templo de Deus.'
                 ],
-                keyVerse: 'Josué 5:2-9',
-                enigma: 'O que foi feito em Gilgal para renovar a aliança com Deus?',
-                options: ['A circuncisão', 'Um sacrifício', 'A construção de um altar'],
-                correctAnswer: 'A circuncisão'
+                keyVerse: 'Apocalipse 3:7-13',
+                enigma: 'Apesar de ter pouca força, o que a igreja de Filadélfia guardou?',
+                options: ['A palavra de Jesus', 'Tesouros terrenos', 'Grandes exércitos'],
+                correctAnswer: 'A palavra de Jesus'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Comandante do Exército do Senhor',
-                location: 'Perto de Jericó',
-                objective: 'Descobrir o encontro de Josué com uma figura celestial.',
+                title: 'Capítulo 7: Laodiceia - A Igreja Morna',
+                location: 'Laodiceia',
+                objective: 'Observar a repreensão de Jesus à igreja de Laodiceia.',
                 clues: [
-                    'Josué levantou os olhos e viu um homem com uma espada desembainhada.',
-                    'Ele era o Comandante do Exército do Senhor.'
+                    'Jesus os descreveu como mornos, nem frios nem quentes, e por isso os vomitaria de Sua boca.',
+                    'Eles se consideravam ricos, mas Jesus os via como miseráveis, pobres, cegos e nus.'
                 ],
-                keyVerse: 'Josué 5:13-15',
-                enigma: 'Quem Josué encontrou com uma espada desembainhada antes da batalha de Jericó?',
-                options: ['O Comandante do Exército do Senhor', 'Um anjo', 'Um guerreiro filisteu'],
-                correctAnswer: 'O Comandante do Exército do Senhor'
-            },
-            {
-                id: 'chapter8',
-                title: 'Capítulo 8: A Queda de Jericó',
-                location: 'Jericó',
-                objective: 'Aprender sobre a estratégia divina para a conquista de Jericó.',
-                clues: [
-                    'Israel marchou ao redor da cidade por sete dias.',
-                    'No sétimo dia, eles gritaram e as muralhas caíram.'
-                ],
-                keyVerse: 'Josué 6:15-20',
-                enigma: 'O que os israelitas fizeram no sétimo dia para derrubar as muralhas de Jericó?',
-                options: ['Gritaram e tocaram as trombetas', 'Atacaram com espadas', 'Cercaram a cidade por meses'],
-                correctAnswer: 'Gritaram e tocaram as trombetas'
-            },
-            {
-                id: 'chapter9',
-                title: 'Capítulo 9: O Pecado de Acã',
-                location: 'Vale de Acor',
-                objective: 'Entender as consequências da desobediência de Acã.',
-                clues: [
-                    'Israel foi derrotado na primeira tentativa de conquistar Ai.',
-                    'Um homem chamado Acã havia roubado coisas consagradas.'
-                ],
-                keyVerse: 'Josué 7:1, 20-21',
-                enigma: 'Quem causou a derrota de Israel em Ai por sua desobediência?',
-                options: ['Acã', 'Calebe', 'Finéias'],
-                correctAnswer: 'Acã'
-            },
-            {
-                id: 'chapter10',
-                title: 'Capítulo 10: A Conquista de Ai',
-                location: 'Ai',
-                objective: 'Observar a estratégia de Josué para conquistar Ai.',
-                clues: [
-                    'Josué usou uma emboscada para derrotar Ai.',
-                    'A cidade foi queimada e seus habitantes destruídos.'
-                ],
-                keyVerse: 'Josué 8:18-28',
-                enigma: 'Que tática Josué usou para conquistar Ai?',
-                options: ['Uma emboscada', 'Um cerco prolongado', 'Um ataque frontal'],
-                correctAnswer: 'Uma emboscada'
-            },
-            {
-                id: 'chapter11',
-                title: 'Capítulo 11: A Aliança com Gibeão',
-                location: 'Gibeão',
-                objective: 'Aprender sobre o engano dos gibeonitas e a aliança feita.',
-                clues: [
-                    'Os gibeonitas enganaram Josué, fingindo vir de uma terra distante.',
-                    'Israel fez uma aliança de paz com eles.'
-                ],
-                keyVerse: 'Josué 9:3-6, 15',
-                enigma: 'Como os gibeonitas enganaram Josué e os israelitas?',
-                options: ['Fingindo vir de uma terra distante', 'Oferecendo presentes valiosos', 'Ameaçando-os'],
-                correctAnswer: 'Fingindo vir de uma terra distante'
-            },
-            {
-                id: 'chapter12',
-                title: 'Capítulo 12: A Batalha dos Cinco Reis',
-                location: 'Gibeão',
-                objective: 'Testemunhar o milagre do sol e da lua parando.',
-                clues: [
-                    'Cinco reis amorreus atacaram Gibeão, e Israel veio em seu socorro.',
-                    'Deus fez o sol e a lua pararem para Israel vencer a batalha.'
-                ],
-                keyVerse: 'Josué 10:12-14',
-                enigma: 'O que Deus fez para ajudar Israel a vencer a batalha contra os cinco reis?',
-                options: ['Fez o sol e a lua pararem', 'Enviou uma tempestade', 'Enviou anjos para lutar'],
-                correctAnswer: 'Fez o sol e a lua pararem'
-            },
-            {
-                id: 'chapter13',
-                title: 'Capítulo 13: A Divisão da Terra',
-                location: 'Siló',
-                objective: 'Compreender como a Terra Prometida foi dividida entre as tribos.',
-                clues: [
-                    'A terra foi dividida por sorteio entre as tribos de Israel.',
-                    'Josué e Eleazar supervisionaram a divisão.'
-                ],
-                keyVerse: 'Josué 14:1-2',
-                enigma: 'Como a terra foi dividida entre as tribos de Israel?',
-                options: ['Por sorteio', 'Por conquista individual', 'Por decisão de Josué'],
-                correctAnswer: 'Por sorteio'
-            },
-            {
-                id: 'chapter14',
-                title: 'Capítulo 14: As Cidades de Refúgio',
-                location: 'Canaã',
-                objective: 'Aprender sobre o propósito das Cidades de Refúgio.',
-                clues: [
-                    'Deus ordenou que fossem separadas cidades de refúgio.',
-                    'Elas serviam para proteger aqueles que matassem alguém acidentalmente.'
-                ],
-                keyVerse: 'Josué 20:2-3',
-                enigma: 'Qual era o propósito das Cidades de Refúgio?',
-                options: ['Proteger homicidas acidentais', 'Servir como centros comerciais', 'Serem fortalezas militares'],
-                correctAnswer: 'Proteger homicidas acidentais'
-            },
-            {
-                id: 'chapter15',
-                title: 'Capítulo 15: O Discurso Final e Morte de Josué',
-                location: 'Siquém',
-                objective: 'Relembrar as últimas palavras de Josué e sua morte.',
-                clues: [
-                    'Josué reuniu todo o Israel em Siquém e os exortou a servir ao Senhor.',
-                    'Ele morreu com 110 anos de idade.'
-                ],
-                keyVerse: 'Josué 24:14-15, 29',
-                enigma: 'Qual foi a famosa exortação de Josué ao povo em seu discurso final?',
-                options: ['Escolhei a quem sirvais', 'Sede fortes e corajosos', 'Não temais os inimigos'],
-                correctAnswer: 'Escolhei a quem sirvais'
+                keyVerse: 'Apocalipse 3:14-22',
+                enigma: 'Como Jesus descreveu a igreja de Laodiceia por sua condição espiritual?',
+                options: ['Morna', 'Fervorosa', 'Fria'],
+                correctAnswer: 'Morna'
             }
         ];
 
@@ -426,7 +314,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-emerald-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-red-700 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

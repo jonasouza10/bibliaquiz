@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Abraão e Sara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #f59e0b; /* Amber border for Abraham and Sarah game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #d97706; /* Darker Amber for Abraham and Sarah game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #b45309; /* Even darker amber on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #d97706;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #d97706;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #b45309;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-amber-700 mb-4">A História de Abraão e Sara ✨</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Embarque na jornada de fé de Abraão e Sara, desde o chamado de Deus até o cumprimento das promessas.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Abraão e Sara!</p>
+            <p class="text-gray-700 mt-6">A história de Abraão e Sara é um testemunho de fé, paciência e da fidelidade das promessas de Deus.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Chamado de Abrão',
+                location: 'Ur dos Caldeus',
+                objective: 'Descobrir o primeiro chamado de Deus a Abrão.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Deus chamou Abrão para sair de sua terra e parentela.',
+                    'Ele deveria ir para uma terra que Deus lhe mostraria.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Gênesis 12:1',
+                enigma: 'De qual cidade Deus chamou Abrão para sair?',
+                options: ['Ur dos Caldeus', 'Harã', 'Canaã'],
+                correctAnswer: 'Ur dos Caldeus'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: A Promessa da Grande Nação',
+                location: 'Harã',
+                objective: 'Entender as promessas iniciais de Deus a Abrão.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Deus prometeu fazer dele uma grande nação.',
+                    'Seu nome seria engrandecido e ele seria uma bênção.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Gênesis 12:2',
+                enigma: 'O que Deus prometeu fazer de Abrão?',
+                options: ['Uma grande nação', 'Um grande rei', 'Um grande profeta'],
+                correctAnswer: 'Uma grande nação'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Viagem para Canaã',
+                location: 'Canaã',
+                objective: 'Acompanhar a obediência de Abrão em sua jornada.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Abrão partiu como o Senhor lhe havia dito.',
+                    'Ele levou sua esposa Sarai e seu sobrinho Ló.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Gênesis 12:4',
+                enigma: 'Quem acompanhou Abrão em sua viagem para Canaã, além de sua esposa?',
+                options: ['Ló', 'Noé', 'Sem'],
+                correctAnswer: 'Ló'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: O Altar em Siquém',
+                location: 'Siquém',
+                objective: 'Observar o primeiro altar que Abrão construiu em Canaã.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Deus apareceu a Abrão em Siquém.',
+                    'Abrão construiu um altar ao Senhor que lhe aparecera.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Gênesis 12:7',
+                enigma: 'O que Abrão construiu em Siquém em honra a Deus?',
+                options: ['Um altar', 'Uma casa', 'Um poço'],
+                correctAnswer: 'Um altar'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Fome no Egito',
+                location: 'Egito',
+                objective: 'Entender a ida de Abrão ao Egito e a situação de Sarai.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Houve uma grande fome na terra de Canaã.',
+                    'Abrão pediu a Sarai para dizer que era sua irmã.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Gênesis 12:10-13',
+                enigma: 'Por que Abrão foi para o Egito?',
+                options: ['Por causa da fome', 'Para fazer comércio', 'Para visitar parentes'],
+                correctAnswer: 'Por causa da fome'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: A Separação de Ló',
+                location: 'Betel e Ai',
+                objective: 'Compreender a necessidade da separação entre Abrão e Ló.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Houve contenda entre os pastores de Abrão e Ló.',
+                    'Abrão ofereceu a Ló a escolha da terra.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Gênesis 13:8-9',
+                enigma: 'Qual terra Ló escolheu para si?',
+                options: ['A planície do Jordão', 'As montanhas', 'O deserto'],
+                correctAnswer: 'A planície do Jordão'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: A Promessa Renovada',
+                location: 'Canaã',
+                objective: 'Ver a renovação das promessas de Deus a Abrão após a separação.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Deus falou a Abrão depois que Ló se separou dele.',
+                    'Deus prometeu toda a terra que ele via.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Gênesis 13:14-15',
+                enigma: 'O que Deus prometeu a Abrão que sua descendência seria como?',
+                options: ['O pó da terra', 'As estrelas do céu', 'As areias do mar'],
+                correctAnswer: 'O pó da terra'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: A Batalha dos Reis',
+                location: 'Vale de Sidim',
+                objective: 'Aprender sobre a intervenção de Abrão para resgatar Ló.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Quatro reis do Oriente lutaram contra cinco reis de cidades da planície.',
+                    'Ló foi levado cativo.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Gênesis 14:12-16',
+                enigma: 'Quem foi levado cativo na batalha dos reis?',
+                options: ['Ló', 'Sarai', 'Abrão'],
+                correctAnswer: 'Ló'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: Melquisedeque',
+                location: 'Vale de Savé',
+                objective: 'Conhecer o sacerdote-rei que abençoou Abrão.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Melquisedeque era rei de Salém e sacerdote do Deus Altíssimo.',
+                    'Ele trouxe pão e vinho e abençoou Abrão.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Gênesis 14:18-20',
+                enigma: 'O que Abrão deu a Melquisedeque?',
+                options: ['O dízimo de tudo', 'Ouro e prata', 'Animais'],
+                correctAnswer: 'O dízimo de tudo'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: A Aliança com Abrão',
+                location: 'Canaã',
+                objective: 'Entender a formalização da aliança de Deus com Abrão.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Deus fez uma aliança com Abrão em um sonho profundo.',
+                    'Prometeu uma descendência numerosa e a posse da terra.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Gênesis 15:18',
+                enigma: 'O que Deus usou como símbolo na aliança com Abrão, que passou entre as metades dos animais?',
+                options: ['Uma tocha fumegante e uma chama de fogo', 'Uma nuvem e um raio', 'Um arco-íris'],
+                correctAnswer: 'Uma tocha fumegante e uma chama de fogo'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: Agar e Ismael',
+                location: 'Canaã',
+                objective: 'Aprender sobre a tentativa de Sarai de ajudar no cumprimento da promessa.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Sarai não podia ter filhos e deu sua serva Agar a Abrão.',
+                    'Agar deu à luz Ismael.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Gênesis 16:3-4',
+                enigma: 'Qual era o nome da serva egípcia de Sarai que teve um filho com Abrão?',
+                options: ['Agar', 'Rebeca', 'Raquel'],
+                correctAnswer: 'Agar'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Mudança de Nomes',
+                location: 'Canaã',
+                objective: 'Entender a mudança de nomes de Abrão e Sarai e o significado.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Deus mudou o nome de Abrão para Abraão, pai de muitas nações.',
+                    'Sarai foi mudada para Sara, princesa.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Gênesis 17:5, 15',
+                enigma: 'Qual o significado do novo nome de Abraão?',
+                options: ['Pai de muitas nações', 'Pai da fé', 'Pai da alegria'],
+                correctAnswer: 'Pai de muitas nações'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Visita dos Três Homens',
+                location: 'Carvalho de Manre',
+                objective: 'Observar a visita de Deus a Abraão e a promessa de um filho.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Três homens apareceram a Abraão junto aos carvalhos de Manre.',
+                    'Eles anunciaram que Sara teria um filho em um ano.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Gênesis 18:10',
+                enigma: 'Como Sara reagiu ao ouvir que teria um filho na velhice?',
+                options: ['Riu-se', 'Chorou', 'Ficou em silêncio'],
+                correctAnswer: 'Riu-se'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: Sodoma e Gomorra',
+                location: 'Vale de Sidim',
+                objective: 'Aprender sobre a intercessão de Abraão pelas cidades.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Deus revelou a Abraão que destruiria Sodoma e Gomorra.',
+                    'Abraão intercedeu por elas, tentando salvar os justos.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Gênesis 18:23-32',
+                enigma: 'Quantos justos Abraão pediu a Deus que houvesse em Sodoma para que ela não fosse destruída?',
+                options: ['Dez', 'Cinquenta', 'Vinte'],
+                correctAnswer: 'Dez'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: O Nascimento de Isaque',
+                location: 'Gerar',
+                objective: 'Testemunhar o cumprimento da promessa de Deus.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Sara engravidou e deu à luz um filho na velhice de Abraão.',
+                    'O nome do filho significava "riso".'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Gênesis 21:1-3',
+                enigma: 'Qual foi o nome do filho de Abraão e Sara, que significa "riso"?',
+                options: ['Isaque', 'Ismael', 'Jacó'],
+                correctAnswer: 'Isaque'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-amber-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">

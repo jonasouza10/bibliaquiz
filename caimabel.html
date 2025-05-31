@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A História de Esdras</title>
+    <title>A História de Caim e Abel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,7 +42,7 @@
         }
         .clue-list li {
             background-color: #f9fafb;
-            border-left: 4px solid #f97316; /* Orange border for Ezra game */
+            border-left: 4px solid #92400e; /* Brown border for Cain and Abel game */
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 0.5rem;
@@ -78,7 +78,7 @@
             transform: scale(1.2); /* Slightly larger radio buttons */
         }
         button {
-            background-color: #f97316; /* Orange for Ezra game */
+            background-color: #78350f; /* Brown for Cain and Abel game */
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem; /* More rounded */
@@ -90,7 +90,7 @@
             margin-top: 1rem;
         }
         button:hover {
-            background-color: #ea580c; /* Darker orange on hover */
+            background-color: #92400e; /* Darker brown on hover */
             transform: translateY(-2px);
         }
         button:active {
@@ -107,7 +107,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             display: none; /* Hidden by default */
-            border: 2px solid #f97316;
+            border: 2px solid #78350f;
         }
         .message-box.show {
             display: block;
@@ -118,7 +118,7 @@
             color: #1f2937;
         }
         .message-box button {
-            background-color: #f97316;
+            background-color: #78350f;
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
@@ -127,7 +127,7 @@
             transition: background-color 0.3s ease;
         }
         .message-box button:hover {
-            background-color: #ea580c;
+            background-color: #92400e;
         }
         .final-revelation {
             font-size: 1.5rem;
@@ -139,9 +139,9 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="game-container">
-        <h1 class="text-4xl font-bold text-orange-700 mb-4">A História de Esdras 📜</h1>
+        <h1 class="text-4xl font-bold text-amber-800 mb-4">A História de Caim e Abel 🌾</h1>
         <p class="text-gray-700 mb-6">
-            Acompanhe a jornada de Esdras, o sacerdote e escriba que liderou o retorno dos exilados e a restauração da Lei em Jerusalém.
+            Descubra a história dos primeiros irmãos, suas ofertas, a tragédia e as consequências de suas escolhas.
         </p>
 
         <div id="start-screen" class="active">
@@ -153,8 +153,8 @@
 
         <div id="revelation-screen" class="chapter-section">
             <h2 class="text-3xl font-bold text-green-600 mb-4">Parabéns!</h2>
-            <p class="final-revelation">Você completou a jornada pela história de Esdras!</p>
-            <p class="text-gray-700 mt-6">A história de Esdras é um testemunho da importância da Palavra de Deus, da obediência e do arrependimento para a restauração espiritual de um povo.</p>
+            <p class="final-revelation">Você completou a jornada pela história de Caim e Abel!</p>
+            <p class="text-gray-700 mt-6">A história de Caim e Abel nos ensina sobre a natureza do pecado, o ciúme e a importância da obediência a Deus.</p>
             <button onclick="restartGame()">Jogar Novamente</button>
             <a href="index.html" class="game-button mt-4">Voltar ao Lançador de Jogos</a>
         </div>
@@ -170,213 +170,213 @@
         const chapters = [
             {
                 id: 'chapter1',
-                title: 'Capítulo 1: O Retorno do Exílio (Primeiro Grupo)',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender o decreto de Ciro e o primeiro retorno.',
+                title: 'Capítulo 1: O Nascimento dos Irmãos',
+                location: 'Fora do Éden',
+                objective: 'Conhecer os primeiros filhos de Adão e Eva.',
                 clues: [
-                    'Ciro, rei da Pérsia, decretou a reconstrução do Templo em Jerusalém.',
-                    'Zorobabel liderou o primeiro grupo de exilados de volta a Jerusalém.'
+                    'Eva deu à luz dois filhos após a expulsão do Éden.',
+                    'Um se tornou lavrador e o outro, pastor de ovelhas.'
                 ],
-                keyVerse: 'Esdras 1:1-3',
-                enigma: 'Qual rei persa decretou a reconstrução do Templo em Jerusalém?',
-                options: ['Ciro', 'Dario', 'Artaxerxes'],
-                correctAnswer: 'Ciro'
+                keyVerse: 'Gênesis 4:1-2',
+                enigma: 'Qual era a profissão de Caim?',
+                options: ['Lavrador', 'Pastor de ovelhas', 'Construtor'],
+                correctAnswer: 'Lavrador'
             },
             {
                 id: 'chapter2',
-                title: 'Capítulo 2: A Reconstrução do Templo (Início)',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre o início da reconstrução do Templo.',
+                title: 'Capítulo 2: As Ofertas',
+                location: 'Fora do Éden',
+                objective: 'Entender os tipos de ofertas apresentadas a Deus.',
                 clues: [
-                    'Os alicerces do Templo do Senhor foram lançados em Jerusalém.',
-                    'Houve grande alegria e choro entre o povo ao ver os alicerces.'
+                    'Caim trouxe uma oferta dos frutos da terra.',
+                    'Abel trouxe das primícias e da gordura de seu rebanho.'
                 ],
-                keyVerse: 'Esdras 3:10-13',
-                enigma: 'O que foi lançado em Jerusalém com grande celebração?',
-                options: ['Os alicerces do Templo', 'Os muros da cidade', 'Um novo palácio'],
-                correctAnswer: 'Os alicerces do Templo'
+                keyVerse: 'Gênesis 4:3',
+                enigma: 'O que Caim ofereceu ao Senhor?',
+                options: ['Frutos da terra', 'Animais do rebanho', 'Ouro e prata'],
+                correctAnswer: 'Frutos da terra'
             },
             {
                 id: 'chapter3',
-                title: 'Capítulo 3: Oposição à Reconstrução',
-                location: 'Samaria e Jerusalém',
-                objective: 'Entender a oposição enfrentada pelos construtores do Templo.',
+                title: 'Capítulo 3: A Aceitação de Abel',
+                location: 'Fora do Éden',
+                objective: 'Descobrir por que a oferta de Abel foi aceita.',
                 clues: [
-                    'Os adversários dos judeus tentaram desanimá-los e impedi-los de construir.',
-                    'Eles escreveram cartas ao rei para que a obra do Templo fosse parada.'
+                    'Deus atentou para Abel e para a sua oferta.',
+                    'A oferta de Abel era das primícias e do melhor.'
                 ],
-                keyVerse: 'Esdras 4:4-5',
-                enigma: 'Quem se opôs ativamente à reconstrução do Templo?',
-                options: ['Os samaritanos', 'Os egípcios', 'Os babilônios'],
-                correctAnswer: 'Os samaritanos'
+                keyVerse: 'Gênesis 4:4',
+                enigma: 'Por que a oferta de Abel foi agradável a Deus?',
+                options: ['Porque era a melhor parte do seu rebanho', 'Porque era a maior oferta', 'Porque era a primeira oferta'],
+                correctAnswer: 'Porque era a melhor parte do seu rebanho'
             },
             {
                 id: 'chapter4',
-                title: 'Capítulo 4: A Retomada da Obra',
-                location: 'Jerusalém',
-                objective: 'Descobrir como a reconstrução do Templo foi retomada.',
+                title: 'Capítulo 4: A Rejeição de Caim',
+                location: 'Fora do Éden',
+                objective: 'Observar a reação de Caim à rejeição de sua oferta.',
                 clues: [
-                    'Os profetas Ageu e Zacarias encorajaram o povo a retomar a obra do Templo.',
-                    'Um novo decreto do rei Dario foi emitido, permitindo que a construção continuasse.'
+                    'Deus não atentou para Caim e para a sua oferta.',
+                    'Caim ficou irado e seu semblante se abateu.'
                 ],
-                keyVerse: 'Esdras 5:1-2',
-                enigma: 'Quais profetas encorajaram o povo a retomar a obra do Templo?',
-                options: ['Ageu e Zacarias', 'Elias e Eliseu', 'Jeremias e Ezequiel'],
-                correctAnswer: 'Ageu e Zacarias'
+                keyVerse: 'Gênesis 4:5',
+                enigma: 'Como Caim reagiu à rejeição de sua oferta?',
+                options: ['Ficou irado e abatido', 'Ficou triste e chorou', 'Pediu perdão a Deus'],
+                correctAnswer: 'Ficou irado e abatido'
             },
             {
                 id: 'chapter5',
-                title: 'Capítulo 5: Conclusão e Dedicação do Templo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a conclusão e dedicação do segundo Templo.',
+                title: 'Capítulo 5: A Advertência de Deus',
+                location: 'Fora do Éden',
+                objective: 'Entender o aviso divino a Caim sobre o pecado.',
                 clues: [
-                    'O Templo foi concluído no sexto ano do reinado do rei Dario.',
-                    'Houve uma grande celebração da Páscoa após a dedicação do Templo.'
+                    'Deus perguntou a Caim por que ele estava irado.',
+                    'Deus o alertou que o pecado estava à porta.'
                 ],
-                keyVerse: 'Esdras 6:15-16',
-                enigma: 'Em qual ano do reinado de Dario o Templo foi concluído?',
-                options: ['Sexto ano', 'Segundo ano', 'Décimo ano'],
-                correctAnswer: 'Sexto ano'
+                keyVerse: 'Gênesis 4:6-7',
+                enigma: 'O que Deus disse a Caim que estava à porta, esperando para dominá-lo?',
+                options: ['O pecado', 'A fome', 'A tristeza'],
+                correctAnswer: 'O pecado'
             },
             {
                 id: 'chapter6',
-                title: 'Capítulo 6: A Vinda de Esdras a Jerusalém',
-                location: 'Babilônia e Jerusalém',
-                objective: 'Entender a missão de Esdras.',
+                title: 'Capítulo 6: O Homicídio',
+                location: 'Campo',
+                objective: 'Testemunhar o primeiro ato de violência entre irmãos.',
                 clues: [
-                    'Esdras era um escriba e sacerdote, versado na Lei de Moisés.',
-                    'O rei Artaxerxes lhe concedeu autoridade para ir a Jerusalém e ensinar a Lei.'
+                    'Caim chamou Abel para o campo.',
+                    'Lá, Caim se levantou contra seu irmão e o matou.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual era a profissão principal de Esdras?',
-                options: ['Escriba e sacerdote', 'Construtor e líder', 'Guerreiro e juiz'],
-                correctAnswer: 'Escriba e sacerdote'
+                keyVerse: 'Gênesis 4:8',
+                enigma: 'Onde Caim matou Abel?',
+                options: ['No campo', 'Em casa', 'No jardim'],
+                correctAnswer: 'No campo'
             },
             {
                 id: 'chapter7',
-                title: 'Capítulo 7: O Jejum e a Oração de Esdras',
-                location: 'Rio Aava',
-                objective: 'Observar a dependência de Esdras em Deus para a viagem.',
+                title: 'Capítulo 7: O Questionamento de Deus',
+                location: 'Campo',
+                objective: 'Observar a confrontação de Deus com Caim.',
                 clues: [
-                    'Esdras proclamou um jejum no rio Aava para buscar a proteção de Deus para a viagem.',
-                    'Ele se recusou a pedir escolta militar ao rei, confiando na proteção divina.'
+                    'Deus perguntou a Caim onde estava seu irmão Abel.',
+                    'Caim respondeu com uma pergunta evasiva.'
                 ],
-                keyVerse: 'Esdras 8:21-23',
-                enigma: 'Onde Esdras proclamou um jejum antes de partir para Jerusalém?',
-                options: ['No rio Aava', 'No palácio do rei', 'No deserto'],
-                correctAnswer: 'No rio Aava'
+                keyVerse: 'Gênesis 4:9',
+                enigma: 'Qual foi a resposta de Caim quando Deus perguntou sobre Abel?',
+                options: ['Não sei; sou eu guarda do meu irmão?', 'Ele fugiu', 'Ele está dormindo'],
+                correctAnswer: 'Não sei; sou eu guarda do meu irmão?'
             },
             {
                 id: 'chapter8',
-                title: 'Capítulo 8: A Chegada de Esdras a Jerusalém',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a chegada segura de Esdras e seus companheiros.',
+                title: 'Capítulo 8: O Clamor do Sangue',
+                location: 'Terra',
+                objective: 'Entender a voz do sangue de Abel clamando a Deus.',
                 clues: [
-                    'Esdras e seu grupo chegaram a Jerusalém em segurança, pela boa mão de Deus sobre eles.',
-                    'Os vasos sagrados do Templo foram entregues aos sacerdotes.'
+                    'Deus disse a Caim que a voz do sangue de seu irmão clamava da terra.',
+                    'O sangue de Abel era um testemunho contra Caim.'
                 ],
-                keyVerse: 'Esdras 8:31-32',
-                enigma: 'Quanto tempo durou a viagem de Esdras da Babilônia até Jerusalém?',
-                options: ['Quatro meses', 'Um mês', 'Um ano'],
-                correctAnswer: 'Quatro meses'
+                keyVerse: 'Gênesis 4:10',
+                enigma: 'De onde o sangue de Abel clamava a Deus?',
+                options: ['Da terra', 'Do céu', 'Da arca'],
+                correctAnswer: 'Da terra'
             },
             {
                 id: 'chapter9',
-                title: 'Capítulo 9: O Problema dos Casamentos Mistos',
-                location: 'Jerusalém',
-                objective: 'Entender a crise dos casamentos mistos e a reação de Esdras.',
+                title: 'Capítulo 9: A Maldição de Caim',
+                location: 'Terra',
+                objective: 'Aprender sobre a punição imposta a Caim por Deus.',
                 clues: [
-                    'Os líderes de Israel informaram Esdras sobre os casamentos dos judeus com povos estrangeiros.',
-                    'Esdras ficou chocado, rasgou suas vestes e arrancou cabelos e barba em sinal de angústia.'
+                    'Caim foi amaldiçoado pela terra.',
+                    'Ela não mais lhe daria sua força, e ele seria fugitivo e errante.'
                 ],
-                keyVerse: 'Esdras 9:1-3',
-                enigma: 'Qual problema grave Esdras encontrou ao chegar a Jerusalém?',
-                options: ['Casamentos mistos', 'Falta de alimento', 'Ataques inimigos'],
-                correctAnswer: 'Casamentos mistos'
+                keyVerse: 'Gênesis 4:11-12',
+                enigma: 'Qual foi uma das maldições impostas a Caim?',
+                options: ['Ser fugitivo e errante na terra', 'Perder a fala', 'Ser transformado em animal'],
+                correctAnswer: 'Ser fugitivo e errante na terra'
             },
             {
                 id: 'chapter10',
-                title: 'Capítulo 10: A Oração e Confissão de Esdras',
-                location: 'Jerusalém (Diante do Templo)',
-                objective: 'Observar a profunda oração de confissão de Esdras.',
+                title: 'Capítulo 10: O Lamento de Caim',
+                location: 'Terra',
+                objective: 'Observar a reação de Caim à sua punição.',
                 clues: [
-                    'Esdras orou a Deus, confessando os pecados do povo com grande arrependimento, prostrado diante do Templo.',
-                    'Uma grande congregação de homens, mulheres e crianças se reuniu e chorou amargamente com ele.'
+                    'Caim disse que sua punição era maior do que podia suportar.',
+                    'Ele temia que qualquer um que o encontrasse o mataria.'
                 ],
-                keyVerse: 'Esdras 9:5-7',
-                enigma: 'O que Esdras fez ao saber dos casamentos mistos?',
-                options: ['Orou e confessou os pecados do povo', 'Ignorou o problema', 'Expulsou os culpados imediatamente'],
-                correctAnswer: 'Orou e confessou os pecados do povo'
+                keyVerse: 'Gênesis 4:13-14',
+                enigma: 'O que Caim temia após receber sua punição?',
+                options: ['Ser morto por quem o encontrasse', 'Passar fome', 'Viver sozinho'],
+                correctAnswer: 'Ser morto por quem o encontrasse'
             },
             {
                 id: 'chapter11',
-                title: 'Capítulo 11: O Compromisso do Povo',
-                location: 'Jerusalém',
-                objective: 'Aprender sobre a decisão do povo de se arrepender.',
+                title: 'Capítulo 11: A Proteção de Caim',
+                location: 'Terra',
+                objective: 'Entender a provisão de Deus para a proteção de Caim.',
                 clues: [
-                    'O povo fez um pacto para se separar das mulheres estrangeiras, seguindo a Lei de Deus.',
-                    'Uma comissão foi formada para investigar e lidar com o problema dos casamentos mistos.'
+                    'Deus colocou um sinal em Caim.',
+                    'Para que ninguém que o encontrasse o matasse.'
                 ],
-                keyVerse: 'Esdras 10:3-4',
-                enigma: 'O que o povo prometeu fazer para corrigir o problema dos casamentos mistos?',
-                options: ['Separar-se das mulheres estrangeiras', 'Construir um novo templo', 'Oferecer mais sacrifícios'],
-                correctAnswer: 'Separar-se das mulheres estrangeiras'
+                keyVerse: 'Gênesis 4:15',
+                enigma: 'Qual foi o propósito do sinal que Deus colocou em Caim?',
+                options: ['Para protegê-lo de ser morto', 'Para marcá-lo como assassino', 'Para que todos o evitassem'],
+                correctAnswer: 'Para protegê-lo de ser morto'
             },
             {
                 id: 'chapter12',
-                title: 'Capítulo 12: A Lista dos que se Casaram com Estrangeiras',
-                location: 'Jerusalém',
-                objective: 'Entender a seriedade da questão e a ação tomada.',
+                title: 'Capítulo 12: A Terra de Node',
+                location: 'Terra de Node',
+                objective: 'Aprender sobre o novo lar de Caim após ser expulso.',
                 clues: [
-                    'O livro de Esdras lista os nomes daqueles que haviam se casado com mulheres estrangeiras.',
-                    'Eles prometeram se arrepender e se separar, oferecendo um carneiro como oferta pela culpa.'
+                    'Caim saiu da presença do Senhor.',
+                    'Ele habitou na terra de Node, a leste do Éden.'
                 ],
-                keyVerse: 'Esdras 10:18-19',
-                enigma: 'O que foi feito para registrar e resolver o problema dos casamentos mistos?',
-                options: ['Uma lista dos nomes foi feita', 'Um novo sacerdote foi nomeado', 'Um novo muro foi construído'],
-                correctAnswer: 'Uma lista dos nomes foi feita'
+                keyVerse: 'Gênesis 4:16',
+                enigma: 'Qual era o nome da terra para onde Caim foi viver?',
+                options: ['Node', 'Gósen', 'Canaã'],
+                correctAnswer: 'Node'
             },
             {
                 id: 'chapter13',
-                title: 'Capítulo 13: A Liderança de Esdras',
-                location: 'Jerusalém',
-                objective: 'Refletir sobre o papel de Esdras como líder espiritual.',
+                title: 'Capítulo 13: A Descendência de Caim',
+                location: 'Terra de Node',
+                objective: 'Conhecer a linhagem de Caim e suas contribuições.',
                 clues: [
-                    'Esdras dedicou seu coração a estudar, praticar e ensinar a Lei do Senhor.',
-                    'Ele foi fundamental na restauração da ordem religiosa e da obediência à Lei entre o povo.'
+                    'Caim teve um filho chamado Enoque.',
+                    'Sua descendência incluiu inventores e construtores de cidades.'
                 ],
-                keyVerse: 'Esdras 7:10',
-                enigma: 'Qual era o principal objetivo de Esdras em relação à Lei do Senhor?',
-                options: ['Estudar, praticar e ensinar', 'Apenas estudar', 'Apenas ensinar'],
-                correctAnswer: 'Estudar, praticar e ensinar'
+                keyVerse: 'Gênesis 4:17-24',
+                enigma: 'Quem foi o primeiro filho de Caim?',
+                options: ['Enoque', 'Lameque', 'Jubal'],
+                correctAnswer: 'Enoque'
             },
             {
                 id: 'chapter14',
-                title: 'Capítulo 14: Esdras e Neemias',
-                location: 'Jerusalém',
-                objective: 'Entender a colaboração entre Esdras e Neemias.',
+                title: 'Capítulo 14: O Nascimento de Sete',
+                location: 'Fora do Éden',
+                objective: 'Entender a continuação da linhagem piedosa através de Adão e Eva.',
                 clues: [
-                    'Esdras e Neemias trabalharam juntos na restauração de Jerusalém.',
-                    'Esdras liderou a restauração espiritual da Lei, enquanto Neemias focou na reconstrução física dos muros.'
+                    'Adão e Eva tiveram outro filho após a morte de Abel.',
+                    'Eva o considerou uma substituição para Abel.'
                 ],
-                keyVerse: 'Neemias 8:9',
-                enigma: 'Com quem Esdras colaborou na restauração de Jerusalém?',
-                options: ['Neemias', 'Zorobabel', 'Josué'],
-                correctAnswer: 'Neemias'
+                keyVerse: 'Gênesis 4:25',
+                enigma: 'Qual foi o nome do filho que Adão e Eva tiveram para substituir Abel?',
+                options: ['Sete', 'Enos', 'Noé'],
+                correctAnswer: 'Sete'
             },
             {
                 id: 'chapter15',
-                title: 'Capítulo 15: O Legado de Esdras',
-                location: 'Israel',
-                objective: 'Refletir sobre o impacto duradouro do ministério de Esdras.',
+                title: 'Capítulo 15: O Início da Invocação do Nome do Senhor',
+                location: 'Fora do Éden',
+                objective: 'Aprender sobre o reavivamento da adoração a Deus.',
                 clues: [
-                    'Esdras é conhecido como o "pai do judaísmo pós-exílico" por sua ênfase na Lei e na identidade judaica.',
-                    'Seu trabalho foi fundamental para a preservação da fé e da cultura judaica após o exílio.'
+                    'Sete também teve um filho.',
+                    'Naqueles dias, começou-se a invocar o nome do Senhor.'
                 ],
-                keyVerse: 'Esdras 7:6',
-                enigma: 'Qual foi um dos principais legados de Esdras?',
-                options: ['Restauração da Lei e identidade judaica', 'Reconstrução do Templo', 'Conquista de novas terras'],
-                correctAnswer: 'Restauração da Lei e identidade judaica'
+                keyVerse: 'Gênesis 4:26',
+                enigma: 'O que começou a acontecer nos dias do filho de Sete?',
+                options: ['A invocar o nome do Senhor', 'A construir grandes cidades', 'A criar animais'],
+                correctAnswer: 'A invocar o nome do Senhor'
             }
         ];
 
@@ -426,7 +426,7 @@
                 let cluesHtml = chapterData.clues.map(clue => `<li>${clue}</li>`).join('');
 
                 chapterDiv.innerHTML = `
-                    <h2 class="text-2xl font-semibold text-orange-600 mb-2">${chapterData.title}</h2>
+                    <h2 class="text-2xl font-semibold text-amber-600 mb-2">${chapterData.title}</h2>
                     <p class="text-gray-600 mb-4">Local: ${chapterData.location}</p>
                     <p class="text-gray-800 mb-4">Objetivo: ${chapterData.objective}</p>
                     <ul class="clue-list">
